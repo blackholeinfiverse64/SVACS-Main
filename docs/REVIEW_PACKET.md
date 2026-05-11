@@ -5,7 +5,7 @@
 ---
 
 # PROJECT OVERVIEW
-
+ 
 SVACS Unified Core is a deterministic multi-stage execution validation and monitoring system designed for secure, traceable, replayable, and contract-verified pipeline execution.
 
 The system simulates a real-world intelligence and orchestration workflow where every execution passes through multiple controlled stages including:
