@@ -7,7 +7,7 @@ The system simulates a real-world multi-stage intelligence workflow where every 
 
 ---
 
-# PROJECT OBJECTIVE
+# PROJECT OBJECTIVE 
 
 The primary goal of this project is to create a secure and traceable execution framework capable of:
 
