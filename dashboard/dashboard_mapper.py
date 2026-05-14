@@ -10,7 +10,7 @@ def dashboard_mapper(execution_request):
     # =====================================================
     # DEFAULTS
     # =====================================================
-
+ 
     status = "BLOCKED"
 
     denial_reason = None
