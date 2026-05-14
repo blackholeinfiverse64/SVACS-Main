@@ -1,6 +1,6 @@
 def validate_rajya(state_event):
 
-    risk_level = state_event.get("risk_level")
+    risk_level = state_event.get("risk_level") 
 
     # =====================================================
     # REJECT CASE
