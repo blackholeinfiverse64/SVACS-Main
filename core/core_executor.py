@@ -6,7 +6,7 @@ import hashlib
 # GENERATE CONTRACT HASH
 # =========================================================
 
-def generate_contract_hash(data):
+def generate_contract_hash(data): 
 
     encoded_data = json.dumps(
         data,
