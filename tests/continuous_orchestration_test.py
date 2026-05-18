@@ -5,7 +5,7 @@ from datetime import datetime, UTC
 
 
 def simulate_event():
-
+ 
     return {
         "execution_id": f"exec_{uuid.uuid4().hex[:8]}",
         "trace_id": f"trace_{uuid.uuid4().hex[:8]}",
