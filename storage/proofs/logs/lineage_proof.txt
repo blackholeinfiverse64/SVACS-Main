@@ -3,7 +3,7 @@
     "trace_id": "trace_3cc7bea8",
     "lineage": [
         {
-            "stage": "SIGNAL",
+            "stage": "SIGNAL", 
             "service": "SIGNAL",
             "status": "COMPLETED",
             "timestamp": "2026-05-14T12:03:01.277523"
