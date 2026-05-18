@@ -4,7 +4,7 @@
 
 function getStatusClass(status) {
 
-    if (status === "EXECUTED") {
+    if (status === "EXECUTED") { 
 
         return "bg-success text-light";
     }
