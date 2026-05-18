@@ -5,7 +5,7 @@
         {
             "stage": "SIGNAL",
             "status": "COMPLETED"
-        },
+        }, 
         {
             "stage": "PERCEPTION",
             "status": "COMPLETED"
