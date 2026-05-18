@@ -3,7 +3,7 @@
     "trace_id": "trace_c2280533",
     "pipeline": [
         {
-            "stage": "SIGNAL",
+            "stage": "SIGNAL", 
             "status": "COMPLETED"
         },
         {
