@@ -9,7 +9,7 @@ python replay/intelligence_lineage.py
 
 Observed Output:
 {
-    "execution_id": "exec_f11a582c",
+    "execution_id": "exec_f11a582c", 
     "trace_id": "UNKNOWN",
     "lineage": []
 }
