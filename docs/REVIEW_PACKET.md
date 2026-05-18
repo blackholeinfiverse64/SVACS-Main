@@ -6,22 +6,22 @@
 
 # PROJECT OVERVIEW
 
-SVACS Unified Core is a deterministic, replay-safe, governance-controlled orchestration system designed for secure execution validation, telemetry monitoring, forensic replay reconstruction, provenance tracking, and constitutional boundary enforcement.
+SVACS Unified Core is a deterministic, replay-safe, constitutionally-governed orchestration and intelligence validation system designed for secure execution monitoring, telemetry observability, forensic replay reconstruction, provenance continuity, and operational convergence stability.
 
-The platform simulates a multi-stage intelligence and orchestration workflow where every execution passes through deterministic validation layers before final execution approval.
+The platform simulates a multi-stage operational intelligence workflow where every execution passes through deterministic governance, validation, replay, and authorization stages before execution approval.
 
-The system supports:
+The system focuses on:
 
 - deterministic orchestration
 - replay-safe execution
-- provenance-visible lineage
+- provenance-visible intelligence lineage
 - constitutional boundary enforcement
-- telemetry monitoring
-- contract validation
-- append-only forensic storage
-- mutation rejection
+- append-only forensic continuity
+- telemetry observability
+- mutation detection
 - token authorization validation
-- live dashboard monitoring
+- replay reconstruction
+- operational convergence stability
 
 ---
 
@@ -29,14 +29,16 @@ The system supports:
 
 This review validates that SVACS Unified Core successfully demonstrates:
 
-- deterministic execution behavior
-- replay reconstruction capability
+- deterministic operational execution
+- replay-safe orchestration
 - provenance continuity
 - telemetry traceability
-- mutation-resistant orchestration
-- governance enforcement
+- intelligence lineage reconstruction
+- append-only forensic replay
+- mutation-resistant execution validation
+- constitutional boundary enforcement
+- governance isolation
 - replay-safe observability
-- append-only forensic continuity
 
 ---
 
@@ -48,17 +50,18 @@ The primary objectives of SVACS Unified Core are:
 2. Preserve replay-safe execution history
 3. Detect unauthorized mutation attempts
 4. Prevent invalid token execution
-5. Maintain append-only execution lineage
+5. Maintain append-only lineage continuity
 6. Provide provenance-visible replay reconstruction
 7. Enable live telemetry visibility
 8. Preserve trace continuity across all stages
-9. Enforce constitutional execution boundaries
+9. Enforce constitutional governance boundaries
+10. Maintain replay-safe operational observability
 
 ---
 
 # SYSTEM PIPELINE
 
-SVACS follows a deterministic execution pipeline:
+SVACS follows a deterministic multi-stage execution pipeline:
 
 ```text
 SIGNAL
@@ -78,46 +81,53 @@ CORE
 
 ---
 
-# PIPELINE STAGE RESPONSIBILITIES
+# PIPELINE RESPONSIBILITIES
 
 | Stage | Responsibility |
 |---|---|
 | SIGNAL | Signal ingestion |
 | PERCEPTION | Signal interpretation |
-| INTELLIGENCE | Risk analysis |
-| STATE | State orchestration |
-| RAJYA | Governance validation |
+| INTELLIGENCE | Intelligence generation and anomaly analysis |
+| STATE | State transition orchestration |
+| RAJYA | Governance and validation enforcement |
 | SARATHI | Token authorization |
-| CORE | Final execution |
+| CORE | Final execution orchestration |
 
 ---
 
 # CORE SYSTEM FEATURES
 
-# 1. Deterministic Orchestration
+## 1. Deterministic Orchestration
 
-The orchestration pipeline operates with deterministic execution rules.
+SVACS operates using deterministic execution rules.
 
-The system guarantees:
+The platform guarantees:
 
 - replay-safe execution
 - deterministic replay outputs
 - trace continuity
 - reproducible orchestration states
+- append-only replay behavior
 
 ---
 
-# 2. Constitutional Boundary Enforcement
+## 2. Constitutional Boundary Enforcement
 
-SVACS enforces governance and execution boundaries.
+SVACS enforces strict operational boundaries between:
 
-The system rejects:
+- intelligence generation
+- validation authority
+- governance enforcement
+- dashboard observability
+- replay infrastructure
 
-- invalid execution mutations
-- unauthorized payload modifications
-- invalid contracts
-- unauthorized execution attempts
-- invalid token usage
+The system prevents:
+
+- intelligence becoming authority
+- dashboards becoming execution surfaces
+- replay mutation
+- governance bypass
+- unauthorized execution escalation
 
 Boundary enforcement statuses include:
 
@@ -129,53 +139,57 @@ MUTATION_REJECTED
 
 ---
 
-# 3. Provenance-Visible Intelligence Lineage
+## 3. Provenance-Visible Intelligence Lineage
 
-Each execution maintains:
+Every execution maintains:
 
 - execution_id
 - trace_id
-- telemetry lineage
-- stage ancestry
+- telemetry ancestry
+- intelligence lineage
 - replay continuity
-- provenance visibility
+- provenance references
+- stage transitions
 
-Lineage reconstruction enables full execution traceability.
+Lineage reconstruction enables deterministic operational traceability.
 
 ---
 
-# 4. Contract Validation
+## 4. Contract Validation
 
 Execution contracts validate:
 
-- execution integrity
-- payload structure
+- payload integrity
+- schema continuity
 - trace continuity
+- replay continuity
 - mutation resistance
 - governance compliance
-- replay continuity
+- deterministic structure validation
 
-Validation failures immediately block execution continuation.
+Validation failures immediately block pipeline continuation.
 
 ---
 
-# 5. Append-Only Forensic Storage
+## 5. Append-Only Forensic Storage
 
-SVACS stores artifacts using append-only methodology.
+SVACS uses append-only storage architecture.
 
 Stored artifacts include:
 
 - execution payloads
 - telemetry events
-- replay artifacts
+- replay proofs
 - rejection logs
+- lineage artifacts
 - validation records
+- operational replay outputs
 
-This preserves forensic continuity.
+This preserves forensic continuity and replay integrity.
 
 ---
 
-# 6. Hash Chain Verification
+## 6. Hash Chain Verification
 
 Each execution maintains:
 
@@ -190,29 +204,33 @@ This enables:
 - tamper detection
 - forensic integrity validation
 - replay continuity verification
+- deterministic reconstruction proof
 
 ---
 
-# 7. Replay Reconstruction Engine
+## 7. Replay Reconstruction Engine
 
 The replay engine reconstructs complete operational history including:
 
-- execution flows
-- telemetry traces
-- rejection events
-- mutation events
-- governance decisions
-- replay continuity
+- original signals
+- perception outputs
+- intelligence outputs
+- validation results
+- state transitions
+- telemetry emissions
+- rejection reasoning
+- replay lineage
+- operational continuity
 
 Replay outputs remain deterministic and reproducible.
 
 ---
 
-# 8. Real-Time Telemetry Monitoring
+## 8. Real-Time Telemetry Monitoring
 
 Telemetry events are emitted at every pipeline stage.
 
-Telemetry includes:
+Telemetry contains:
 
 - execution_id
 - trace_id
@@ -239,7 +257,7 @@ Example telemetry event:
 
 ---
 
-# 9. Mutation Detection
+## 9. Mutation Detection
 
 SVACS actively detects execution mutation attempts.
 
@@ -255,16 +273,17 @@ Result:
 MUTATION_REJECTED
 ```
 
-Mutation rejection includes:
+Mutation handling includes:
 
 - execution blocking
-- telemetry emission
+- telemetry generation
 - replay preservation
 - forensic logging
+- lineage continuity protection
 
 ---
 
-# 10. Token Authorization
+## 10. Token Authorization
 
 Sarathi validates execution authorization tokens before execution approval.
 
@@ -278,15 +297,17 @@ This prevents unauthorized execution continuation.
 
 ---
 
-# 11. Intelligence Lineage Reconstruction
+## 11. Intelligence Lineage Reconstruction
 
 The intelligence lineage engine reconstructs:
 
-- execution ancestry
-- stage lineage
-- provenance chain
-- replay visibility
-- telemetry continuity
+- signal ancestry
+- perception lineage
+- intelligence transitions
+- validation history
+- state evolution
+- replay continuity
+- provenance visibility
 
 Example lineage:
 
@@ -296,42 +317,98 @@ SIGNAL → PERCEPTION → INTELLIGENCE → STATE → CONTRACT
 
 ---
 
-# 12. Continuous Orchestration Validation
+## 12. Continuous Orchestration Validation
 
 Continuous orchestration testing validates:
 
 - deterministic execution
-- replay safety
+- replay continuity
 - trace continuity
-- orchestration reproducibility
+- intelligence continuity
+- schema continuity
 - replay-safe observability
+- rejection visibility
+- latency stability
 
 ---
 
-# 13. Live Dashboard Monitoring
+## 13. Degraded Replay Recovery Validation
 
-The Flask dashboard provides:
+SVACS validates replay resilience under degraded operational conditions.
 
-- live execution monitoring
-- telemetry visibility
-- rejection visibility
-- replay tracking
-- mutation monitoring
-- trace inspection
-- system metrics
+Validated recovery scenarios include:
 
-Dashboard APIs:
+- telemetry interruption
+- stale lineage recovery
+- replay reconstruction after restart
+- node failure simulation
+- append-only replay recovery
+
+Replay reconstruction remains deterministic after failure recovery.
+
+---
+
+## 14. Provenance Continuity Validation
+
+SVACS preserves provenance continuity through:
+
+- append-only lineage
+- replay-safe dataset references
+- deterministic reconstruction
+- intelligence derivation visibility
+- schema continuity enforcement
+- federated provenance discipline
+
+The system explicitly separates:
+
+- dataset layer
+- intelligence layer
+- validation layer
+- operational authority layer
+
+Datasets never automatically become operational truth.
+
+---
+
+## 15. Dashboard Observability Isolation
+
+The dashboard remains strictly:
+
+```text
+OBSERVABILITY ONLY
+```
+
+The dashboard does NOT provide:
+
+- operational authority
+- execution control
+- governance override
+- replay mutation capability
+- intelligence authorization
+
+Dashboard APIs expose:
 
 | API | Purpose |
 |---|---|
-| `/api/dashboard` | Execution dashboard data |
-| `/api/telemetry` | Telemetry events |
-| `/api/rejections` | Rejection logs |
-| `/api/metrics` | System metrics |
+| `/api/dashboard` | Execution visibility |
+| `/api/telemetry` | Telemetry monitoring |
+| `/api/rejections` | Rejection visibility |
+| `/api/metrics` | Operational metrics |
 
 ---
 
 # DASHBOARD VISIBILITY
+
+Dashboard displays:
+
+- execution_id
+- trace_id
+- replay visibility
+- telemetry events
+- rejection reasoning
+- lineage visibility
+- operational metrics
+- timestamps
 
 Dashboard metrics include:
 
@@ -341,16 +418,6 @@ REJECTED
 TOKEN_DENIED
 MUTATION_REJECTED
 ```
-
-Dashboard displays:
-
-- execution_id
-- trace_id
-- replay visibility
-- hash verification
-- telemetry events
-- rejection reasons
-- timestamps
 
 ---
 
@@ -363,19 +430,35 @@ svacs_unified_core/
 ├── core/
 ├── dashboard/
 ├── docs/
+│   ├── constitutional_boundaries.md
+│   ├── provenance_strategy.md
+│   ├── REVIEW_PACKET.md
+│   ├── TESTING_PACKET.md
+│   └── system_flow.md
+│
 ├── intelligence/
 ├── orchestration/
 ├── perception/
 ├── rajya/
 ├── replay/
+│   ├── intelligence_lineage.py
+│   └── full_operational_replay.py
+│
 ├── sarathi/
 ├── signal_events/
 ├── state/
 ├── storage/
+│   ├── dashboard/
+│   ├── telemetry/
+│   ├── denials/
+│   ├── executions/
+│   └── proofs/
+│
 ├── telemetry/
 ├── tests/
-├── utils/
+│   └── continuous_orchestration_test.py
 │
+├── utils/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
@@ -390,8 +473,8 @@ svacs_unified_core/
 |---|---|
 | contracts | Contract validation |
 | core | Final execution orchestration |
-| dashboard | Live monitoring UI |
-| intelligence | Intelligence and risk analysis |
+| dashboard | Observability dashboard |
+| intelligence | Intelligence analysis |
 | orchestration | Pipeline coordination |
 | perception | Signal interpretation |
 | rajya | Governance validation |
@@ -399,14 +482,14 @@ svacs_unified_core/
 | sarathi | Token authorization |
 | signal_events | Signal ingestion |
 | state | State orchestration |
-| telemetry | Telemetry event tracking |
+| telemetry | Telemetry tracking |
 | utils | Shared utilities |
 
 ---
 
 # EXECUTION FLOWS
 
-# Successful Execution Flow
+## Successful Execution Flow
 
 ```text
 SIGNAL
@@ -426,7 +509,7 @@ EXECUTED
 
 ---
 
-# Governance Rejection Flow
+## Governance Rejection Flow
 
 ```text
 INTELLIGENCE(HIGH RISK)
@@ -442,7 +525,7 @@ REJECTED
 
 ---
 
-# Invalid Token Flow
+## Invalid Token Flow
 
 ```text
 SARATHI(TOKEN_DENIED)
@@ -456,7 +539,7 @@ TOKEN_DENIED
 
 ---
 
-# Mutation Detection Flow
+## Mutation Detection Flow
 
 ```text
 CONTRACT(MUTATION_REJECTED)
@@ -475,13 +558,14 @@ MUTATION_REJECTED
 Replay reconstruction validates:
 
 - append-only continuity
-- execution lineage
 - telemetry ancestry
-- deterministic replay
+- execution lineage
+- deterministic replay outputs
 - trace continuity
-- forensic visibility
+- forensic replay visibility
+- provenance continuity
 
-Replay remains available for both approved and rejected executions.
+Replay remains available for approved and rejected executions.
 
 ---
 
@@ -492,10 +576,11 @@ SVACS forensic replay supports:
 - execution reconstruction
 - telemetry recovery
 - rejection trace recovery
-- replay continuity validation
-- mutation detection verification
+- mutation verification
 - governance traceability
+- lineage reconstruction
 - provenance validation
+- deterministic replay proof
 
 ---
 
@@ -510,27 +595,29 @@ SVACS uses append-only structured storage.
 | storage/denials | Rejection logs |
 | storage/executions | Execution artifacts |
 | storage/replay | Replay artifacts |
+| storage/proofs | Replay and recovery proofs |
 
 ---
 
 # SECURITY CONTROLS
 
-The system implements:
+The platform implements:
 
 - append-only storage
 - deterministic replay validation
 - governance enforcement
 - mutation detection
-- token authorization
 - replay-safe observability
-- trace continuity validation
+- token authorization
 - provenance verification
-- contract validation
+- telemetry continuity
+- trace continuity validation
 - forensic replay reconstruction
+- constitutional execution isolation
 
 ---
 
-# TEST EXECUTION RESULTS
+# CONTINUOUS ORCHESTRATION TEST RESULTS
 
 Continuous orchestration testing validated:
 
@@ -560,12 +647,16 @@ Continuous orchestration testing validated:
 | Deterministic replay validation | PASSED |
 | Replay-safe orchestration | PASSED |
 | Provenance lineage reconstruction | PASSED |
+| Telemetry interruption recovery | PASSED |
+| Stale lineage recovery | PASSED |
+| Replay reconstruction after restart | PASSED |
+| Deterministic replay under stress | PASSED |
 
 ---
 
 # SAMPLE EXECUTION RESULTS
 
-# Successful Execution
+## Successful Execution
 
 ```text
 Status: EXECUTED
@@ -576,7 +667,7 @@ Token Authorized: true
 
 ---
 
-# High Risk Rejection
+## High Risk Rejection
 
 ```text
 Status: REJECTED
@@ -585,7 +676,7 @@ Reason: High risk anomaly detected
 
 ---
 
-# Invalid Token Detection
+## Invalid Token Detection
 
 ```text
 Status: TOKEN_DENIED
@@ -594,7 +685,7 @@ Reason: Invalid token detected
 
 ---
 
-# Mutation Rejection
+## Mutation Rejection
 
 ```text
 Status: MUTATION_REJECTED
@@ -628,6 +719,7 @@ SVACS Unified Core is:
 - append-only
 - forensic-capable
 - contract-driven
+- operationally traceable
 
 ---
 
@@ -638,15 +730,17 @@ SVACS Unified Core successfully demonstrates:
 - deterministic orchestration
 - replay-safe execution
 - provenance-visible lineage reconstruction
-- real-time telemetry monitoring
+- telemetry continuity
 - governance validation
 - mutation rejection
 - token authorization
-- forensic replay capability
-- append-only integrity
-- trace continuity enforcement
+- replay reconstruction
+- append-only forensic continuity
+- operational replay proof
+- constitutional boundary enforcement
+- degraded recovery validation
 
-The system is operational, replay-safe, deterministic, traceable, and demo-ready.
+The system is operational, deterministic, replay-safe, traceable, provenance-aware, and convergence-ready.
 
 ---
 
@@ -662,6 +756,8 @@ CONTRACT STATUS: VALIDATED
 PROVENANCE STATUS: VERIFIED
 CONSTITUTIONAL STATUS: ENFORCED
 ORCHESTRATION STATUS: DETERMINISTIC
+RECOVERY STATUS: VERIFIED
+LINEAGE STATUS: ACTIVE
 ```
 
 ---
