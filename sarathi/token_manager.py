@@ -6,7 +6,7 @@ import secrets
 # =========================================================
 
 def generate_token(execution_request):
-
+ 
     token = secrets.token_hex(16)
 
     return {
