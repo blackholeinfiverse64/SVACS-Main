@@ -1,6 +1,6 @@
 # FINAL PROOF SUMMARY
 
-## Completed Proofs
+## Completed Proofs 
 
 - Replay reconstruction proof
 - Intelligence lineage proof
