@@ -6,7 +6,7 @@ def validate_rajya(state_event):
     # REJECT CASE
     # =====================================================
 
-    if risk_level == "HIGH":
+    if risk_level == "HIGH": 
 
         return {
             "status": "REJECTED",
