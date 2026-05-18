@@ -4,7 +4,7 @@
 
 NICAI operates as a replay-safe maritime intelligence participation layer inside the unified SVACS + TANTRA ecosystem.
 
-NICAI does not execute sovereign authority.  
+NICAI does not execute sovereign authority.   
 NICAI only generates deterministic intelligence outputs with complete observability and replay continuity.
 
 ---
