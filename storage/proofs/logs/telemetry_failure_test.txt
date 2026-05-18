@@ -1,7 +1,7 @@
 Telemetry interruption validation completed.
 
 Test Performed:
-- storage/telemetry temporarily renamed to telemetry_backup
+- storage/telemetry temporarily renamed to telemetry_backup 
 - replay reconstruction executed during telemetry interruption
 
 Command Executed:
