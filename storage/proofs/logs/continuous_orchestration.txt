@@ -3,7 +3,7 @@
     "deterministic": true,
     "trace_continuity": true,
     "replay_safe": true,
-    "results": [
+    "results": [ 
         {
             "execution_id": "exec_b1032b74",
             "trace_id": "trace_57c911e1",
