@@ -4,6 +4,6 @@ def generate_signal():
         "signal_type": "VESSEL_ALERT",
         "signal_strength": "HIGH"
     }
-
+ 
     return signal_chunk
  
