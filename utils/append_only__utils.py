@@ -7,6 +7,6 @@ def calculate_hash(data):
     return hashlib.sha256(
         json.dumps( 
             data,
-            sort_keys=True
+            sort_keys=True 
         ).encode()
     ).hexdigest()
