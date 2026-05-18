@@ -4,7 +4,7 @@
 SVACS Unified Core is a deterministic, replay-safe, contract-driven orchestration framework designed for telemetry visibility, forensic replay reconstruction, provenance tracking, constitutional boundary enforcement, and mutation-resistant execution validation.
 
 The platform simulates a secure multi-stage maritime intelligence orchestration workflow where every execution is validated, traceable, replayable, governance-controlled, and append-only before execution approval.
-
+ 
 ---
 
 # PROJECT OBJECTIVE
