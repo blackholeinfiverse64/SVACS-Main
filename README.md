@@ -1,10 +1,10 @@
 # SVACS Unified Core  
-## Secure Verification & Autonomous Control System
+## Distributed Replay-Resilient Maritime Orchestration Infrastructure
 
-SVACS Unified Core is a deterministic, replay-safe, contract-driven orchestration framework designed for telemetry visibility, forensic replay reconstruction, provenance tracking, constitutional boundary enforcement, and mutation-resistant execution validation.
+SVACS Unified Core is a deterministic, replay-safe, provenance-visible orchestration framework designed for distributed replay reconstruction, constitutional boundary enforcement, telemetry continuity, lineage preservation, schema-safe replay migration, and operational recovery validation under degraded infrastructure conditions.
 
-The platform simulates a secure multi-stage maritime intelligence orchestration workflow where every execution is validated, traceable, replayable, governance-controlled, and append-only before execution approval.
- 
+The platform simulates a replay-safe maritime intelligence orchestration pipeline where every execution remains deterministic, append-only, traceable, reconstructable, and governance-bounded even during replay corruption, telemetry interruption, stale lineage recovery, and distributed replay node failure.
+
 ---
 
 # PROJECT OBJECTIVE
@@ -12,21 +12,22 @@ The platform simulates a secure multi-stage maritime intelligence orchestration 
 The primary objective of SVACS Unified Core is to provide:
 
 - deterministic orchestration
-- replay-safe execution validation
-- telemetry-driven monitoring
+- distributed replay parity
+- replay-safe reconstruction
 - provenance-visible intelligence lineage
+- telemetry-driven monitoring
 - constitutional boundary enforcement
-- contract validation
-- mutation detection
-- append-only forensic logging
+- replay-safe schema migration
+- corruption-aware replay recovery
+- append-only forensic continuity
 - trace continuity verification
-- token authorization validation
+- replay-safe operational recovery
 
 ---
 
 # SYSTEM PIPELINE
 
-SVACS follows a deterministic execution pipeline:
+SVACS follows a deterministic replay-safe orchestration pipeline:
 
 ```text
 SIGNAL
@@ -37,11 +38,9 @@ INTELLIGENCE
    ↓
 STATE
    ↓
-RAJYA
+REPLAY
    ↓
-SARATHI
-   ↓
-CORE
+DASHBOARD
 ```
 
 ---
@@ -54,9 +53,8 @@ CORE
 | PERCEPTION | Signal interpretation |
 | INTELLIGENCE | Intelligence generation and anomaly analysis |
 | STATE | State persistence and orchestration |
-| RAJYA | Governance validation |
-| SARATHI | Authorization and token validation |
-| CORE | Final execution orchestration |
+| REPLAY | Replay reconstruction and lineage recovery |
+| DASHBOARD | Observability-only visualization |
 
 ---
 
@@ -78,17 +76,17 @@ The system guarantees:
 
 ## Constitutional Boundary Enforcement
 
-SVACS enforces governance and execution boundaries.
+SVACS enforces governance and replay boundaries.
+
+The system guarantees:
+
+- replay never becomes authority
+- telemetry never becomes governance
+- observability never becomes execution control
+- provenance never mutates replay semantics
+- replay remains immutable
 
 The system rejects:
-
-- unauthorized execution mutation
-- invalid execution contracts
-- tampered payload chains
-- invalid authorization tokens
-- governance bypass attempts
-
-Example statuses:
 
 ```text
 REJECTED
@@ -108,58 +106,57 @@ Every execution maintains:
 - replay lineage
 - provenance continuity
 - stage continuity
+- schema ancestry
 
 Lineage reconstruction enables complete execution traceability.
 
 ---
 
-## Contract Validation
+## Distributed Replay Validation
 
-Execution contracts validate:
+SVACS validates replay parity across distributed replay nodes.
 
-- execution integrity
-- payload structure
-- trace continuity
-- governance compliance
-- replay continuity
-- mutation resistance
+Simulated distributed failure conditions include:
 
-Validation failures immediately stop execution continuation.
+- replay node outage
+- stale replay node
+- delayed telemetry
+- partial lineage corruption
 
----
-
-## Append-Only Forensic Storage
-
-SVACS stores artifacts using append-only methodology.
-
-Stored artifacts include:
-
-- execution payloads
-- telemetry events
-- replay artifacts
-- rejection logs
-- lineage records
-- governance validation records
-
-This preserves replay-safe forensic continuity.
+Replay remains deterministic after recovery.
 
 ---
 
-## Hash Chain Verification
+## Replay-Safe Schema Migration
 
-Each execution stores:
+Replay schema migration validation includes:
 
-```text
-previous_hash
-current_hash
-```
+- old schema replay support
+- mixed schema replay support
+- replay-safe schema fallback
+- schema drift visibility
+- deterministic replay compatibility
 
-This enables:
+---
 
-- append-only verification
-- tamper detection
-- forensic integrity validation
-- replay continuity verification
+## Corruption Recovery Validation
+
+SVACS validates replay reconstruction during corruption conditions.
+
+Validated corruption scenarios include:
+
+- corrupted replay artifacts
+- broken lineage chains
+- telemetry interruption
+- append-only continuity loss
+- replay restart recovery
+
+The system guarantees:
+
+- corruption visibility
+- deterministic recovery where possible
+- replay-safe failure isolation
+- irrecoverable boundary visibility
 
 ---
 
@@ -169,11 +166,11 @@ Replay reconstruction validates complete execution history including:
 
 - execution pipeline
 - telemetry traces
-- governance decisions
-- mutation events
-- rejection states
+- replay ancestry
+- lineage continuity
+- provenance references
 - replay continuity
-- lineage ancestry
+- deterministic reconstruction
 
 Replay outputs remain deterministic and reproducible.
 
@@ -210,105 +207,45 @@ Example telemetry event:
 
 ---
 
-## Mutation Detection
-
-SVACS actively detects unauthorized execution mutation attempts.
-
-Example:
-
-```text
-execution_id mismatch detected
-```
-
-Result:
-
-```text
-MUTATION_REJECTED
-```
-
----
-
-## Token Authorization
-
-Sarathi validates authorization tokens before execution approval.
-
-Invalid tokens produce:
-
-```text
-TOKEN_DENIED
-```
-
----
-
 ## Intelligence Lineage Reconstruction
 
 The intelligence lineage engine reconstructs:
 
 - execution ancestry
-- stage continuity
+- replay ancestry
 - telemetry ancestry
+- schema continuity
 - provenance chain
-- replay visibility
+- deterministic replay visibility
 
 Example lineage:
 
 ```text
-SIGNAL → PERCEPTION → INTELLIGENCE → STATE → CONTRACT
+SIGNAL → PERCEPTION → INTELLIGENCE → STATE → REPLAY
 ```
 
 ---
 
-## Continuous Orchestration Validation
+## Federated Replay Continuity
 
-Continuous orchestration tests validate:
-
-- deterministic replay
-- orchestration stability
-- replay continuity
-- trace continuity
-- schema continuity
-- rejection visibility
-- replay-safe observability
-
-The system successfully processes:
+Federated replay continuity validates replay-safe orchestration across:
 
 ```text
-100+ sequential operational events
+SIGNAL
+→ PERCEPTION
+→ INTELLIGENCE
+→ STATE
+→ REPLAY
+→ DASHBOARD
 ```
 
----
+The system guarantees:
 
-## Degraded Replay Recovery Validation
-
-SVACS validates replay recovery under degraded operational conditions.
-
-Validated recovery scenarios include:
-
-- telemetry interruption
-- stale lineage recovery
-- replay reconstruction after restart
-- deterministic replay recovery
-- append-only replay continuity
-
-Replay reconstruction remains deterministic after recovery.
-
----
-
-## Provenance Continuity Enforcement
-
-SVACS preserves provenance continuity through:
-
-- append-only lineage storage
-- deterministic lineage reconstruction
-- replay-safe dataset references
-- governance-controlled replay reconstruction
-- trace continuity validation
-
-The system prevents:
-
-- mutable replay state
-- silent lineage mutation
-- unauthorized provenance modification
+- same trace_id continuity
+- deterministic replay after restart
+- lineage continuity
+- provenance continuity
+- replay-safe recovery
 
 ---
 
@@ -318,12 +255,11 @@ The Flask dashboard provides:
 
 - live telemetry monitoring
 - replay visibility
+- lineage visibility
+- replay timelines
 - execution tracking
 - rejection visibility
-- mutation monitoring
-- trace inspection
-- orchestration metrics
-- lineage visibility
+- replay-safe inspection
 
 Dashboard APIs:
 
@@ -356,7 +292,8 @@ svacs_unified_core/
 │
 ├── contracts/
 │   ├── __init__.py
-│   └── execution_contract_validator.py
+│   ├── execution_contract_validator.py
+│   └── schema_migration_validator.py
 │
 ├── core/
 │   ├── __init__.py
@@ -375,6 +312,7 @@ svacs_unified_core/
 ├── docs/
 │   ├── constitutional_boundaries.md
 │   ├── provenance_strategy.md
+│   ├── replay_visualization_api.md
 │   ├── REVIEW_PACKET.md
 │   ├── TESTING_PACKET.md
 │   └── system_flow.md
@@ -398,7 +336,8 @@ svacs_unified_core/
 ├── replay/
 │   ├── __init__.py
 │   ├── full_operational_replay.py
-│   └── intelligence_lineage.py
+│   ├── intelligence_lineage.py
+│   └── provenance_reconstruction.py
 │
 ├── sarathi/
 │   ├── __init__.py
@@ -419,7 +358,19 @@ svacs_unified_core/
 │   ├── replay/
 │   ├── telemetry/
 │   └── proofs/
+│       ├── replay_parity_report.json
+│       ├── lineage_ancestry_report.json
+│       ├── replay_schema_compatibility_report.json
+│       ├── replay_recovery_proof.json
+│       ├── federated_trace_report.json
 │       └── logs/
+│           ├── continuous_orchestration.txt
+│           ├── deterministic_replay.txt
+│           ├── lineage_proof.txt
+│           ├── replay_proof.txt
+│           ├── restart_replay_proof.txt
+│           ├── stale_lineage_test.txt
+│           └── telemetry_failure_test.txt
 │
 ├── telemetry/
 │   ├── __init__.py
@@ -427,7 +378,10 @@ svacs_unified_core/
 │
 ├── tests/
 │   ├── __init__.py
-│   └── continuous_orchestration_test.py
+│   ├── continuous_orchestration_test.py
+│   ├── distributed_replay_test.py
+│   ├── corruption_recovery_test.py
+│   └── federated_replay_validation.py
 │
 ├── utils/
 │   ├── append_only_utils.py
@@ -520,10 +474,52 @@ python replay/intelligence_lineage.py
 
 ---
 
+## Provenance Reconstruction
+
+```bash
+python replay/provenance_reconstruction.py
+```
+
+---
+
+# VALIDATION COMMANDS
+
+## Distributed Replay Validation
+
+```bash
+python tests/distributed_replay_test.py
+```
+
+---
+
 ## Continuous Orchestration Validation
 
 ```bash
 python tests/continuous_orchestration_test.py
+```
+
+---
+
+## Corruption Recovery Validation
+
+```bash
+python tests/corruption_recovery_test.py
+```
+
+---
+
+## Federated Replay Validation
+
+```bash
+python tests/federated_replay_validation.py
+```
+
+---
+
+## Replay-Safe Schema Migration Validation
+
+```bash
+python contracts/schema_migration_validator.py
 ```
 
 ---
@@ -539,89 +535,65 @@ python tests/continuous_orchestration_test.py
 
 ---
 
-# EXECUTION FLOWS
+# DISTRIBUTED REPLAY TEST RESULT
 
-## Successful Execution
-
-```text
-SIGNAL
-→ PERCEPTION
-→ INTELLIGENCE
-→ STATE
-→ RAJYA(APPROVED)
-→ SARATHI(TOKEN_GENERATED)
-→ CORE(EXECUTED)
-```
-
-Result:
-
-```text
-EXECUTED
+```json
+{
+    "trace_id": "trace_distributed_001",
+    "deterministic": true,
+    "replay_parity": true
+}
 ```
 
 ---
 
-## Governance Rejection
+# PROVENANCE RECONSTRUCTION RESULT
 
-```text
-INTELLIGENCE(HIGH RISK)
-        ↓
-RAJYA(REJECTED)
-```
-
-Result:
-
-```text
-REJECTED
-```
-
----
-
-## Invalid Token Flow
-
-```text
-SARATHI(TOKEN_DENIED)
-```
-
-Result:
-
-```text
-TOKEN_DENIED
+```json
+{
+    "execution_id": "exec_001",
+    "trace_id": "trace_001",
+    "dataset_version": "v1",
+    "schema_version": "1.0",
+    "source_node": "node_1",
+    "replay_origin": "replay_engine"
+}
 ```
 
 ---
 
-## Mutation Detection Flow
+# SCHEMA MIGRATION RESULT
 
-```text
-CONTRACT(MUTATION_REJECTED)
-```
-
-Result:
-
-```text
-MUTATION_REJECTED
+```json
+{
+    "old_schema_supported": true,
+    "new_schema_supported": true,
+    "mixed_schema_replay_safe": true
+}
 ```
 
 ---
 
-# REPLAY SAFETY
+# CORRUPTION RECOVERY RESULT
 
-Replay validation verifies:
+```json
+{
+    "corruption_detected": true,
+    "recovery_possible": false
+}
+```
 
-- deterministic replay
-- trace continuity
-- append-only lineage
-- provenance continuity
-- hash continuity
-- execution integrity
+---
 
-Replay remains available for:
+# FEDERATED REPLAY RESULT
 
-- approved executions
-- rejected executions
-- token denial flows
-- mutation rejection flows
+```json
+{
+    "trace_id": "trace_federated_001",
+    "lineage_continuity": true,
+    "replay_deterministic_after_restart": true
+}
+```
 
 ---
 
@@ -636,23 +608,8 @@ SVACS uses append-only structured storage.
 | storage/denials | Rejection logs |
 | storage/executions | Execution artifacts |
 | storage/replay | Replay artifacts |
+| storage/proofs | Replay validation proofs |
 | storage/proofs/logs | Operational proof logs |
-
----
-
-# TEST EXECUTION RESULTS
-
-Continuous orchestration validation confirmed:
-
-```json
-{
-    "total_events": 100,
-    "deterministic": true,
-    "trace_continuity": true,
-    "replay_safe": true,
-    "append_only": true
-}
-```
 
 ---
 
@@ -660,21 +617,16 @@ Continuous orchestration validation confirmed:
 
 | Scenario | Status |
 |---|---|
-| Normal execution | PASSED |
-| High-risk rejection | PASSED |
-| Invalid token detection | PASSED |
-| Mutation rejection | PASSED |
-| Replay reconstruction | PASSED |
-| Telemetry monitoring | PASSED |
-| Hash verification | PASSED |
-| Trace continuity validation | PASSED |
+| Distributed replay recovery | PASSED |
+| Replay parity validation | PASSED |
+| Provenance reconstruction | PASSED |
+| Replay-safe schema migration | PASSED |
+| Corruption detection | PASSED |
+| Replay continuity after restart | PASSED |
+| Federated replay continuity | PASSED |
+| Lineage continuity validation | PASSED |
 | Deterministic replay validation | PASSED |
-| Replay-safe orchestration | PASSED |
-| Provenance lineage reconstruction | PASSED |
-| Telemetry interruption recovery | PASSED |
-| Replay recovery after restart | PASSED |
-| Stale lineage recovery | PASSED |
-| Degraded replay recovery | PASSED |
+| Replay-safe observability | PASSED |
 
 ---
 
@@ -687,7 +639,7 @@ Continuous orchestration validation confirmed:
 | HTML | Dashboard UI |
 | CSS | Styling |
 | JavaScript | Live updates |
-| JSON | Structured storage |
+| JSON | Structured append-only storage |
 
 ---
 
@@ -697,14 +649,14 @@ SVACS supports:
 
 - append-only logging
 - deterministic replay validation
-- forensic replay reconstruction
-- mutation resistance
-- governance enforcement
-- token authorization
-- replay-safe observability
+- distributed replay recovery
+- replay-safe schema migration
 - provenance continuity validation
+- corruption-aware replay recovery
+- replay-safe observability
 - trace continuity verification
-- hash chain validation
+- lineage ancestry reconstruction
+- constitutional boundary enforcement
 
 ---
 
@@ -719,8 +671,9 @@ SVACS Unified Core is:
 - governance-controlled
 - mutation-resistant
 - append-only
+- replay-resilient
+- corruption-aware
 - forensic-capable
-- contract-driven
 - operationally traceable
 
 ---
@@ -729,16 +682,15 @@ SVACS Unified Core is:
 
 ```text
 SYSTEM STATUS: OPERATIONAL
-PIPELINE STATUS: VERIFIED
-REPLAY STATUS: ACTIVE
-TELEMETRY STATUS: ACTIVE
-HASH CHAIN STATUS: VERIFIED
-CONTRACT STATUS: VALIDATED
+REPLAY STATUS: VERIFIED
+DISTRIBUTED REPLAY STATUS: VERIFIED
 PROVENANCE STATUS: VERIFIED
-CONSTITUTIONAL STATUS: ENFORCED
-ORCHESTRATION STATUS: DETERMINISTIC
-REPLAY RECOVERY STATUS: VERIFIED
+SCHEMA MIGRATION STATUS: VERIFIED
+CORRUPTION DETECTION STATUS: VERIFIED
+FEDERATED REPLAY STATUS: VERIFIED
 LINEAGE CONTINUITY STATUS: VERIFIED
+OBSERVABILITY STATUS: CONSTITUTIONALLY SAFE
+ORCHESTRATION STATUS: DETERMINISTIC
 ```
 
----
+--- 
