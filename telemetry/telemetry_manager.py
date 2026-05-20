@@ -13,7 +13,7 @@ TELEMETRY_DIR = "storage/telemetry"
 
 TELEMETRY_FILE = (
     f"{TELEMETRY_DIR}/telemetry_logs.json"
-)
+) 
 
 
 # =========================================================
