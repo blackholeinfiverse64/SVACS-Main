@@ -3,7 +3,7 @@
 ## Distributed Replay-Resilient Operational Validation
 
 ---
-
+ 
 # TESTING OVERVIEW
 
 This document contains the complete operational testing and replay validation report for SVACS Unified Core.
