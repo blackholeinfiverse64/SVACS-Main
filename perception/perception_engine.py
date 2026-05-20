@@ -4,7 +4,7 @@ def process_perception(signal_chunk):
         "detected": True,
         "source_signal": signal_chunk
     }
-
+ 
     return perception_event
  
  
