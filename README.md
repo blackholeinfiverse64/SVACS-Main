@@ -6,7 +6,7 @@ SVACS Unified Core is a deterministic, replay-safe, provenance-visible orchestra
 The platform simulates a replay-safe maritime intelligence orchestration pipeline where every execution remains deterministic, append-only, traceable, reconstructable, and governance-bounded even during replay corruption, telemetry interruption, stale lineage recovery, and distributed replay node failure.
 
 ---
-
+ 
 # PROJECT OBJECTIVE
 
 The primary objective of SVACS Unified Core is to provide:
