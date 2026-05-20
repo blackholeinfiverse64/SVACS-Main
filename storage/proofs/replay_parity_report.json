@@ -3,7 +3,7 @@
     "nodes": [
         {
             "node": "node_1",
-            "status": "ACTIVE"
+            "status": "ACTIVE" 
         },
         {
             "node": "node_2",
