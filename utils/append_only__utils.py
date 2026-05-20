@@ -10,3 +10,4 @@ def calculate_hash(data):
             sort_keys=True 
         ).encode()
     ).hexdigest()
+ 
