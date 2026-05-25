@@ -1,13 +1,27 @@
 # Failure Case Report
 
-## Validated Failures
+## Validated Failure Scenarios
 
-- telemetry interruption
-- replay recovery
-- schema mismatch
-- geo uncertainty
-- RL boundary protection
+### 1. Telemetry Interruption
+Result:
+Replay continuity preserved.
 
-## Result
+### 2. Stale Geo Lineage
+Result:
+Geo provenance validation rejected invalid lineage.
 
-All failures isolated safely.
+### 3. RL Boundary Violation Attempt
+Result:
+Policy guardrails prevented governance modification.
+
+### 4. Corrupted Scenario Replay
+Result:
+Replay reconstruction isolated corrupted artifacts.
+
+### 5. Invalid Dataset Governance Metadata
+Result:
+Governance validator rejected incomplete schema.
+
+## Final Status
+
+Failure handling remains deterministic, replay-safe, and constitutionally bounded.
