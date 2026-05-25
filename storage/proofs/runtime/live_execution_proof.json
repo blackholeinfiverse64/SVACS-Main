@@ -1,0 +1,6 @@
+{
+  "runtime_valid": true,
+  "replay_safe": true,
+  "geo_valid": true,
+  "rl_boundary_safe": true
+}
