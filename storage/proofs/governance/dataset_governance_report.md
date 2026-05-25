@@ -1,8 +1,14 @@
-Dataset governance validation completed successfully.
+# Dataset Governance Report
 
-Validated:
-- trust score
-- approval state
+## Validated Governance Areas
+
 - dataset ownership
-- source confidence
-- schema authority reference
+- trust score validation
+- approval validation
+- schema authority validation
+- registry reference validation
+- deterministic governance handling
+
+## Status
+
+DATASET_GOVERNANCE_VALID
