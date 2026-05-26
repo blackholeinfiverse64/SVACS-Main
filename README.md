@@ -4,7 +4,7 @@
 
 SVACS Unified Core is a deterministic, replay-safe, provenance-visible orchestration framework designed for distributed replay reconstruction, governance-aware dataset validation, geo provenance hardening, bounded adaptive learning, operational realism simulation, and replay-safe maritime intelligence orchestration under degraded infrastructure conditions.
 
-The platform validates deterministic replay continuity, corruption-aware recovery, provenance-safe reconstruction, operational scenario realism, RL experimentation boundaries, geo lineage continuity, and observability-safe replay inspection while preserving constitutional execution isolation.
+The platform validates deterministic replay continuity, corruption-aware recovery, provenance-safe reconstruction, operational scenario realism, RL experimentation boundaries, geo lineage continuity, and observability-safe replay inspection while preserving constitutional execution isolation. 
 
 ---
 
