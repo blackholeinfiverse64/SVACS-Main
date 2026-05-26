@@ -7,3 +7,4 @@ def generate_state(intelligence_event):
  
     return state_event 
  
+ 
