@@ -1,7 +1,7 @@
 # REVIEW_PACKET_vNext.md
 # SVACS Unified Core
 ## Governance-Aware Deterministic Maritime Intelligence Substrate
-  
+   
 ---
 
 # PROJECT OVERVIEW
