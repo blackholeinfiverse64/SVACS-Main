@@ -6,7 +6,7 @@ SVACS Unified Core is a deterministic, replay-safe, provenance-visible orchestra
 
 The platform validates deterministic replay continuity, corruption-aware recovery, provenance-safe reconstruction, operational scenario realism, RL experimentation boundaries, geo lineage continuity, and observability-safe replay inspection while preserving constitutional execution isolation. 
 
----
+--- 
 
 # PROJECT OBJECTIVE
 
