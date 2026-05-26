@@ -6,7 +6,7 @@ with open("geo/geo_provenance_schema.json") as f:
 required = [
     "geo_source_lineage",
     "coordinate_origin",
-    "sensor_origin",
+    "sensor_origin", 
     "spatial_uncertainty",
     "timestamp_uncertainty",
     "coordinate_confidence",
