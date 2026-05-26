@@ -4,7 +4,7 @@
 
 This report validates realistic bounded maritime operational scenarios for SVACS Unified Core.
 
-The objective of scenario testing is to validate:
+The objective of scenario testing is to validate: 
 
 - deterministic operational reconstruction
 - replay-safe scenario continuity
