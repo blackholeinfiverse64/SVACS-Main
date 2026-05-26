@@ -12,7 +12,7 @@ required_fields = [
     "dataset_expiry_policy",
     "federated_registry_reference",
     "dataset_change_log",
-    "source_confidence",
+    "source_confidence", 
     "schema_authority_reference"
 ]
 
