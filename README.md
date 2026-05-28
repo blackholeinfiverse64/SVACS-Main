@@ -1,38 +1,58 @@
 # SVACS Unified Core
 
-## Distributed Replay-Resilient Maritime Orchestration Infrastructure
+## Governance-Aware Deterministic Maritime Intelligence Substrate
 
-SVACS Unified Core is a deterministic, replay-safe, provenance-visible orchestration framework designed for distributed replay reconstruction, governance-aware dataset validation, geo provenance hardening, bounded adaptive learning, operational realism simulation, and replay-safe maritime intelligence orchestration under degraded infrastructure conditions.
+SVACS Unified Core is a deterministic, replay-safe, governance-aware maritime orchestration infrastructure designed for:
 
-The platform validates deterministic replay continuity, corruption-aware recovery, provenance-safe reconstruction, operational scenario realism, RL experimentation boundaries, geo lineage continuity, and observability-safe replay inspection while preserving constitutional execution isolation. 
+* distributed replay reconstruction
+* provenance continuity
+* geo lineage hardening
+* governance-aware dataset validation
+* operational maritime realism
+* bounded adaptive learning experimentation
+* replay-safe observability
+* corruption-aware replay recovery
+* append-only forensic continuity
 
---- 
+The platform simulates realistic maritime intelligence orchestration workflows where every execution remains:
 
-# PROJECT OBJECTIVE
+* deterministic
+* append-only
+* provenance-visible
+* replay-reconstructable
+* governance-controlled
+* mutation-resistant
+* operationally traceable
 
-SVACS Unified Core provides:
+---
+
+# SYSTEM OBJECTIVE
+
+SVACS Unified Core validates:
 
 * deterministic orchestration
 * distributed replay parity
 * replay-safe reconstruction
-* governance-aware dataset validation
-* geo provenance hardening
-* operational maritime scenario simulation
+* governance-aware dataset handling
+* geo provenance continuity
+* operational maritime realism
 * bounded RL experimentation
-* provenance-visible intelligence lineage
-* telemetry-driven monitoring
-* replay-safe schema migration
-* corruption-aware replay recovery
-* append-only forensic continuity
 * operator auditability
-* external maritime grounding readiness
+* replay-safe schema evolution
+* corruption-aware recovery
+* append-only lineage continuity
+* constitutional execution isolation
 
 ---
 
-# SYSTEM PIPELINE
+# CORE EXECUTION PIPELINE
 
 ```text
 SIGNAL
+   ↓
+NOISE
+   ↓
+GEO
    ↓
 PERCEPTION
    ↓
@@ -40,7 +60,11 @@ INTELLIGENCE
    ↓
 STATE
    ↓
+BUCKET
+   ↓
 REPLAY
+   ↓
+OBSERVABILITY
    ↓
 OPERATOR REVIEW
    ↓
@@ -49,17 +73,21 @@ DASHBOARD
 
 ---
 
-# PIPELINE STAGES
+# PIPELINE RESPONSIBILITIES
 
-| Stage           | Purpose                                           |
-| --------------- | ------------------------------------------------- |
-| SIGNAL          | Signal and event ingestion                        |
-| PERCEPTION      | Signal interpretation                             |
-| INTELLIGENCE    | Intelligence generation and anomaly analysis      |
-| STATE           | Deterministic orchestration and state persistence |
-| REPLAY          | Replay reconstruction and lineage recovery        |
-| OPERATOR REVIEW | Auditability and replay inspection                |
-| DASHBOARD       | Observability-only visualization                  |
+| Stage           | Responsibility                          |
+| --------------- | --------------------------------------- |
+| SIGNAL          | Maritime signal ingestion               |
+| NOISE           | Telemetry degradation simulation        |
+| GEO             | Geo provenance enrichment               |
+| PERCEPTION      | Signal interpretation                   |
+| INTELLIGENCE    | Intelligence analysis                   |
+| STATE           | Deterministic orchestration persistence |
+| BUCKET          | Replay persistence continuity           |
+| REPLAY          | Replay reconstruction                   |
+| OBSERVABILITY   | Replay-safe visibility                  |
+| OPERATOR REVIEW | Auditability workflows                  |
+| DASHBOARD       | Observability-only inspection           |
 
 ---
 
@@ -67,44 +95,20 @@ DASHBOARD
 
 ## Deterministic Replay Orchestration
 
-All executions follow deterministic orchestration rules.
+SVACS guarantees:
 
-The system guarantees:
-
-* replay-safe execution
-* deterministic outputs
+* deterministic execution
+* replay-safe reconstruction
 * reproducible replay states
 * append-only lineage continuity
-* trace continuity
-* replay-safe reconstruction
-
----
-
-## Constitutional Boundary Enforcement
-
-SVACS enforces replay-safe constitutional boundaries.
-
-The system guarantees:
-
-* replay never becomes authority
-* telemetry never becomes governance
-* RL never modifies constitutional semantics
-* observability never becomes execution control
-* provenance never mutates replay semantics
-
-Rejected states include:
-
-```text
-REJECTED
-TOKEN_DENIED
-MUTATION_REJECTED
-```
+* replay parity validation
+* provenance-visible replay
 
 ---
 
 ## Governance-Aware Dataset Validation
 
-SVACS validates governance maturity across operational datasets.
+SVACS validates governance maturity across datasets.
 
 Governance metadata includes:
 
@@ -114,17 +118,48 @@ Governance metadata includes:
 * approval_state
 * validation_status
 * dataset_expiry_policy
-* source_confidence
 * federated_registry_reference
+* dataset_change_log
+* source_confidence
 * schema_authority_reference
 
-Governance validation remains deterministic and replay-safe.
+Validation guarantees:
+
+* deterministic governance continuity
+* replay-safe dataset ancestry
+* immutable governance lineage
+* governance-safe replay reconstruction
+
+---
+
+## Provenance Layer
+
+All orchestration artifacts carry provenance metadata.
+
+Provenance fields include:
+
+* schema_version
+* dataset_version
+* source_lineage
+* ais_lineage
+* replay_reference
+* provenance_hash
+* dataset_origin
+* simulation_origin
+* compatibility_metadata
+
+The provenance system guarantees:
+
+* replay-safe lineage continuity
+* schema ancestry reconstruction
+* append-only provenance tracking
+* deterministic replay compatibility
 
 ---
 
 ## Geo Provenance Hardening
 
-Every geo artifact maintains provenance metadata including:
+Geo artifacts include:
 
 * geo_source_lineage
 * coordinate_origin
@@ -133,9 +168,15 @@ Every geo artifact maintains provenance metadata including:
 * timestamp_uncertainty
 * coordinate_confidence
 * geo_transformation_history
+* location_reference_version
 * geo_validation_status
 
-Geo reconstruction remains lineage-visible and replay-safe.
+Geo reconstruction remains:
+
+* deterministic
+* replay-safe
+* append-only
+* provenance-visible
 
 ---
 
@@ -147,9 +188,13 @@ Simulated failure conditions include:
 
 * replay node outage
 * stale replay node
-* delayed telemetry
+* telemetry interruption
 * lineage corruption
-* append-only continuity loss
+* append-only degradation
+* node desynchronization
+* bucket latency
+* schema mismatch
+* restart recovery
 
 Replay reconstruction remains deterministic after recovery.
 
@@ -157,27 +202,26 @@ Replay reconstruction remains deterministic after recovery.
 
 ## Replay-Safe Schema Migration
 
-Replay schema migration validation includes:
+Replay migration validation supports:
 
-* old schema replay compatibility
-* mixed schema replay safety
+* schema evolution
 * replay-safe fallback
-* schema drift visibility
 * deterministic migration continuity
+* replay-safe compatibility handling
+* lineage-preserving reconstruction
 
 ---
 
 ## Corruption Recovery Validation
 
-SVACS validates replay reconstruction during corruption conditions.
-
-Validated corruption scenarios include:
+SVACS validates replay recovery during:
 
 * corrupted replay artifacts
 * telemetry interruption
-* replay restart recovery
 * stale lineage recovery
+* replay restart recovery
 * broken replay ancestry
+* append-only corruption
 
 The system guarantees:
 
@@ -190,7 +234,9 @@ The system guarantees:
 
 ## Operational Maritime Scenario Pack
 
-SVACS includes bounded operational maritime scenarios including:
+SVACS includes realistic operational maritime scenarios.
+
+Scenario pack includes:
 
 * piracy interception
 * illegal fishing detection
@@ -199,19 +245,20 @@ SVACS includes bounded operational maritime scenarios including:
 * port congestion overload
 * sensor deception event
 
-Each scenario includes:
+Each scenario contains:
 
 * multi-signal inputs
 * operational ambiguity
+* telemetry noise
 * geo provenance
 * replay reconstruction proof
 * expected intelligence outcome
 
 ---
 
-## RL Sandbox Boundaries
+## RL Sandbox (Constitutionally Bounded)
 
-SVACS includes constitutionally bounded RL experimentation.
+SVACS includes bounded adaptive experimentation.
 
 RL MAY optimize:
 
@@ -226,52 +273,104 @@ RL MAY NOT modify:
 * governance semantics
 * replay truth
 * execution authority
-* contract meaning
 * constitutional boundaries
+* contract meaning
+
+The RL environment remains replay-safe and governance-isolated.
 
 ---
 
-## Operator Auditability Layer
+## Human Operator Realism Layer
 
-The operator realism layer provides:
+Operator workflows include:
 
 * analyst review workflow
 * replay inspection workflow
+* decision auditability
 * confidence explanation surface
 * operator override visibility
 * human validation trail
-* decision auditability
 
-The operator layer remains inspection-only.
+The operator layer remains:
+
+```text
+INSPECTION ONLY
+```
+
+No execution authority is exposed.
 
 ---
 
-## Real-Time Telemetry Monitoring
+## External Maritime Grounding Readiness
+
+SVACS includes future grounding preparation for:
+
+* AIS feed compatibility
+* registry import compatibility
+* external maritime adapters
+* deterministic onboarding contracts
+* vessel registry ingestion
+
+Prepared maritime interfaces include:
+
+* AIS lineage adapters
+* registry contracts
+* onboarding schemas
+* source lineage validation
+
+---
+
+# REAL MARITIME DATA FOUNDATION
+
+SVACS supports Jane’s-aligned maritime vessel registry structures.
+
+Registry metadata supports:
+
+* vessel_class
+* signature_profile
+* propulsion_metadata
+* size_metadata
+* operational_role
+* source_metadata
+* version_metadata
+
+Example supported vessel types:
+
+* cargo vessels
+* patrol vessels
+* speedboats
+* fishing vessels
+* submarines
+* support vessels
+
+---
+
+# REAL-TIME TELEMETRY
 
 Telemetry events are emitted across all orchestration stages.
 
-Telemetry includes:
+Telemetry metadata includes:
 
 * execution_id
 * trace_id
 * stage
 * service
-* status
 * severity
+* status
 * timestamps
 
 Example telemetry event:
 
 ```json
 {
-    "event_id": "uuid",
-    "execution_id": "exec_xxxx",
-    "trace_id": "trace_xxxx",
-    "stage": "STATE",
-    "service": "STATE",
-    "status": "COMPLETED",
-    "severity": "INFO",
-    "timestamp": "timestamp"
+  "event_id": "uuid",
+  "execution_id": "exec_001",
+  "trace_id": "trace_001",
+  "stage": "STATE",
+  "service": "STATE_ENGINE",
+  "status": "COMPLETED",
+  "severity": "INFO",
+  "timestamp": "2026-01-01T00:00:00Z"
 }
 ```
 
@@ -292,6 +391,7 @@ svacs_unified_core/
 ├── intelligence/
 ├── orchestration/
 ├── perception/
+├── provenance/
 ├── rajya/
 ├── replay/
 ├── rl_sandbox/
@@ -358,6 +458,14 @@ python main.py
 
 ---
 
+## Run Full Operational Chain
+
+```bash
+python full_operational_chain.py
+```
+
+---
+
 ## Run Dashboard
 
 ```bash
@@ -386,6 +494,14 @@ python governance/dataset_governance_validator.py
 
 ```bash
 python geo/geo_provenance_validator.py
+```
+
+---
+
+## Provenance Validation
+
+```bash
+python provenance/provenance_validator.py
 ```
 
 ---
@@ -422,10 +538,10 @@ python tests/corruption_recovery_test.py
 
 ---
 
-## Federated Replay Validation
+## Replay Migration Validation
 
 ```bash
-python tests/federated_replay_validation.py
+python replay_migration_test.py
 ```
 
 ---
@@ -445,15 +561,22 @@ python tests/federated_replay_validation.py
 
 SVACS uses append-only structured storage.
 
-| Directory           | Purpose                |
-| ------------------- | ---------------------- |
-| storage/dashboard   | Dashboard payloads     |
-| storage/telemetry   | Telemetry logs         |
-| storage/denials     | Rejection logs         |
-| storage/executions  | Execution artifacts    |
-| storage/replay      | Replay artifacts       |
-| storage/proofs      | Validation proofs      |
-| storage/proofs/logs | Operational proof logs |
+```text
+storage/
+│
+├── dashboard/
+├── denials/
+├── executions/
+├── governance/
+├── geo/
+├── replay/
+├── telemetry/
+└── proofs/
+    ├── logs/
+    ├── replay/
+    ├── lineage/
+    └── governance/
+```
 
 ---
 
@@ -467,22 +590,22 @@ SVACS uses append-only structured storage.
 | Geo provenance validation        | PASSED |
 | Replay-safe schema migration     | PASSED |
 | Corruption recovery              | PASSED |
-| Federated replay continuity      | PASSED |
 | RL boundary validation           | PASSED |
 | Operational scenario simulation  | PASSED |
 | Operator auditability validation | PASSED |
+| Replay-safe observability        | PASSED |
 
 ---
 
 # TECHNOLOGIES USED
 
-| Technology          | Purpose                        |
-| ------------------- | ------------------------------ |
-| Python              | Core backend                   |
-| Flask               | Dashboard server               |
-| JSON                | Structured append-only storage |
-| HTML/CSS/JavaScript | Dashboard visualization        |
-| Hash utilities      | Integrity validation           |
+| Technology          | Purpose                 |
+| ------------------- | ----------------------- |
+| Python              | Core backend            |
+| Flask               | Dashboard server        |
+| JSON                | Append-only storage     |
+| HTML/CSS/JavaScript | Dashboard visualization |
+| Hash utilities      | Integrity validation    |
 
 ---
 
@@ -492,8 +615,8 @@ SVACS supports:
 
 * append-only logging
 * deterministic replay validation
-* corruption-aware replay recovery
 * governance-aware dataset validation
+* corruption-aware replay recovery
 * geo provenance continuity
 * replay-safe schema migration
 * replay-safe observability
@@ -503,14 +626,63 @@ SVACS supports:
 
 ---
 
+# GOVERNANCE BOUNDARIES
+
+SVACS guarantees:
+
+* governance remains deterministic
+* replay never becomes authority
+* telemetry never becomes governance
+* provenance never mutates replay semantics
+* dashboards remain observability-only
+* RL remains constitutionally bounded
+
+---
+
+# LEARNING BOUNDARIES
+
+Adaptive systems are restricted to:
+
+* prioritization optimization
+* signal ranking
+* confidence weighting
+* replay-safe experimentation
+
+Adaptive systems cannot modify:
+
+* governance semantics
+* replay truth
+* execution authority
+* constitutional enforcement
+
+---
+
+# OPERATOR BOUNDARIES
+
+Operators may:
+
+* inspect replay continuity
+* validate lineage
+* audit telemetry
+* review confidence states
+
+Operators may NOT:
+
+* mutate replay state
+* override governance semantics
+* alter constitutional boundaries
+* manipulate replay truth
+
+---
+
 # SYSTEM CHARACTERISTICS
 
 SVACS Unified Core is:
 
 * deterministic
 * replay-safe
-* provenance-visible
 * governance-aware
+* provenance-visible
 * telemetry-enabled
 * append-only
 * replay-resilient
@@ -535,4 +707,5 @@ RL BOUNDARY STATUS: ENFORCED
 LINEAGE CONTINUITY STATUS: VERIFIED
 OBSERVABILITY STATUS: CONSTITUTIONALLY SAFE
 ORCHESTRATION STATUS: DETERMINISTIC
+MARITIME REALISM STATUS: ACTIVE
 ```
