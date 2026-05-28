@@ -1,0 +1,6 @@
+{
+  "trace_id": "trace_001",
+  "status": "SUCCESS",
+  "deterministic": true,
+  "replay_safe": true
+}
