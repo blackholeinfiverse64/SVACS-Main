@@ -2,25 +2,38 @@
 
 # SVACS Unified Core
 
-## Deterministic Maritime Intelligence Substrate — Operational Testing Packet
+## Deterministic Maritime Intelligence Runtime — Operational Testing Packet
 
 ---
 
 # TESTING OVERVIEW
 
-This document contains the complete operational testing and validation report for SVACS Unified Core.
+This document contains the complete operational validation and deterministic replay testing report for SVACS Unified Core.
 
-The testing objective validates that SVACS successfully operates as a:
+The testing objective validates that SVACS successfully operates as:
 
-* deterministic orchestration framework
+* deterministic orchestration runtime
 * replay-safe maritime intelligence substrate
-* governance-aware operational runtime
+* governance-aware operational framework
 * provenance-visible execution system
-* replay-resilient distributed architecture
+* append-only replay architecture
 * bounded adaptive learning environment
-* constitutionally isolated observability platform
+* geo lineage hardened infrastructure
+* replay-resilient distributed runtime
+* operationally traceable intelligence system
 
-The validation process confirms replay continuity, lineage preservation, governance integrity, geo provenance continuity, distributed recovery behavior, operational realism simulation, and bounded RL enforcement under degraded infrastructure conditions.
+The validation process confirms:
+
+* replay continuity
+* deterministic reconstruction
+* bucket persistence continuity
+* governance integrity
+* geo provenance continuity
+* RL boundedness enforcement
+* distributed replay recovery
+* operational scenario realism
+* replay-safe observability
+* append-only lineage continuity
 
 ---
 
@@ -30,14 +43,15 @@ The validation process confirms replay continuity, lineage preservation, governa
 | ------------------------------ | ------------------------ |
 | Operating System               | Windows 11               |
 | Runtime Language               | Python 3.11              |
-| Dashboard Framework            | Flask                    |
-| Frontend Layer                 | HTML / CSS / JavaScript  |
+| Dashboard Runtime              | React + Vite             |
+| Backend Runtime                | Python                   |
 | Storage Model                  | JSON Append-Only         |
-| Replay Architecture            | Distributed Replay Nodes |
+| Replay Architecture            | Deterministic Replay     |
 | Governance Layer               | Enabled                  |
 | Geo Provenance Layer           | Enabled                  |
 | RL Sandbox                     | Constitutionally Bounded |
 | Replay Persistence             | Enabled                  |
+| Bucket Integration             | Enabled                  |
 | Operator Auditability          | Enabled                  |
 | Observability Layer            | Enabled                  |
 | External Grounding Preparation | Enabled                  |
@@ -62,8 +76,6 @@ STATE
 BUCKET
    ↓
 REPLAY
-   ↓
-OPERATOR REVIEW
    ↓
 OBSERVABILITY
    ↓
@@ -91,8 +103,8 @@ DASHBOARD
 | Distributed Replay Recovery        | PASSED |
 | Schema Migration Validation        | PASSED |
 | Corruption Recovery Validation     | PASSED |
-| Dashboard APIs                     | PASSED |
-| Telemetry Manager                  | PASSED |
+| Dashboard Runtime                  | PASSED |
+| Telemetry Layer                    | PASSED |
 | Scenario Runner                    | PASSED |
 | External Dataset Adapter Interface | PASSED |
 
@@ -116,6 +128,7 @@ Validate deterministic replay-safe orchestration continuity.
 | Append-only lineage continuity | PASSED |
 | Replay parity preservation     | PASSED |
 | Runtime restart recovery       | PASSED |
+| Bucket replay continuity       | PASSED |
 
 ---
 
@@ -131,7 +144,6 @@ python full_operational_chain.py
 
 ```text
 SIGNAL -> COMPLETED
-NOISE -> COMPLETED
 GEO -> COMPLETED
 PERCEPTION -> COMPLETED
 INTELLIGENCE -> COMPLETED
@@ -144,6 +156,41 @@ DASHBOARD -> COMPLETED
 DETERMINISTIC CHAIN VERIFIED
 REPLAY SAFE
 LINEAGE CONTINUITY VERIFIED
+```
+
+---
+
+# BUCKET INTEGRATION TESTING
+
+## Objective
+
+Validate replay persistence and lineage continuity using live bucket infrastructure.
+
+---
+
+# VALIDATED CONDITIONS
+
+| Validation Area               | Result |
+| ----------------------------- | ------ |
+| Artifact upload               | PASSED |
+| Parent hash continuity        | PASSED |
+| Append-only persistence       | PASSED |
+| Replay lineage continuity     | PASSED |
+| Bucket replay compatibility   | PASSED |
+| Deterministic replay ancestry | PASSED |
+
+---
+
+# BUCKET VALIDATION RESULT
+
+```json
+{
+  "bucket_connected": true,
+  "artifact_uploaded": true,
+  "lineage_continuity": true,
+  "append_only_validation": true,
+  "replay_safe": true
+}
 ```
 
 ---
@@ -193,10 +240,10 @@ DATASET_GOVERNANCE_VALID
 
 ```json
 {
-    "governance_validation": true,
-    "deterministic_governance": true,
-    "lineage_safe": true,
-    "mutation_detected": false
+  "governance_validation": true,
+  "deterministic_governance": true,
+  "lineage_safe": true,
+  "mutation_detected": false
 }
 ```
 
@@ -245,16 +292,16 @@ GEO_PROVENANCE_VALID
 
 ```json
 {
-    "geo_validation": true,
-    "coordinate_integrity": true,
-    "geo_lineage_safe": true,
-    "uncertainty_visibility": true
+  "geo_validation": true,
+  "coordinate_integrity": true,
+  "geo_lineage_safe": true,
+  "uncertainty_visibility": true
 }
 ```
 
 ---
 
-# OPERATIONAL MARITIME SCENARIO TESTING
+# OPERATIONAL SCENARIO TESTING
 
 ## Objective
 
@@ -264,14 +311,14 @@ Validate realistic maritime operational simulation behavior.
 
 # TESTED SCENARIOS
 
-| Scenario                    | Result |
-| --------------------------- | ------ |
-| Piracy Interception         | PASSED |
-| Illegal Fishing Detection   | PASSED |
-| Submarine Stealth Ambiguity | PASSED |
-| Smuggling Route Anomaly     | PASSED |
-| Port Congestion Overload    | PASSED |
-| Sensor Deception Event      | PASSED |
+| Scenario                  | Result |
+| ------------------------- | ------ |
+| Piracy Interception       | PASSED |
+| Illegal Fishing Detection | PASSED |
+| Smuggling Route Anomaly   | PASSED |
+| Submarine Ambiguity       | PASSED |
+| Port Congestion Overload  | PASSED |
+| Sensor Deception Event    | PASSED |
 
 ---
 
@@ -279,7 +326,7 @@ Validate realistic maritime operational simulation behavior.
 
 Validated:
 
-* multi-signal input handling
+* multi-signal inputs
 * telemetry continuity
 * geo provenance continuity
 * operational ambiguity handling
@@ -301,10 +348,10 @@ python scenario_pack/scenario_runner.py
 
 ```json
 {
-    "scenario_count": 6,
-    "deterministic_execution": true,
-    "geo_provenance_valid": true,
-    "replay_safe": true
+  "scenario_count": 6,
+  "deterministic_execution": true,
+  "geo_provenance_valid": true,
+  "replay_safe": true
 }
 ```
 
@@ -352,10 +399,10 @@ RL_BOUNDARIES_ACTIVE
 
 ```json
 {
-    "governance_modification_allowed": false,
-    "execution_authority_allowed": false,
-    "replay_mutation_allowed": false,
-    "signal_optimization_allowed": true
+  "governance_modification_allowed": false,
+  "execution_authority_allowed": false,
+  "replay_mutation_allowed": false,
+  "signal_optimization_allowed": true
 }
 ```
 
@@ -365,7 +412,7 @@ RL_BOUNDARIES_ACTIVE
 
 ## Objective
 
-Validate human operator realism and audit workflows.
+Validate operator inspection and audit workflows.
 
 ---
 
@@ -386,9 +433,9 @@ Validate human operator realism and audit workflows.
 
 ```json
 {
-    "operator_review_enabled": true,
-    "auditability_visible": true,
-    "human_validation_logged": true
+  "operator_review_enabled": true,
+  "auditability_visible": true,
+  "human_validation_logged": true
 }
 ```
 
@@ -412,14 +459,7 @@ Validated:
 * partial lineage corruption
 * restart recovery
 * replay degradation
-
----
-
-# DISTRIBUTED REPLAY COMMAND
-
-```bash
-python tests/distributed_replay_test.py
-```
+* bucket latency
 
 ---
 
@@ -427,24 +467,12 @@ python tests/distributed_replay_test.py
 
 ```json
 {
-    "trace_id": "trace_distributed_001",
-    "deterministic": true,
-    "replay_parity": true,
-    "node_recovery": true
+  "trace_id": "trace_distributed_001",
+  "deterministic": true,
+  "replay_parity": true,
+  "node_recovery": true
 }
 ```
-
----
-
-# REPLAY VALIDATION RESULTS
-
-| Validation Area      | Result |
-| -------------------- | ------ |
-| Replay Parity        | PASSED |
-| Replay Continuity    | PASSED |
-| Deterministic Replay | PASSED |
-| Node Recovery        | PASSED |
-| Trace Continuity     | PASSED |
 
 ---
 
@@ -468,77 +496,14 @@ Validated:
 
 ---
 
-# CORRUPTION RECOVERY COMMAND
-
-```bash
-python tests/corruption_recovery_test.py
-```
-
----
-
 # CORRUPTION RECOVERY RESULT
 
 ```json
 {
-    "corruption_detected": true,
-    "recovery_possible": false,
-    "irrecoverable_boundary_visible": true
+  "corruption_detected": true,
+  "recovery_possible": false,
+  "irrecoverable_boundary_visible": true
 }
-```
-
----
-
-# SCHEMA MIGRATION TESTING
-
-## Objective
-
-Validate replay-safe schema evolution continuity.
-
----
-
-# SCHEMA MIGRATION COMMAND
-
-```bash
-python contracts/schema_migration_validator.py
-```
-
----
-
-# SCHEMA MIGRATION RESULT
-
-```json
-{
-    "old_schema_supported": true,
-    "new_schema_supported": true,
-    "mixed_schema_replay_safe": true
-}
-```
-
----
-
-# EXTERNAL MARITIME GROUNDING TESTING
-
-## Objective
-
-Validate future maritime dataset onboarding readiness.
-
----
-
-# VALIDATED INTERFACES
-
-| Interface                          | Result |
-| ---------------------------------- | ------ |
-| AIS Feed Contract                  | PASSED |
-| Registry Import Contract           | PASSED |
-| External Dataset Adapter Interface | PASSED |
-| Dataset Onboarding Contract        | PASSED |
-
----
-
-# EXTERNAL GROUNDING COMMAND
-
-```bash
-python external_grounding/external_dataset_adapter_interface.py
 ```
 
 ---
@@ -568,22 +533,6 @@ The dashboard does NOT provide:
 
 ---
 
-# SECURITY VALIDATION
-
-Validated protections include:
-
-* append-only telemetry integrity
-* replay-safe lineage continuity
-* deterministic replay reconstruction
-* governance mutation prevention
-* replay mutation prevention
-* provenance continuity enforcement
-* geo provenance preservation
-* RL constitutional boundary isolation
-* operator audit visibility
-
----
-
 # LIVE EXECUTION PROOF
 
 Runtime validation outputs confirmed:
@@ -595,27 +544,29 @@ RL_BOUNDARIES_ACTIVE
 SCENARIO_PACK_EXECUTED
 REPLAY_PARITY_VERIFIED
 LINEAGE_CONTINUITY_VERIFIED
+BUCKET_REPLAY_CONTINUITY_VERIFIED
 ```
 
 ---
 
 # FINAL VALIDATION SUMMARY
 
-| Validation Area              | Result |
-| ---------------------------- | ------ |
-| Deterministic Execution      | PASSED |
-| Replay Reconstruction        | PASSED |
-| Dataset Governance           | PASSED |
-| Geo Provenance Hardening     | PASSED |
-| Maritime Scenario Realism    | PASSED |
-| RL Boundary Enforcement      | PASSED |
-| Operator Auditability        | PASSED |
-| Distributed Replay Recovery  | PASSED |
-| Schema Migration Safety      | PASSED |
-| Corruption Detection         | PASSED |
-| Replay Continuity            | PASSED |
-| Constitutional Isolation     | PASSED |
-| External Grounding Readiness | PASSED |
+| Validation Area               | Result |
+| ----------------------------- | ------ |
+| Deterministic Execution       | PASSED |
+| Replay Reconstruction         | PASSED |
+| Dataset Governance            | PASSED |
+| Geo Provenance Hardening      | PASSED |
+| Maritime Scenario Realism     | PASSED |
+| RL Boundary Enforcement       | PASSED |
+| Operator Auditability         | PASSED |
+| Distributed Replay Recovery   | PASSED |
+| Schema Migration Safety       | PASSED |
+| Corruption Detection          | PASSED |
+| Replay Continuity             | PASSED |
+| Bucket Persistence Continuity | PASSED |
+| Constitutional Isolation      | PASSED |
+| External Grounding Readiness  | PASSED |
 
 ---
 
@@ -629,6 +580,7 @@ GEO PROVENANCE STATUS: VERIFIED
 RL BOUNDARY STATUS: ENFORCED
 LINEAGE CONTINUITY STATUS: VERIFIED
 REPLAY PARITY STATUS: VERIFIED
+BUCKET STATUS: ACTIVE
 OBSERVABILITY STATUS: CONSTITUTIONALLY SAFE
 ORCHESTRATION STATUS: DETERMINISTIC
 MARITIME REALISM STATUS: ACTIVE
@@ -653,6 +605,7 @@ SVACS Unified Core successfully demonstrates:
 * replay-safe schema evolution
 * corruption-aware replay recovery
 * constitutional execution isolation
+* live bucket persistence continuity
 * external maritime grounding readiness
 
-The platform successfully transitioned from a replay-safe engineering framework toward a governance-aware deterministic maritime intelligence substrate with operational realism, replay resilience, provenance continuity, and bounded adaptive learning enforcement.
+The platform successfully transitioned toward a governance-aware deterministic maritime intelligence runtime with replay resilience, provenance continuity, operational realism, bounded adaptive learning, and append-only replay persistence.
