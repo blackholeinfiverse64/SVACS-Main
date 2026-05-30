@@ -1,0 +1,103 @@
+{
+    "execution_id": "70b17069-ff31-425a-b344-28f4bf88472f",
+    "trace_id": "a3ea96c5-72b6-4bf2-968c-711f346c175a",
+    "runtime_status": "ACTIVE",
+    "deterministic": true,
+    "replay_safe": true,
+    "pipeline_status": [
+        {
+            "stage": "SIGNAL",
+            "status": "COMPLETED",
+            "details": {
+                "signal_strength": 0.95,
+                "signal_source": "AIS_RUNTIME",
+                "signal_status": "VALID",
+                "signal_type": "VESSEL_TRACKING"
+            },
+            "timestamp": "2026-05-29T06:26:58.970140+00:00"
+        },
+        {
+            "stage": "GEO",
+            "status": "COMPLETED",
+            "details": {
+                "latitude": 19.076,
+                "longitude": 72.8777,
+                "geo_validation": true,
+                "coordinate_confidence": 0.98,
+                "geo_source_lineage": "AIS_GEO_RUNTIME"
+            },
+            "timestamp": "2026-05-29T06:26:58.972093+00:00"
+        },
+        {
+            "stage": "PERCEPTION",
+            "status": "COMPLETED",
+            "details": {
+                "vessel_detected": true,
+                "vessel_class": "Cargo",
+                "threat_detected": false,
+                "confidence_score": 0.94
+            },
+            "timestamp": "2026-05-29T06:26:58.974147+00:00"
+        },
+        {
+            "stage": "INTELLIGENCE",
+            "status": "COMPLETED",
+            "details": {
+                "risk_score": 0.14,
+                "anomaly_detected": false,
+                "recommendation": "MONITOR",
+                "intelligence_status": "STABLE"
+            },
+            "timestamp": "2026-05-29T06:26:58.976373+00:00"
+        },
+        {
+            "stage": "STATE",
+            "status": "COMPLETED",
+            "details": {
+                "state_status": "ACTIVE",
+                "deterministic_state": true,
+                "state_integrity": "VERIFIED"
+            },
+            "timestamp": "2026-05-29T06:26:58.980211+00:00"
+        },
+        {
+            "stage": "BUCKET",
+            "status": "FAILED",
+            "details": {
+                "bucket_status": "FAILED",
+                "error": "Bucket upload failed: {\"detail\":{\"error\":\"ValidationError\",\"message\":\"Artifact validation failed: Unknown envelope field: trace_id. Schema drift detected.\",\"artifact_id\":\"2e022186-bdbf-4204-ab9f-656058c1b289\"}}"
+            },
+            "timestamp": "2026-05-29T06:27:01.046744+00:00"
+        },
+        {
+            "stage": "REPLAY",
+            "status": "COMPLETED",
+            "details": {
+                "replay_status": "VERIFIED",
+                "deterministic_replay": true,
+                "lineage_continuity": true
+            },
+            "timestamp": "2026-05-29T06:27:01.054289+00:00"
+        },
+        {
+            "stage": "OBSERVABILITY",
+            "status": "COMPLETED",
+            "details": {
+                "telemetry_visible": true,
+                "lineage_visible": true,
+                "observability_safe": true
+            },
+            "timestamp": "2026-05-29T06:27:01.055279+00:00"
+        },
+        {
+            "stage": "DASHBOARD",
+            "status": "COMPLETED",
+            "details": {
+                "dashboard_visibility": true,
+                "observability_safe": true,
+                "runtime_active": true
+            },
+            "timestamp": "2026-05-29T06:27:01.057146+00:00"
+        }
+    ]
+}
