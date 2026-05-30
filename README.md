@@ -8,7 +8,7 @@
 
 SVACS Unified Core is a deterministic maritime intelligence orchestration runtime designed for:
 
-* replay-safe execution
+* replay-safe execution 
 * governance-aware dataset handling
 * geo provenance continuity
 * operational maritime realism
