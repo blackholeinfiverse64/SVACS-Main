@@ -1,6 +1,10 @@
-{
-  "trace_id": "trace_001",
-  "status": "SUCCESS",
-  "deterministic": true,
-  "replay_safe": true
-}
+{"stage":"SIGNAL","status":"COMPLETED"}
+{"stage":"NOISE","status":"COMPLETED"}
+{"stage":"GEO","status":"COMPLETED"}
+{"stage":"PERCEPTION","status":"COMPLETED"}
+{"stage":"INTELLIGENCE","status":"COMPLETED"}
+{"stage":"STATE","status":"COMPLETED"}
+{"stage":"BUCKET","status":"COMPLETED"}
+{"stage":"REPLAY","status":"COMPLETED"}
+{"stage":"OBSERVABILITY","status":"COMPLETED"}
+{"stage":"DASHBOARD","status":"COMPLETED"}
