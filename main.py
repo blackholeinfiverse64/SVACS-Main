@@ -1,254 +1,257 @@
-from orchestration.live_pipeline import run_pipeline
-from replay.execution_replay import replay_execution
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
-import os
+from runtime.full_operational_chain import process_runtime_chain
+from runtime.runtime_normalizer import normalize_runtime
 
-  
-# =====================================================
-# CLEAR OLD STORAGE LOGS
-# =====================================================
+from replay.replay_engine import replay_runtime
+from ttg.ttg_adapter import generate_ttg_event
+from rl.episode_runner import run_episode
 
-LOG_FILES = [
- 
-    "storage/dashboard/dashboard_payloads.json",
-
-    "storage/telemetry/telemetry_logs.json",
-
-    "storage/denials/denial_logs.json"
-]
-
-for log_file in LOG_FILES:
-
-    os.makedirs(
-        os.path.dirname(log_file),
-        exist_ok=True
-    )
-
-    open(log_file, "w").close()
-
-
-# =====================================================
-# SYSTEM METRICS
-# =====================================================
-
-metrics = {
-
-    "EXECUTED": 0,
-
-    "REJECTED": 0,
-
-    "TOKEN_DENIED": 0,
-
-    "MUTATION_REJECTED": 0
-}
-
-
-# =====================================================
-# HELPER
-# =====================================================
-
-def replay_if_exists(execution):
-
-    if (
-        execution
-        and isinstance(execution, dict)
-        and execution.get("execution_id")
-    ):
-
-        replay_execution(
-            execution["execution_id"]
-        )
-
-
-# =====================================================
-# STATUS DETECTION
-# =====================================================
-
-def detect_status(execution):
-
-    if not execution:
-        return "UNKNOWN"
-
-    # =========================================
-    # MUTATION REJECTION
-    # =========================================
-
-    if execution.get(
-        "mutation_attempt"
-    ):
-
-        return "MUTATION_REJECTED"
-
-    # =========================================
-    # TOKEN DENIED
-    # =========================================
-
-    sarathi_token = execution.get(
-        "sarathi_token",
-        {}
-    )
-
-    if sarathi_token.get(
-        "token"
-    ) == "fake_token":
-
-        return "TOKEN_DENIED"
-
-    # =========================================
-    # RAJYA REJECTION
-    # =========================================
-
-    rajya_verdict = execution.get(
-        "rajya_verdict",
-        {}
-    )
-
-    if rajya_verdict.get(
-        "status"
-    ) == "REJECTED":
-
-        return "REJECTED"
-
-    # =========================================
-    # SUCCESSFUL EXECUTION
-    # =========================================
-
-    if execution.get(
-        "core_execution"
-    ):
-
-        return "EXECUTED"
-
-    return "UNKNOWN"
-
-
-# =====================================================
-# UPDATE METRICS
-# =====================================================
-
-def update_metrics(execution):
-
-    status = detect_status(
-        execution
-    )
-
-    if status in metrics:
-
-        metrics[status] += 1
-
-
-# =====================================================
-# APPROVED FLOW
-# =====================================================
-
-print("\n===== APPROVED FLOW =====\n")
-
-approved_execution = run_pipeline(
-    risk_level="LOW"
+app = FastAPI(
+    title="SVACS Runtime API",
+    version="1.0.0"
 )
 
-update_metrics(
-    approved_execution
+# =========================================================
+# CORS
+# =========================================================
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
-replay_if_exists(
-    approved_execution
-)
+# =========================================================
+# ROOT
+# =========================================================
 
+@app.get("/")
+def root():
 
-# =====================================================
-# REJECT FLOW
-# =====================================================
+    return {
+        "system": "SVACS",
+        "status": "ACTIVE",
+        "runtime": "LIVE"
+    }
 
-print("\n===== REJECT FLOW =====\n")
+# =========================================================
+# HEALTH
+# =========================================================
 
-rejected_execution = run_pipeline(
-    risk_level="HIGH"
-)
+@app.get("/health")
+def health():
 
-update_metrics(
-    rejected_execution
-)
+    return {
+        "status": "healthy",
+        "system": "SVACS Runtime",
+        "services": {
+            "runtime_chain": "ACTIVE",
+            "replay_engine": "ACTIVE",
+            "ttg": "ACTIVE",
+            "rl_engine": "ACTIVE"
+        }
+    }
 
-replay_if_exists(
-    rejected_execution
-)
+# =========================================================
+# MAIN RUNTIME
+# =========================================================
 
+@app.get("/api/runtime")
+def runtime():
 
-# =====================================================
-# INVALID TOKEN FLOW
-# =====================================================
+    try:
 
-print("\n===== INVALID TOKEN FLOW =====\n")
+        raw_data = process_runtime_chain()
 
-invalid_token_execution = run_pipeline(
-    risk_level="LOW",
-    invalid_token=True
-)
+        if not isinstance(raw_data, list):
+            raw_data = []
 
-update_metrics(
-    invalid_token_execution
-)
+        normalized = normalize_runtime(raw_data)
 
-replay_if_exists(
-    invalid_token_execution
-)
+        return normalized
 
+    except Exception as e:
 
-# =====================================================
-# MUTATION REJECTION FLOW
-# =====================================================
+        print("RUNTIME ERROR:", e)
 
-print("\n===== MUTATION REJECTION FLOW =====\n")
+        return []
 
-mutation_execution = run_pipeline(
-    risk_level="LOW",
-    mutation_test=True
-)
+# =========================================================
+# DASHBOARD
+# =========================================================
 
-update_metrics(
-    mutation_execution
-)
+@app.get("/api/dashboard")
+def dashboard():
 
-replay_if_exists(
-    mutation_execution
-)
+    try:
 
+        raw_data = process_runtime_chain()
 
-# =====================================================
-# OPTIONAL SCHEMA FAILURE TEST
-# =====================================================
+        if not isinstance(raw_data, list):
+            raw_data = []
 
-# Uncomment only for schema validation testing
+        runtime_data = normalize_runtime(raw_data)
 
-# print("\n===== SCHEMA FAILURE FLOW =====\n")
+        alerts = []
+        vessels = []
 
-# schema_failure_execution = run_pipeline(
-#     schema_failure_test=True
-# )
+        for item in runtime_data:
 
-# update_metrics(
-#     schema_failure_execution
-# )
+            # -------------------------
+            # ALERTS
+            # -------------------------
 
-# replay_if_exists(
-#     schema_failure_execution
-# )
+            if item.get("risk") != "LOW":
 
+                alerts.append({
+                    "trace_id": item.get("trace_id"),
+                    "vessel_id": item.get("vessel_id"),
+                    "risk": item.get("risk"),
+                    "validation": item.get("validation"),
+                    "confidence": item.get("confidence")
+                })
 
-# =====================================================
-# FINAL SYSTEM METRICS
-# =====================================================
+            # -------------------------
+            # VESSELS
+            # -------------------------
 
-print("\n===== SYSTEM METRICS =====\n")
+            vessels.append({
+                "trace_id": item.get("trace_id"),
+                "vessel_id": item.get("vessel_id"),
+                "lat": item.get("lat"),
+                "lon": item.get("lon"),
+                "speed": item.get("speed"),
+                "vessel_class": item.get("vessel_class")
+            })
 
-for key, value in metrics.items():
+        return {
+            "alerts": alerts,
+            "vessels": vessels,
+            "runtime_count": len(runtime_data),
+            "status": "ACTIVE"
+        }
 
-    print(f"{key}: {value}")
+    except Exception as e:
 
+        print("DASHBOARD ERROR:", e)
 
-# =====================================================
-# PIPELINE COMPLETE
-# =====================================================
+        return {
+            "alerts": [],
+            "vessels": [],
+            "runtime_count": 0,
+            "status": "FAILED"
+        }
 
-print("\n===== SVACS PIPELINE COMPLETE =====\n")
+# =========================================================
+# REPLAY
+# =========================================================
+
+@app.get("/api/replay")
+def replay():
+
+    try:
+
+        replay_data = replay_runtime()
+
+        return {
+            "status": "ACTIVE",
+            "replay": replay_data
+        }
+
+    except Exception as e:
+
+        print("REPLAY ERROR:", e)
+
+        return {
+            "status": "FAILED",
+            "replay": []
+        }
+
+# =========================================================
+# TTG
+# =========================================================
+
+@app.get("/api/ttg")
+def ttg():
+
+    try:
+
+        ttg_data = generate_ttg_event()
+
+        return {
+            "status": "ACTIVE",
+            "ttg": ttg_data
+        }
+
+    except Exception as e:
+
+        print("TTG ERROR:", e)
+
+        return {
+            "status": "FAILED",
+            "ttg": {}
+        }
+
+# =========================================================
+# RL
+# =========================================================
+
+@app.get("/api/rl")
+def rl():
+
+    try:
+
+        rl_data = run_episode()
+
+        return {
+            "status": "ACTIVE",
+            "episode": rl_data
+        }
+
+    except Exception as e:
+
+        print("RL ERROR:", e)
+
+        return {
+            "status": "FAILED",
+            "episode": {}
+        }
+
+# =========================================================
+# TRACE LOOKUP
+# =========================================================
+
+@app.get("/api/trace/{trace_id}")
+def trace(trace_id: str):
+
+    try:
+
+        raw_data = process_runtime_chain()
+
+        if not isinstance(raw_data, list):
+            raw_data = []
+
+        runtime_data = normalize_runtime(raw_data)
+
+        for item in runtime_data:
+
+            if item.get("trace_id") == trace_id:
+                return item
+
+        return {
+            "status": "NOT_FOUND",
+            "trace_id": trace_id
+        }
+
+    except Exception as e:
+
+        print("TRACE ERROR:", e)
+
+        return {
+            "status": "FAILED",
+            "trace_id": trace_id
+        }
