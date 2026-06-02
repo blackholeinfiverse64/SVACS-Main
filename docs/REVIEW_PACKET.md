@@ -2,31 +2,31 @@
 
 # SVACS Unified Core
 
-## Deterministic Governance-Aware Maritime Intelligence Substrate
+## Runtime-Grounded Deterministic Maritime Execution Substrate
 
 ---
 
-# ENTRY POINT
+# EXECUTION ENTRYPOINT
 
-Primary runtime execution entry:
+Primary runtime execution:
 
 ```bash
 python full_operational_chain.py
 ```
 
-Primary orchestration root:
+Primary deterministic orchestration root:
 
 ```text
 signal_events/signal_generator.py
 ```
 
-Primary replay proof artifact:
+Primary runtime lineage artifact:
 
 ```text
-runtime/single_trace_runtime.json
+storage/runtime/single_trace_runtime.json
 ```
 
-Primary replay persistence layer:
+Primary lineage persistence endpoint:
 
 ```text
 https://bhiv-bucket.onrender.com
@@ -34,41 +34,36 @@ https://bhiv-bucket.onrender.com
 
 ---
 
-# CORE EXECUTION FLOW
+# RUNTIME EXECUTION OBJECTIVE
 
-Deterministic execution flow:
-
-```text
-SIGNAL
-   ↓
-GEO
-   ↓
-PERCEPTION
-   ↓
-INTELLIGENCE
-   ↓
-STATE
-```
-
-Replay-safe orchestration continuation:
+SVACS transitioned from:
 
 ```text
-STATE
-   ↓
-BUCKET
-   ↓
-REPLAY
-   ↓
-OBSERVABILITY
-   ↓
-DASHBOARD
+Prepared replay-capable maritime framework
 ```
+
+toward:
+
+```text
+Runtime-grounded deterministic maritime execution substrate
+```
+
+The system now validates:
+
+* runtime chain participation
+* deterministic replay continuity
+* AIS ingestion participation
+* Jane’s metadata participation
+* TTG runtime convergence
+* bounded RL operationalization
+* replay-safe lineage continuity
+* operational dashboard cognition visibility
 
 ---
 
-# LIVE FLOW
+# LIVE DETERMINISTIC EXECUTION FLOW
 
-Live operational runtime chain validated:
+Validated runtime chain:
 
 ```text
 SIGNAL
@@ -92,7 +87,7 @@ OBSERVABILITY
 DASHBOARD
 ```
 
-Runtime validation output:
+Runtime execution validation:
 
 ```text
 SIGNAL -> COMPLETED
@@ -106,301 +101,289 @@ OBSERVABILITY -> COMPLETED
 DASHBOARD -> COMPLETED
 ```
 
-Deterministic runtime confirmed:
+Deterministic guarantees verified:
 
 ```text
 DETERMINISTIC_CHAIN_VERIFIED
 REPLAY_SAFE
 LINEAGE_CONTINUITY_VERIFIED
+SINGLE_TRACE_CONTINUITY_VERIFIED
 ```
 
 ---
 
-# PROJECT OVERVIEW
+# SINGLE TRACE RUNTIME PROOF
 
-SVACS Unified Core is a deterministic maritime intelligence orchestration substrate focused on:
-
-* replay-safe orchestration
-* deterministic reconstruction
-* governance-aware datasets
-* geo provenance continuity
-* append-only lineage
-* operational auditability
-* bounded adaptive learning
-* replay-safe observability
-* distributed replay resilience
-* maritime operational realism
-
-The system preserves deterministic replay continuity during:
-
-* telemetry interruption
-* replay degradation
-* schema migration
-* dataset evolution
-* lineage corruption
-* node restart
-* distributed desynchronization
-
----
-
-# WHAT CHANGED
-
-This convergence sprint transitioned SVACS from:
+Runtime chain validated using:
 
 ```text
-Replay-safe maritime engineering stack
+single trace_id
+single lineage chain
+single replay reconstruction
+single bucket persistence flow
 ```
 
-toward:
+Validation guarantees:
+
+* same trace_id preserved across stages
+* deterministic replay reconstruction validated
+* append-only lineage continuity preserved
+* replay-safe execution continuity verified
+
+Artifacts:
 
 ```text
-Deterministic governance-aware maritime intelligence substrate
+single_trace_runtime_proof.json
+runtime_lineage_report.json
+full_operational_chain_log.jsonl
+terminal_runtime_recording.txt
 ```
-
-Major additions:
-
-* live bucket integration
-* deterministic replay persistence
-* dataset governance maturity
-* geo provenance hardening
-* operational maritime scenario pack
-* RL bounded operationalization
-* operator auditability workflows
-* AIS ingestion preparation
-* replay-safe lineage continuity
-* provenance reconstruction visibility
 
 ---
 
-# DATASET GOVERNANCE LAYER
+# JANE'S RUNTIME PARTICIPATION
 
-Governance metadata added:
+Jane’s registry now participates directly in runtime execution.
 
-* dataset_owner
-* dataset_trust_score
-* dataset_origin
-* approval_state
-* validation_status
-* dataset_expiry_policy
-* federated_registry_reference
-* dataset_change_log
-* source_confidence
-* schema_authority_reference
+Integrated runtime metadata:
 
-Governance guarantees:
+* vessel_class
+* signature_profile
+* propulsion_metadata
+* operational_role
+* size_metadata
+* source_metadata
+* version_metadata
+* lineage_metadata
 
-* deterministic governance continuity
-* replay-safe dataset reconstruction
-* append-only lineage ancestry
-* immutable governance visibility
+Runtime validation guarantees:
 
----
+* metadata traversal continuity
+* deterministic enrichment participation
+* replay-safe metadata reconstruction
+* append-only provenance continuity
 
-# GOVERNANCE VALIDATION
-
-Validation command:
-
-```bash
-python governance/dataset_governance_validator.py
-```
-
-Validation output:
+Artifacts:
 
 ```text
-DATASET_GOVERNANCE_VALID
+janes_runtime_registry.json
+janes_registry_loader.py
+janes_version_registry.json
+runtime_registry_validation.json
 ```
 
-Governance guarantees:
+---
+
+# AIS RUNTIME INGESTION
+
+SVACS now validates live AIS participation beyond compatibility preparation.
+
+Runtime AIS capabilities:
+
+* AIS payload ingestion
+* vessel identity traversal
+* provenance linkage
+* replay linkage
+* metadata continuity
+* runtime vessel enrichment
+
+Runtime guarantees:
+
+* deterministic AIS replay
+* append-only AIS lineage
+* provenance-visible ingestion continuity
+
+Artifacts:
 
 ```text
-GOVERNANCE_LINEAGE_SAFE
-REPLAY_SAFE_GOVERNANCE
-MUTATION_RESISTANT
+ais_runtime_ingestor.py
+ais_runtime_trace.json
+ais_lineage_validation.json
+runtime_vessel_metadata_report.md
 ```
 
 ---
 
-# GEO PROVENANCE HARDENING
+# LIVE VESSEL METADATA PARTICIPATION
 
-Geo provenance metadata now includes:
+Runtime chain now consumes vessel metadata during execution.
 
-* geo_source_lineage
-* coordinate_origin
-* sensor_origin
-* spatial_uncertainty
-* timestamp_uncertainty
-* coordinate_confidence
-* geo_transformation_history
-* location_reference_version
-* geo_validation_status
-
-Geo continuity guarantees:
-
-* deterministic reconstruction
-* append-only geo ancestry
-* replay-safe geo replay
-* provenance-visible location continuity
-
----
-
-# GEO VALIDATION
-
-Validation command:
-
-```bash
-python geo/geo_provenance_validator.py
-```
-
-Validation output:
+Validated metadata continuity:
 
 ```text
-GEO_PROVENANCE_VALID
+AIS
+   ↓
+Jane's Registry
+   ↓
+Runtime Enrichment
+   ↓
+Intelligence Layer
+   ↓
+State Layer
+```
+
+Validated fields:
+
+* vessel_class
+* propulsion_type
+* operational_role
+* vessel_dimensions
+* identity_confidence
+* metadata_source_version
+
+Artifacts:
+
+```text
+live_vessel_runtime_log.json
+runtime_metadata_validation.json
 ```
 
 ---
 
-# OPERATIONAL MARITIME SCENARIOS
+# TTG RUNTIME CONVERGENCE
 
-Operational scenario pack includes:
+TTG is now integrated as operational runtime participant.
 
-* piracy interception
-* illegal fishing detection
-* submarine stealth ambiguity
-* smuggling route anomaly
-* port congestion overload
-* sensor deception event
+Runtime convergence areas:
 
-Each scenario validates:
+* TTG simulation participation
+* runtime visibility
+* replay linkage
+* operational surface integration
+* dashboard cognition visibility
 
-* multi-signal input handling
-* telemetry noise
-* geo lineage continuity
-* operational ambiguity
-* deterministic replay reconstruction
-* intelligence consistency
+TTG visibility validated across:
 
----
-
-# SCENARIO EXECUTION
-
-Execution command:
-
-```bash
-python scenario_pack/scenario_runner.py
+```text
+runtime chain
+dashboard layer
+replay layer
+observability layer
 ```
 
-Example scenario output:
+Artifacts:
 
-```json
-{
-    "scenario": "piracy_interception",
-    "geo_validated": true,
-    "replay_safe": true,
-    "deterministic": true
-}
+```text
+ttg_adapter.py
+ttg_runtime_bridge.json
+ttg_execution_visibility_report.md
+ttg_replay_linkage.json
 ```
 
 ---
 
 # RL OPERATIONALIZATION
 
-RL optimization permitted for:
+SVACS now supports bounded operational learning execution.
+
+RL optimization allowed for:
 
 * prioritization
-* ranking
-* filtering
 * confidence weighting
-* signal optimization
+* signal ranking
+* noise filtering
+* operational scoring
 
 RL prohibited from modifying:
 
 * governance semantics
-* execution authority
 * replay truth
-* constitutional enforcement
 * lineage continuity
-
----
-
-# RL VALIDATION
-
-Validation command:
-
-```bash
-python rl_sandbox/policy_guardrails.py
-```
-
-Validation output:
-
-```text
-RL_BOUNDARIES_ACTIVE
-```
+* constitutional boundaries
+* authority surfaces
 
 Replay-safe RL guarantees:
 
 ```text
-DETERMINISTIC_RL_REPLAY
-CONSTITUTIONAL_BOUNDARIES_ENFORCED
+DETERMINISTIC_TRAINING_REPLAY
+REPLAY_SAFE_LEARNING
+BOUNDARY_ENFORCEMENT_ACTIVE
 ```
 
----
-
-# HUMAN OPERATOR REALISM
-
-Operator auditability layer supports:
-
-* analyst review workflow
-* replay inspection
-* confidence explanation visibility
-* operator override visibility
-* human validation trails
-* replay-safe audit inspection
-
-Operator layer remains:
+Artifacts:
 
 ```text
-INSPECTION_ONLY
+reward_model.py
+episode_runner.py
+learning_episode_log.json
+deterministic_training_report.json
+replay_safe_learning_validation.json
 ```
-
-No execution authority exposed.
 
 ---
 
-# EXTERNAL MARITIME GROUNDING
+# DASHBOARD CAPABILITY CONVERGENCE
 
-Prepared interfaces:
+Dashboard architecture transitioned from:
 
-* AIS feed compatibility
-* registry import compatibility
-* future external dataset adapters
-* dataset onboarding contracts
+```text
+engineering observability panel
+```
 
-Prepared artifacts:
+toward:
 
-* ais_feed_contract.json
-* registry_import_contract.json
-* external_dataset_adapter_interface.py
-* future_data_onboarding.md
+```text
+operational cognition surface
+```
+
+Integrated operational runtime visibility:
+
+* AIS visibility
+* TTG visibility
+* replay visibility
+* lineage visibility
+* runtime execution continuity
+* operational telemetry convergence
+
+Reusable dashboard primitives:
+
+* Replay Card
+* Telemetry Card
+* Vessel Card
+* TTG Card
+* Alert Card
+* Lineage Card
+* Executive Metric Card
+* Geo Card
+
+Frontend stack:
+
+* React
+* Vite
+* component-driven architecture
+* cognition hierarchy
+* reusable primitives
+
+Artifacts:
+
+```text
+dashboard_capability_report.md
+design_system/
+component_library.md
+dashboard_wireframe.png
+operational_dashboard_layout.md
+frontend_integration_report.md
+```
 
 ---
 
 # LIVE BUCKET INTEGRATION
 
-Replay persistence successfully integrated with:
+Replay persistence integrated with:
 
 ```text
 https://bhiv-bucket.onrender.com
 ```
 
-Validated:
+Validated persistence guarantees:
 
-* replay persistence
+* append-only replay persistence
+* deterministic reconstruction
 * lineage continuity
 * parent hash continuity
-* append-only reconstruction
-* deterministic replay persistence
+* replay-safe recovery
 
-Bucket validation flow:
+Bucket flow:
 
 ```text
 STATE
@@ -412,254 +395,138 @@ REPLAY_RECOVERY
 LINEAGE_RECONSTRUCTION
 ```
 
+Validation:
+
+```text
+BUCKET_PERSISTENCE_VERIFIED
+REPLAY_RECOVERY_VERIFIED
+LINEAGE_CHAIN_VALID
+```
+
 ---
 
-# PROVENANCE CONTINUITY
+# GOVERNANCE + LINEAGE CONTINUITY
 
-Artifacts now preserve:
+Governance metadata enforced during runtime execution.
 
-* source lineage
-* dataset ancestry
-* geo lineage
-* replay continuity
-* schema ancestry
-* AIS lineage continuity
+Validated metadata:
 
-All artifacts contain:
-
-* schema_version
-* dataset_version
-* source_lineage
+* dataset_owner
+* dataset_origin
+* dataset_trust_score
+* validation_status
+* schema_authority_reference
 * replay_reference
 * provenance_hash
-* dataset_origin
-* simulation_origin
+* lineage_reference
 
----
-
-# DISTRIBUTED REPLAY VALIDATION
-
-Replay continuity tested during:
-
-* node restart
-* replay degradation
-* telemetry interruption
-* lineage corruption
-* schema migration
-* delayed telemetry
-* distributed desynchronization
-
-Replay reconstruction remained deterministic after recovery.
-
----
-
-# FAILURE CASES VALIDATED
-
-Validated recovery during:
-
-* corrupted replay artifacts
-* stale lineage chains
-* telemetry interruption
-* replay degradation
-* schema drift
-* sensor dropout
-* bucket latency
-* distributed replay recovery
-* multi-node desynchronization
-
----
-
-# LIVE EXECUTION PROOF
-
-Runtime proof successfully demonstrated:
+Governance guarantees:
 
 ```text
-SIGNAL -> COMPLETED
-GEO -> COMPLETED
-PERCEPTION -> COMPLETED
-INTELLIGENCE -> COMPLETED
-STATE -> COMPLETED
-BUCKET -> COMPLETED
-REPLAY -> COMPLETED
-OBSERVABILITY -> COMPLETED
-DASHBOARD -> COMPLETED
-```
-
-Validation confirmed:
-
-```text
-DETERMINISTIC_CHAIN_VERIFIED
-REPLAY_SAFE
-LINEAGE_CONTINUITY_VERIFIED
-DATASET_GOVERNANCE_VALID
-GEO_PROVENANCE_VALID
-RL_BOUNDARIES_ACTIVE
-BUCKET_PERSISTENCE_VERIFIED
+APPEND_ONLY_LINEAGE
+REPLAY_SAFE_GOVERNANCE
+IMMUTABLE_PROVENANCE
+MUTATION_RESISTANT
 ```
 
 ---
 
-# TEAM DEPENDENCY MAP
+# OPERATIONAL MARITIME SCENARIOS
 
-| Team Member      | Responsibility                                                 |
-| ---------------- | -------------------------------------------------------------- |
-| Ankita           | Governance maturity, realism layer, RL boundaries, convergence |
-| Nupur            | Signal, geo, provenance, AIS integration                       |
-| Raj              | STATE runtime participation                                    |
-| Soham / Siddhesh | Bucket continuity validation                                   |
-| Nikhil           | Dashboard cognition architecture                               |
-| Bucket Layer     | Replay persistence and lineage continuity                      |
+Runtime scenario pack validated:
 
----
+* piracy interception
+* illegal fishing detection
+* submarine ambiguity
+* smuggling anomaly
+* port congestion overload
+* RF interference
+* sensor deception event
 
-# GOVERNANCE BOUNDARIES
+Scenario guarantees:
 
-SVACS guarantees:
-
-* replay never becomes authority
-* governance remains immutable
-* telemetry never mutates governance
-* provenance never alters replay truth
-* dashboards remain observability-only
-* governance lineage remains append-only
+* telemetry continuity
+* replay-safe reconstruction
+* operational ambiguity handling
+* deterministic intelligence continuity
 
 ---
 
-# LEARNING BOUNDARIES
+# HUMAN OPERATOR VALIDATION LAYER
 
-Adaptive learning may optimize:
+Operator layer supports:
 
-* prioritization
-* ranking
-* filtering
-* confidence weighting
+* replay inspection
+* lineage auditability
+* confidence explanation visibility
+* operational review workflow
+* bounded inspection realism
 
-Adaptive systems may NOT modify:
-
-* governance semantics
-* replay truth
-* execution authority
-* constitutional boundaries
-
----
-
-# OPERATOR BOUNDARIES
-
-Operators may:
-
-* inspect replay continuity
-* inspect telemetry
-* validate lineage
-* review confidence surfaces
-
-Operators may NOT:
-
-* mutate replay state
-* alter governance semantics
-* override replay truth
-* modify constitutional boundaries
-
----
-
-# REPLAY BOUNDARY DECLARATION
-
-Replay remains:
+Operators remain:
 
 ```text
-DETERMINISTIC
-APPEND_ONLY
-FORENSIC
-NON_AUTHORITATIVE
-RECONSTRUCTABLE
+INSPECTION_ONLY
 ```
 
-Replay cannot:
-
-* mutate governance
-* rewrite lineage
-* alter replay truth
-* modify execution authority
+No authority escalation permitted.
 
 ---
 
-# CONSTITUTIONAL AUTHORITY DECLARATION
+# TEAM CONVERGENCE
 
-SVACS preserves strict constitutional isolation:
+| Contributor | Runtime Responsibility                                                       |
+| ----------- | ---------------------------------------------------------------------------- |
+| Ankita      | Runtime convergence leadership, governance continuity, RL operationalization |
+| Nupur       | Jane’s integration, AIS participation, provenance continuity                 |
+| Raj         | STATE runtime participation, deterministic chain closure                     |
+| Nikhil      | Dashboard cognition architecture, runtime visibility                         |
+| Bucket Team | Replay persistence, lineage continuity validation                            |
 
-* governance authority remains immutable
-* replay remains observability-only
-* operators remain inspection-only
-* RL remains constitutionally bounded
-* telemetry remains non-authoritative
-* lineage remains append-only
-
-No subsystem may self-elevate authority.
-
----
-
-# STORAGE STRUCTURE
+Artifacts:
 
 ```text
-storage/
-│
-├── executions/
-├── governance/
-├── geo/
-├── replay/
-├── telemetry/
-├── proofs/
-├── dashboard/
-└── lineage/
+TEAM_CONVERGENCE_REPORT.md
 ```
 
 ---
 
-# TESTED VALIDATIONS
+# TESTING VALIDATION
 
-| Validation                  | Result |
-| --------------------------- | ------ |
-| Governance validation       | PASSED |
-| Geo provenance validation   | PASSED |
-| Replay continuity           | PASSED |
-| Replay parity               | PASSED |
-| RL boundary enforcement     | PASSED |
-| Operator auditability       | PASSED |
-| Maritime scenario execution | PASSED |
-| Distributed recovery        | PASSED |
-| Replay-safe observability   | PASSED |
-| Bucket persistence          | PASSED |
+Validated runtime testing coverage:
 
----
+* Jane’s runtime participation
+* AIS ingestion proof
+* deterministic chain continuity
+* RL replay-safe execution
+* TTG participation
+* replay continuity
+* lineage persistence
+* dashboard runtime integration
 
-# REMAINING GAPS
+Artifacts:
 
-Remaining operational gaps:
-
-* live AIS streaming ingestion
-* real maritime telemetry feeds
-* multi-region replay federation
-* production-scale replay clustering
-* runtime drift analysis
-* external registry synchronization
-
-Reserved for future operationalization phases.
+```text
+TESTING_PACKET.md
+```
 
 ---
 
 # FINAL SYSTEM CHARACTERISTICS
 
-SVACS Unified Core is:
+SVACS Unified Core is now:
 
+* runtime-grounded
 * deterministic
 * replay-safe
 * governance-aware
 * provenance-visible
 * append-only
 * mutation-resistant
-* geo-aware
-* replay-resilient
-* constitutionally bounded
+* AIS-participating
+* lineage-preserving
+* TTG-integrated
 * operationally traceable
+* constitutionally bounded
 
 ---
 
@@ -667,13 +534,15 @@ SVACS Unified Core is:
 
 ```text
 SYSTEM STATUS: OPERATIONAL
+RUNTIME STATUS: VERIFIED
+AIS STATUS: VERIFIED
+JANE'S STATUS: VERIFIED
+TTG STATUS: VERIFIED
 REPLAY STATUS: VERIFIED
-GOVERNANCE STATUS: VERIFIED
-GEO PROVENANCE STATUS: VERIFIED
-RL BOUNDARY STATUS: ENFORCED
 LINEAGE STATUS: VERIFIED
-OBSERVABILITY STATUS: SAFE
+RL BOUNDARY STATUS: ENFORCED
+GOVERNANCE STATUS: VERIFIED
 BUCKET STATUS: VERIFIED
 ORCHESTRATION STATUS: DETERMINISTIC
-MARITIME REALISM STATUS: ACTIVE
+DASHBOARD STATUS: ACTIVE
 ```
