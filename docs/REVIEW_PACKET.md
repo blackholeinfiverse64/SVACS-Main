@@ -8,25 +8,25 @@
 
 # EXECUTION ENTRYPOINT
 
-Primary runtime execution:
+### Primary Runtime Execution
 
 ```bash
 python full_operational_chain.py
 ```
 
-Primary deterministic orchestration root:
+### Primary Deterministic Orchestration Root
 
 ```text
 signal_events/signal_generator.py
 ```
 
-Primary runtime lineage artifact:
+### Primary Runtime Lineage Artifact
 
 ```text
 storage/runtime/single_trace_runtime.json
 ```
 
-Primary lineage persistence endpoint:
+### Primary Lineage Persistence Endpoint
 
 ```text
 https://bhiv-bucket.onrender.com
@@ -242,7 +242,7 @@ runtime_metadata_validation.json
 
 # TTG RUNTIME CONVERGENCE
 
-TTG is now integrated as operational runtime participant.
+TTG is now integrated as an operational runtime participant.
 
 Runtime convergence areas:
 
@@ -284,7 +284,7 @@ RL optimization allowed for:
 * noise filtering
 * operational scoring
 
-RL prohibited from modifying:
+RL is prohibited from modifying:
 
 * governance semantics
 * replay truth
@@ -468,7 +468,7 @@ Operators remain:
 INSPECTION_ONLY
 ```
 
-No authority escalation permitted.
+No authority escalation is permitted.
 
 ---
 
