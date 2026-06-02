@@ -382,39 +382,49 @@ Frontend stack:
 # PROJECT STRUCTURE
 
 ```text
-svacs_unified_core/
+svacs-unified-core/
 │
-├── ais/
+├── contracts/
+├── core/
 ├── dashboard/
-├── design_system/
+├── data/
+├── docs/
 ├── external_grounding/
 ├── geo/
 ├── governance/
 ├── intelligence/
+├── lineage/
+├── operator/
 ├── orchestration/
 ├── perception/
-├── provenance/
+├── rajya/
 ├── replay/
+├── reports/
+├── rl/
 ├── rl_sandbox/
 ├── runtime/
-├── scenario_pack/
+├── sarathi/
+├── scenario_execution_reports/
+├── scenario_replay_reports/
+├── scenarios/
+├── shared/
 ├── signal_events/
 ├── state/
+├── storage/
+├── stress/
 ├── telemetry/
 ├── tests/
 ├── ttg/
+├── utils/
 │
 ├── full_operational_chain.py
-├── janes_registry_loader.py
-├── ais_runtime_ingestor.py
-├── ttg_adapter.py
-├── reward_model.py
-├── episode_runner.py
+├── main.py
 ├── requirements.txt
+├── README.md
 ├── REVIEW_PACKET.md
 ├── TESTING_PACKET.md
-├── TEAM_CONVERGENCE_REPORT.md
-└── README.md
+└── TEAM_CONVERGENCE_REPORT.md
+
 ```
 
 ---
