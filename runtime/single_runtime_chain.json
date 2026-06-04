@@ -1,0 +1,8 @@
+{
+  "status": "DETERMINISTIC_CHAIN_VERIFIED",
+  "replay_safe": true,
+  "lineage_continuity": true,
+  "dashboard_visibility": true,
+  "ais_runtime": true,
+  "janes_runtime": true
+}
