@@ -11,7 +11,7 @@
 ## Primary Runtime Execution
 
 ```bash
-python full_runtime_chain.py
+python full_operational_chain.py
 ```
 
 ## Primary Runtime Orchestration Root
@@ -23,7 +23,7 @@ signal_events/signal_generator.py
 ## Primary Runtime Lineage Artifact
 
 ```text
-runtime/single_runtime_chain.json
+storage/runtime/single_trace_runtime.json
 ```
 
 ## Primary Replay Persistence Endpoint
@@ -36,7 +36,7 @@ https://bhiv-bucket.onrender.com
 
 # SYSTEM OBJECTIVE
 
-SVACS transitioned from:
+SVACS Unified Core transitioned from:
 
 ```text
 Prepared replay-capable maritime framework
@@ -45,10 +45,10 @@ Prepared replay-capable maritime framework
 toward:
 
 ```text
-Runtime-grounded deterministic maritime execution substrate
+Runtime-grounded deterministic maritime intelligence execution substrate
 ```
 
-The system now validates:
+The platform now validates:
 
 * runtime maritime intelligence execution
 * deterministic replay continuity
@@ -72,7 +72,11 @@ SIGNAL
    ↓
 NOISE
    ↓
+AIS
+   ↓
 GEO
+   ↓
+JANE'S ENRICHMENT
    ↓
 PERCEPTION
    ↓
@@ -86,6 +90,8 @@ REPLAY
    ↓
 OBSERVABILITY
    ↓
+TTG
+   ↓
 DASHBOARD
 ```
 
@@ -94,13 +100,16 @@ Validated runtime execution:
 ```text
 SIGNAL -> COMPLETED
 NOISE -> COMPLETED
+AIS -> COMPLETED
 GEO -> COMPLETED
+JANE'S_ENRICHMENT -> COMPLETED
 PERCEPTION -> COMPLETED
 INTELLIGENCE -> COMPLETED
 STATE -> COMPLETED
 BUCKET -> COMPLETED
 REPLAY -> COMPLETED
 OBSERVABILITY -> COMPLETED
+TTG -> COMPLETED
 DASHBOARD -> COMPLETED
 ```
 
@@ -111,6 +120,7 @@ DETERMINISTIC_CHAIN_VERIFIED
 REPLAY_SAFE
 LINEAGE_CONTINUITY_VERIFIED
 SINGLE_TRACE_CONTINUITY_VERIFIED
+APPEND_ONLY_VALIDATED
 ```
 
 ---
@@ -136,18 +146,18 @@ Validated guarantees:
 Artifacts:
 
 ```text
-runtime/single_runtime_chain.json
-runtime/runtime_trace_proof.json
-runtime/runtime_dataset_lineage.json
-full_runtime_chain_log.jsonl
+storage/runtime/single_trace_runtime.json
+lineage/runtime_lineage_report.json
+full_operational_chain_log.jsonl
 runtime/runtime_vessel_metadata_flow.json
+runtime/runtime_trace_proof.json
 ```
 
 ---
 
 # JANE'S RUNTIME PARTICIPATION
 
-Jane’s maritime registry now participates directly in runtime execution.
+Jane’s maritime registry participates directly in runtime execution.
 
 Integrated runtime metadata:
 
@@ -171,11 +181,10 @@ Validated runtime guarantees:
 Artifacts:
 
 ```text
-datasets/janes/
-external_grounding/janes_runtime_adapter.py
-external_grounding/janes_registry_normalizer.py
+janes_runtime_registry.json
+janes_registry_runtime.json
 external_grounding/runtime_registry_join.py
-runtime/janes_runtime_proof.json
+guptchar_ingestion/janes_ingestor.py
 reports/janes_integration_report.md
 ```
 
@@ -183,7 +192,7 @@ reports/janes_integration_report.md
 
 # AIS RUNTIME INGESTION
 
-SVACS validates live AIS participation beyond compatibility preparation.
+SVACS validates live AIS runtime participation beyond compatibility preparation.
 
 Runtime AIS capabilities:
 
@@ -203,8 +212,6 @@ Validated runtime guarantees:
 Artifacts:
 
 ```text
-external_grounding/ais_ingestor.py
-external_grounding/ais_normalizer.py
 external_grounding/ais_runtime_adapter.py
 runtime/runtime_ais_trace.json
 runtime/runtime_vessel_metadata_flow.json
@@ -215,7 +222,7 @@ reports/ais_runtime_validation.md
 
 # VESSEL INTELLIGENCE PARTICIPATION
 
-Runtime chain now performs explainable vessel intelligence classification.
+Runtime chain performs explainable vessel intelligence classification.
 
 Validated capabilities:
 
@@ -263,7 +270,7 @@ runtime/runtime_trace_proof.json
 
 # SENSOR FUSION PARTICIPATION
 
-SVACS now supports multi-modal maritime vessel identification.
+SVACS supports multi-modal maritime vessel identification.
 
 Supported inputs:
 
@@ -288,7 +295,6 @@ Artifacts:
 
 ```text
 sensor_fusion/sensor_fusion_engine.py
-vessel_observation_engine.py
 runtime/sensor_fusion_runtime.json
 reports/sensor_fusion_validation.md
 ```
@@ -297,7 +303,7 @@ reports/sensor_fusion_validation.md
 
 # TTG RUNTIME CONVERGENCE
 
-TTG now participates as an operational runtime surface.
+TTG participates as an operational runtime surface.
 
 Validated convergence areas:
 
@@ -319,7 +325,7 @@ observability layer
 Artifacts:
 
 ```text
-dashboard/src/components/TTGCard.tsx
+ttg/
 runtime/ttg_runtime_bridge.json
 reports/ttg_execution_visibility_report.md
 ```
@@ -328,7 +334,7 @@ reports/ttg_execution_visibility_report.md
 
 # RL OPERATIONALIZATION
 
-SVACS now supports bounded replay-safe operational learning execution.
+SVACS supports bounded replay-safe operational learning execution.
 
 RL optimization allowed for:
 
@@ -338,7 +344,7 @@ RL optimization allowed for:
 * noise filtering
 * operational scoring
 
-RL prohibited from modifying:
+RL is prohibited from modifying:
 
 * governance semantics
 * replay truth
@@ -359,8 +365,6 @@ Artifacts:
 ```text
 rl_sandbox/reward_model.py
 rl_sandbox/episode_manager.py
-rl_sandbox/training_logger.py
-rl_sandbox/deterministic_learning_replay.py
 runtime/rl_runtime_proof.json
 reports/rl_operationalization_report.md
 ```
@@ -389,6 +393,8 @@ Integrated runtime visibility:
 * TTG visibility
 * runtime execution continuity
 * operational telemetry convergence
+* vessel intelligence visibility
+* sensor fusion visibility
 
 Reusable dashboard primitives:
 
@@ -406,18 +412,42 @@ Frontend stack:
 
 * React
 * Vite
+* TypeScript
+* TailwindCSS
+* React Query
 * component-driven architecture
-* cognition hierarchy
 * reusable dashboard primitives
 
 Artifacts:
 
 ```text
-dashboard/src/components/
-dashboard/src/layouts/
-dashboard/src/design-system/
-reports/dashboard_capability_report.md
+dashboard/
+dashboard_screenshorts/
+frontend_integration_report.md
+dashboard_capability_report.md
+operational_dashboard_layout.md
+component_library.md
 ```
+
+---
+
+# DASHBOARD PREVIEW
+
+## Operational Overview
+
+* dashboard_overview.jpeg
+* dashboard_overview_2.jpeg
+* pipeline_view.jpeg
+
+## Vessel Intelligence Runtime
+
+* Intelligence.jpeg
+* Perception_view.jpeg
+* Signals_view.jpeg
+
+## Sensor Fusion Runtime
+
+* alerts_panel.jpeg
 
 ---
 
@@ -508,7 +538,7 @@ Scenario guarantees:
 
 # HUMAN OPERATOR VALIDATION LAYER
 
-Operator layer supports:
+Operator workflows support:
 
 * replay inspection
 * lineage auditability
@@ -528,18 +558,18 @@ No authority escalation is permitted.
 
 # TEAM CONVERGENCE
 
-| Contributor | Runtime Responsibility                                                                                        |
-| ----------- | ------------------------------------------------------------------------------------------------------------- |
-| Ankita      | Runtime convergence leadership, vessel intelligence integration, governance continuity, RL operationalization |
-| Nupur       | Jane’s integration, AIS participation, provenance continuity                                                  |
-| Raj         | STATE runtime participation, deterministic runtime closure                                                    |
-| Nikhil      | Dashboard cognition architecture, runtime visibility                                                          |
-| Bucket Team | Replay persistence, lineage continuity validation                                                             |
+| Contributor | Runtime Responsibility |
+| ----------- | ---------------------- |
+| Ankita | Runtime convergence leadership, vessel intelligence integration, governance continuity, RL operationalization |
+| Nupur | Jane’s integration, AIS participation, provenance continuity |
+| Raj | STATE runtime participation, deterministic runtime closure |
+| Nikhil | Dashboard cognition architecture, runtime visibility |
+| Bucket Team | Replay persistence, lineage continuity validation |
 
 Artifacts:
 
 ```text
-TEAM_CONVERGENCE_REPORT_vNext.md
+TEAM_CONVERGENCE_REPORT.md
 ```
 
 ---
