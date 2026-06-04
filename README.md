@@ -4,23 +4,20 @@
 
 ---
 
-# OVERVIEW
+# Overview
 
-SVACS Unified Core is a runtime-grounded deterministic maritime intelligence execution substrate designed for:
+SVACS Unified Core is a deterministic, replay-safe maritime intelligence execution substrate designed for:
 
 * live maritime telemetry participation
-* deterministic replay-safe orchestration
-* governance-aware dataset handling
-* append-only lineage continuity
+* AIS runtime ingestion
+* governance-aware orchestration
+* replay-safe intelligence continuity
+* append-only lineage persistence
 * runtime provenance visibility
-* replay-safe observability
-* operational maritime realism
+* operational maritime intelligence workflows
 * deterministic reconstruction
 * bounded adaptive learning
-* AIS runtime participation
-* Jane’s maritime registry grounding
 * TTG operational convergence
-* distributed replay resilience
 * operational cognition dashboards
 
 SVACS validates deterministic runtime continuity across:
@@ -46,18 +43,16 @@ The platform preserves replay continuity during:
 * node restart
 * distributed replay recovery
 * bucket latency
-* operational entropy injection
 * AIS ingestion interruption
 
 ---
 
-# SYSTEM OBJECTIVES
+# System Objectives
 
 SVACS validates:
 
 * deterministic runtime orchestration
 * replay-safe maritime execution
-* runtime-grounded vessel participation
 * governance-aware dataset lineage
 * geo provenance continuity
 * AIS operational ingestion
@@ -67,13 +62,12 @@ SVACS validates:
 * append-only lineage ancestry
 * RL bounded operationalization
 * operator auditability
-* corruption-aware replay recovery
 * distributed replay validation
 * cognition-safe observability
 
 ---
 
-# LIVE OPERATIONAL PIPELINE
+# Live Operational Pipeline
 
 ```text
 SIGNAL
@@ -99,7 +93,7 @@ DASHBOARD
 
 ---
 
-# RUNTIME CHAIN RESPONSIBILITIES
+# Runtime Chain Responsibilities
 
 | Stage         | Responsibility                    |
 | ------------- | --------------------------------- |
@@ -107,7 +101,7 @@ DASHBOARD
 | NOISE         | Operational entropy simulation    |
 | GEO           | Geo provenance enrichment         |
 | PERCEPTION    | Maritime interpretation           |
-| INTELLIGENCE  | Threat/risk analysis              |
+| INTELLIGENCE  | Threat and risk analysis          |
 | STATE         | Deterministic runtime persistence |
 | BUCKET        | Replay-safe lineage persistence   |
 | REPLAY        | Deterministic reconstruction      |
@@ -116,9 +110,9 @@ DASHBOARD
 
 ---
 
-# LIVE MARITIME GROUNDING
+# Maritime Grounding
 
-SVACS now supports runtime maritime grounding using:
+SVACS supports runtime maritime grounding using:
 
 * Jane’s runtime registry participation
 * AIS runtime ingestion
@@ -128,7 +122,7 @@ SVACS now supports runtime maritime grounding using:
 
 ---
 
-# JANE’S RUNTIME PARTICIPATION
+# Jane’s Runtime Participation
 
 SVACS runtime registry supports:
 
@@ -150,7 +144,7 @@ Supported vessel categories:
 * support vessels
 * speedboats
 
-Runtime registry artifacts:
+Artifacts:
 
 ```text
 janes_runtime_registry.json
@@ -161,7 +155,7 @@ janes_registry_loader.py
 
 ---
 
-# AIS RUNTIME PARTICIPATION
+# AIS Runtime Participation
 
 AIS runtime integration supports:
 
@@ -171,7 +165,7 @@ AIS runtime integration supports:
 * replay linkage continuity
 * provenance-linked telemetry
 
-AIS runtime artifacts:
+Artifacts:
 
 ```text
 ais_runtime_ingestor.py
@@ -182,9 +176,9 @@ runtime_vessel_metadata_report.md
 
 ---
 
-# LIVE VESSEL METADATA PARTICIPATION
+# Vessel Metadata Runtime Participation
 
-Runtime execution validates shared metadata participation across:
+Runtime execution validates metadata continuity across:
 
 ```text
 AIS
@@ -195,7 +189,7 @@ AIS
 → STATE
 ```
 
-Runtime validation artifacts:
+Artifacts:
 
 ```text
 live_vessel_runtime_log.json
@@ -204,9 +198,7 @@ runtime_metadata_validation.json
 
 ---
 
-# TTG RUNTIME INTEGRATION
-
-TTG is integrated as a runtime participant.
+# TTG Runtime Integration
 
 TTG convergence supports:
 
@@ -216,7 +208,7 @@ TTG convergence supports:
 * operational surface convergence
 * dashboard cognition integration
 
-TTG artifacts:
+Artifacts:
 
 ```text
 ttg_adapter.py
@@ -227,20 +219,17 @@ ttg_replay_linkage.json
 
 ---
 
-# GOVERNANCE-AWARE DATASET VALIDATION
+# Governance-Aware Dataset Validation
 
 Dataset governance metadata includes:
 
 * dataset_owner
 * dataset_trust_score
 * dataset_origin
-* approval_state
 * validation_status
-* dataset_expiry_policy
-* federated_registry_reference
-* dataset_change_log
-* source_confidence
 * schema_authority_reference
+* source_confidence
+* federated_registry_reference
 
 Validation guarantees:
 
@@ -251,18 +240,17 @@ Validation guarantees:
 
 ---
 
-# PROVENANCE CONTINUITY
+# Provenance Continuity
 
 Artifacts preserve:
 
 * schema_version
 * dataset_version
 * source_lineage
-* ais_lineage
+* AIS_lineage
 * replay_reference
 * provenance_hash
 * dataset_origin
-* simulation_origin
 * compatibility_metadata
 
 The provenance layer guarantees:
@@ -274,7 +262,7 @@ The provenance layer guarantees:
 
 ---
 
-# GEO PROVENANCE HARDENING
+# Geo Provenance Hardening
 
 Geo provenance metadata includes:
 
@@ -284,8 +272,6 @@ Geo provenance metadata includes:
 * spatial_uncertainty
 * timestamp_uncertainty
 * coordinate_confidence
-* geo_transformation_history
-* location_reference_version
 * geo_validation_status
 
 Geo reconstruction remains:
@@ -297,7 +283,7 @@ Geo reconstruction remains:
 
 ---
 
-# RL OPERATIONALIZATION
+# RL Operationalization
 
 RL MAY optimize:
 
@@ -315,7 +301,7 @@ RL MAY NOT modify:
 * constitutional boundaries
 * lineage continuity
 
-The RL environment remains:
+Environment guarantees:
 
 ```text
 REPLAY_SAFE
@@ -325,7 +311,7 @@ CONSTITUTIONALLY_BOUNDED
 
 ---
 
-# HUMAN OPERATOR AUDITABILITY
+# Human Operator Auditability
 
 Operator workflows support:
 
@@ -346,7 +332,7 @@ No execution authority is exposed.
 
 ---
 
-# DASHBOARD CAPABILITY SYSTEM
+# Dashboard Capability System
 
 Dashboard architecture supports:
 
@@ -379,7 +365,7 @@ Frontend stack:
 
 ---
 
-# PROJECT STRUCTURE
+# Project Structure
 
 ```text
 svacs-unified-core/
@@ -404,14 +390,11 @@ svacs-unified-core/
 ├── rl_sandbox/
 ├── runtime/
 ├── sarathi/
-├── scenario_execution_reports/
-├── scenario_replay_reports/
 ├── scenarios/
 ├── shared/
 ├── signal_events/
 ├── state/
 ├── storage/
-├── stress/
 ├── telemetry/
 ├── tests/
 ├── ttg/
@@ -424,12 +407,11 @@ svacs-unified-core/
 ├── REVIEW_PACKET.md
 ├── TESTING_PACKET.md
 └── TEAM_CONVERGENCE_REPORT.md
-
 ```
 
 ---
 
-# INSTALLATION
+# Installation
 
 ## Clone Repository
 
@@ -440,7 +422,7 @@ cd svacs_unified_core
 
 ---
 
-# CREATE VIRTUAL ENVIRONMENT
+# Create Virtual Environment
 
 ## Windows
 
@@ -458,7 +440,7 @@ source .venv/bin/activate
 
 ---
 
-# INSTALL DEPENDENCIES
+# Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -466,7 +448,7 @@ pip install -r requirements.txt
 
 ---
 
-# RUN FULL OPERATIONAL CHAIN
+# Run Full Operational Chain
 
 ```bash
 python full_operational_chain.py
@@ -474,7 +456,7 @@ python full_operational_chain.py
 
 ---
 
-# VALIDATION COMMANDS
+# Validation Commands
 
 ## Governance Validation
 
@@ -486,18 +468,6 @@ python governance/dataset_governance_validator.py
 
 ```bash
 python geo/geo_provenance_validator.py
-```
-
-## Scenario Validation
-
-```bash
-python scenario_pack/scenario_runner.py
-```
-
-## RL Boundary Validation
-
-```bash
-python rl_sandbox/policy_guardrails.py
 ```
 
 ## AIS Runtime Validation
@@ -512,9 +482,15 @@ python ais/ais_runtime_ingestor.py
 python ttg/ttg_adapter.py
 ```
 
+## RL Boundary Validation
+
+```bash
+python rl_sandbox/policy_guardrails.py
+```
+
 ---
 
-# LIVE EXECUTION PROOF
+# Live Execution Proof
 
 Runtime validation successfully demonstrated:
 
@@ -543,19 +519,19 @@ TTG_RUNTIME_VISIBLE
 
 ---
 
-# TEAM CONVERGENCE
+# Team Convergence
 
 | Team Member | Responsibility                   |
 | ----------- | -------------------------------- |
 | Ankita      | Runtime convergence leadership   |
-| Nupur       | Jane’s + AIS + Geo + provenance  |
+| Nupur       | Jane’s + AIS + provenance        |
 | Raj         | STATE runtime closure            |
 | Nikhil      | Dashboard cognition architecture |
 | Bucket Team | Replay persistence continuity    |
 
 ---
 
-# GOVERNANCE BOUNDARIES
+# Governance Boundaries
 
 SVACS guarantees:
 
@@ -568,7 +544,7 @@ SVACS guarantees:
 
 ---
 
-# FINAL SYSTEM CHARACTERISTICS
+# Final System Characteristics
 
 SVACS Unified Core is:
 
@@ -588,7 +564,7 @@ SVACS Unified Core is:
 
 ---
 
-# FINAL VALIDATION STATUS
+# Final Validation Status
 
 ```text
 SYSTEM STATUS: OPERATIONAL
@@ -604,4 +580,3 @@ OBSERVABILITY STATUS: SAFE
 ORCHESTRATION STATUS: DETERMINISTIC
 MARITIME REALISM STATUS: ACTIVE
 ```
-
