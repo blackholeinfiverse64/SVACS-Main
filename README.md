@@ -523,15 +523,37 @@ python sensor_fusion/sensor_fusion_engine.py
 
 ## Operational Overview
 
-![Overview](dashboard_screenshots/overview_dashboard.png)
+![Dashboard Overview](dashboard_screenshots/dashboard_overview.jpeg)
+
+---
 
 ## Vessel Intelligence Runtime
 
-![Vessel Runtime](dashboard_screenshots/vessel_runtime.png)
+![Intelligence Runtime](dashboard_screenshots/Intelligence.jpeg)
+
+---
 
 ## Sensor Fusion Runtime
 
-![Sensor Fusion](dashboard_screenshots/sensor_fusion.png)
+![Pipeline Runtime](dashboard_screenshots/pipeline_view.jpeg)
+
+---
+
+## Signals Runtime
+
+![Signals View](dashboard_screenshots/Signals_view.jpeg)
+
+---
+
+## Perception Runtime
+
+![Perception View](dashboard_screenshots/Perception_view.jpeg)
+
+---
+
+## Alerts Runtime
+
+![Alerts Panel](dashboard_screenshots/alerts_panel.jpeg)
 
 ---
 
