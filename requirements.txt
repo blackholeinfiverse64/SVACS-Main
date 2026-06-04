@@ -5,3 +5,9 @@ numpy
 uuid
 pathlib
 pytest
+openpyxl
+fastapi
+uvicorn
+pydantic
+requests
+python-dotenv
