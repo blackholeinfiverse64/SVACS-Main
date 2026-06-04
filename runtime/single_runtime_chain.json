@@ -1,8 +1,16 @@
 {
-  "status": "DETERMINISTIC_CHAIN_VERIFIED",
-  "replay_safe": true,
-  "lineage_continuity": true,
-  "dashboard_visibility": true,
-  "ais_runtime": true,
-  "janes_runtime": true
+  "trace_id": "TRACE_SVACS_001",
+  "vessel": "Vessel_004",
+  "classification": "Destroyer",
+  "confidence": 0.94,
+  "runtime_chain": [
+    "AIS_INGESTION",
+    "JANE_ENRICHMENT",
+    "VESSEL_INTELLIGENCE",
+    "SENSOR_FUSION",
+    "STATE",
+    "REPLAY",
+    "DASHBOARD"
+  ],
+  "status": "COMPLETED"
 }
