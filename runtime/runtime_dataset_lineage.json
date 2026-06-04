@@ -1,0 +1,6 @@
+{
+  "source_dataset": "Jane's Fighting Ships",
+  "runtime_dataset": "AIS_clean.csv",
+  "lineage_status": "VERIFIED",
+  "replay_safe": true
+}
