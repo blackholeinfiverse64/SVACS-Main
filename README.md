@@ -24,6 +24,7 @@ SVACS validates deterministic runtime continuity across:
 
 ```text
 SIGNAL
+→ NOISE
 → GEO
 → PERCEPTION
 → INTELLIGENCE
@@ -171,29 +172,37 @@ Artifacts:
 ais_runtime_ingestor.py
 ais_runtime_trace.json
 ais_lineage_validation.json
-runtime_vessel_metadata_report.md
+runtime_vessel_metadata.json
 ```
 
 ---
 
-# Vessel Metadata Runtime Participation
+# Vessel Intelligence Engine
 
-Runtime execution validates metadata continuity across:
+SVACS includes runtime vessel intelligence classification using:
 
-```text
-AIS
-→ SIGNAL
-→ GEO
-→ PERCEPTION
-→ INTELLIGENCE
-→ STATE
-```
+* AIS enrichment
+* dimensions analysis
+* displacement analysis
+* radar metadata participation
+* sensor fusion
+* confidence scoring
+* lineage-aware classification
+
+Outputs include:
+
+* candidate vessel matches
+* confidence scores
+* evidence chains
+* supporting intelligence references
+* provenance-linked classification
 
 Artifacts:
 
 ```text
-live_vessel_runtime_log.json
-runtime_metadata_validation.json
+vessel_intelligence_engine.py
+sensor_fusion/sensor_fusion_engine.py
+runtime_vessel_metadata.json
 ```
 
 ---
@@ -355,11 +364,18 @@ Dashboard primitives:
 * Lineage Card
 * Executive Metric Card
 * Geo Card
+* Maritime Intelligence Card
+* Sensor Fusion Card
+* Confidence Card
 
 Frontend stack:
 
 * React
 * Vite
+* TypeScript
+* TailwindCSS
+* Recharts
+* Axios
 * reusable primitives
 * component-driven architecture
 
@@ -373,13 +389,16 @@ svacs-unified-core/
 ├── contracts/
 ├── core/
 ├── dashboard/
+├── dashboard_screenshots/
 ├── data/
 ├── docs/
 ├── external_grounding/
 ├── geo/
 ├── governance/
+├── guptchar_ingestion/
 ├── intelligence/
 ├── lineage/
+├── maritime_knowledge/
 ├── operator/
 ├── orchestration/
 ├── perception/
@@ -391,6 +410,7 @@ svacs-unified-core/
 ├── runtime/
 ├── sarathi/
 ├── scenarios/
+├── sensor_fusion/
 ├── shared/
 ├── signal_events/
 ├── state/
@@ -401,12 +421,15 @@ svacs-unified-core/
 ├── utils/
 │
 ├── full_operational_chain.py
+├── vessel_intelligence_engine.py
 ├── main.py
 ├── requirements.txt
 ├── README.md
 ├── REVIEW_PACKET.md
 ├── TESTING_PACKET.md
-└── TEAM_CONVERGENCE_REPORT.md
+├── TEAM_CONVERGENCE_REPORT.md
+├── frontend_integration_report.md
+└── operational_dashboard_layout.md
 ```
 
 ---
@@ -417,7 +440,7 @@ svacs-unified-core/
 
 ```bash
 git clone <repository_url>
-cd svacs_unified_core
+cd svacs-unified-core
 ```
 
 ---
@@ -473,7 +496,7 @@ python geo/geo_provenance_validator.py
 ## AIS Runtime Validation
 
 ```bash
-python ais/ais_runtime_ingestor.py
+python ais_runtime_ingestor.py
 ```
 
 ## TTG Runtime Validation
@@ -487,6 +510,28 @@ python ttg/ttg_adapter.py
 ```bash
 python rl_sandbox/policy_guardrails.py
 ```
+
+## Sensor Fusion Validation
+
+```bash
+python sensor_fusion/sensor_fusion_engine.py
+```
+
+---
+
+# Dashboard Preview
+
+## Operational Overview
+
+![Overview](dashboard_screenshots/overview_dashboard.png)
+
+## Vessel Intelligence Runtime
+
+![Vessel Runtime](dashboard_screenshots/vessel_runtime.png)
+
+## Sensor Fusion Runtime
+
+![Sensor Fusion](dashboard_screenshots/sensor_fusion.png)
 
 ---
 
@@ -580,3 +625,5 @@ OBSERVABILITY STATUS: SAFE
 ORCHESTRATION STATUS: DETERMINISTIC
 MARITIME REALISM STATUS: ACTIVE
 ```
+
+---
