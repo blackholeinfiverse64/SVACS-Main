@@ -14,16 +14,19 @@
 python full_operational_chain.py
 ```
 
-## Primary Runtime Orchestration Root
+## Supporting Runtime Modules
 
-```text
-signal_events/signal_generator.py
+```bash
+python external_grounding/janes_ingestion_pipeline.py
+python sensor_fusion/sensor_fusion_engine.py
+python sensor_fusion/uncertainty_engine.py
+python vessel_intelligence_engine.py
 ```
 
 ## Primary Runtime Lineage Artifact
 
 ```text
-storage/runtime/single_trace_runtime.json
+runtime/single_trace_runtime.json
 ```
 
 ## Primary Replay Persistence Endpoint
@@ -48,18 +51,18 @@ toward:
 Runtime-grounded deterministic maritime intelligence execution substrate
 ```
 
-The platform now validates:
+The platform validates:
 
 * runtime maritime intelligence execution
 * deterministic replay continuity
 * AIS ingestion participation
-* Jane’s metadata enrichment
+* Jane's maritime knowledge participation
 * vessel intelligence classification
 * sensor fusion participation
 * provenance continuity
-* TTG runtime convergence
-* bounded RL operationalization
+* replay-safe lineage persistence
 * operational dashboard cognition visibility
+* bounded operational learning
 
 ---
 
@@ -69,29 +72,27 @@ Validated runtime chain:
 
 ```text
 SIGNAL
-   ↓
+↓
 NOISE
-   ↓
+↓
 AIS
-   ↓
+↓
 GEO
-   ↓
+↓
 JANE'S ENRICHMENT
-   ↓
+↓
 PERCEPTION
-   ↓
+↓
 INTELLIGENCE
-   ↓
+↓
 STATE
-   ↓
+↓
 BUCKET
-   ↓
+↓
 REPLAY
-   ↓
+↓
 OBSERVABILITY
-   ↓
-TTG
-   ↓
+↓
 DASHBOARD
 ```
 
@@ -99,17 +100,13 @@ Validated runtime execution:
 
 ```text
 SIGNAL -> COMPLETED
-NOISE -> COMPLETED
-AIS -> COMPLETED
 GEO -> COMPLETED
-JANE'S_ENRICHMENT -> COMPLETED
 PERCEPTION -> COMPLETED
 INTELLIGENCE -> COMPLETED
 STATE -> COMPLETED
 BUCKET -> COMPLETED
 REPLAY -> COMPLETED
 OBSERVABILITY -> COMPLETED
-TTG -> COMPLETED
 DASHBOARD -> COMPLETED
 ```
 
@@ -119,7 +116,6 @@ Deterministic guarantees verified:
 DETERMINISTIC_CHAIN_VERIFIED
 REPLAY_SAFE
 LINEAGE_CONTINUITY_VERIFIED
-SINGLE_TRACE_CONTINUITY_VERIFIED
 APPEND_ONLY_VALIDATED
 ```
 
@@ -146,76 +142,164 @@ Validated guarantees:
 Artifacts:
 
 ```text
-storage/runtime/single_trace_runtime.json
-lineage/runtime_lineage_report.json
-full_operational_chain_log.jsonl
-runtime/runtime_vessel_metadata_flow.json
+runtime/single_trace_runtime.json
 runtime/runtime_trace_proof.json
+runtime/runtime_vessel_metadata_flow.json
+storage/logs/full_runtime_chain_log.jsonl
 ```
 
 ---
 
-# JANE'S RUNTIME PARTICIPATION
+# JANE'S KNOWLEDGE GROUNDING
 
-Jane’s maritime registry participates directly in runtime execution.
+Jane's maritime knowledge now participates in runtime intelligence workflows.
 
-Integrated runtime metadata:
+Validated capabilities:
 
-* vessel_class
-* signature_profile
-* propulsion_metadata
-* operational_role
-* size_metadata
-* source_metadata
-* dataset_version
-* confidence_score
-* lineage_metadata
-
-Validated runtime guarantees:
-
-* metadata traversal continuity
-* deterministic enrichment participation
-* replay-safe metadata reconstruction
-* append-only provenance continuity
+* vessel registry ingestion
+* provenance preservation
+* structured maritime knowledge extraction
+* lineage preservation
+* replay-safe enrichment
 
 Artifacts:
 
 ```text
-janes_runtime_registry.json
-janes_registry_runtime.json
-external_grounding/runtime_registry_join.py
-guptchar_ingestion/janes_ingestor.py
-reports/janes_integration_report.md
+external_grounding/janes_ingestion_pipeline.py
+janes_provenance_manifest.json
+janes_corpus_statistics.json
+knowledge_ingestion_validation.json
 ```
+
+Validated provenance fields:
+
+* source
+* page
+* edition
+* ingestion_timestamp
+* lineage_reference
 
 ---
 
-# AIS RUNTIME INGESTION
+# MARITIME KNOWLEDGE CORPUS EXPANSION
 
-SVACS validates live AIS runtime participation beyond compatibility preparation.
+SVACS supports reusable maritime intelligence grounding.
+
+Capabilities:
+
+* fleet history tracking
+* vessel lineage reconstruction
+* fleet evolution visibility
+* nation fleet mapping
+* evidence-backed vessel ancestry
+
+Artifacts:
+
+```text
+maritime_knowledge/fleet_history_registry.json
+maritime_knowledge/vessel_lineage_registry.json
+docs/fleet_evolution_report.md
+```
+
+Validated intelligence questions:
+
+* What class is this vessel?
+* What preceded this class?
+* What succeeded this class?
+* Which nation operates it?
+* What related vessels exist?
+
+---
+
+# AIS RUNTIME PARTICIPATION
 
 Runtime AIS capabilities:
 
 * AIS payload ingestion
 * vessel identity traversal
-* provenance linkage
-* replay linkage
 * metadata continuity
-* runtime vessel enrichment
+* replay linkage
+* provenance linkage
+* vessel enrichment participation
 
-Validated runtime guarantees:
+Validated guarantees:
 
 * deterministic AIS replay
 * append-only AIS lineage
-* provenance-visible ingestion continuity
+* provenance-visible continuity
 
 Artifacts:
 
 ```text
-external_grounding/ais_runtime_adapter.py
 runtime/runtime_ais_trace.json
 runtime/runtime_vessel_metadata_flow.json
-reports/ais_runtime_validation.md
+```
+
+---
+
+# SENSOR FUSION PARTICIPATION
+
+SVACS supports multi-modal maritime vessel identification.
+
+Supported inputs:
+
+* AIS
+* radar observations
+* acoustic observations
+* EO/IR observations
+* displacement
+* dimensions
+* unknown observations
+
+Validated outputs:
+
+* candidate vessel matches
+* confidence score
+* uncertainty score
+* evidence chain
+* lineage participation
+
+Artifacts:
+
+```text
+sensor_fusion/sensor_fusion_engine.py
+sensor_fusion/uncertainty_engine.py
+runtime/sensor_fusion_result.json
+runtime/uncertainty_analysis.json
+runtime/sensor_fusion_validation.json
+```
+
+---
+
+# VESSEL IDENTIFICATION VALIDATION
+
+Validation executed across:
+
+* Cargo Vessel
+* Destroyer
+* Frigate
+* Patrol Vessel
+* Submarine
+* Support Vessel
+* Fishing Vessel
+* Tanker
+* Amphibious Vessel
+* Unknown Vessel
+
+Validation outputs include:
+
+* observation
+* candidate match
+* confidence score
+* uncertainty score
+* evidence chain
+* lineage source
+
+Artifacts:
+
+```text
+runtime/sensor_fusion_validation.json
+runtime/runtime_vessel_reasoning.json
 ```
 
 ---
@@ -230,144 +314,53 @@ Validated capabilities:
 * confidence scoring
 * metadata reasoning
 * evidence-chain generation
-* lineage participation
 * explainable intelligence outputs
-
-Runtime enrichment chain:
-
-```text
-AIS
-   ↓
-Jane's Registry
-   ↓
-Runtime Enrichment
-   ↓
-Vessel Intelligence
-   ↓
-Threat Classification
-   ↓
-State Layer
-```
-
-Validated fields:
-
-* vessel_class
-* propulsion_type
-* operational_role
-* vessel_dimensions
-* identity_confidence
-* metadata_source_version
 
 Artifacts:
 
 ```text
 vessel_intelligence_engine.py
-runtime/runtime_vessel_metadata_flow.json
+runtime/runtime_vessel_reasoning.json
 runtime/runtime_trace_proof.json
 ```
 
----
-
-# SENSOR FUSION PARTICIPATION
-
-SVACS supports multi-modal maritime vessel identification.
-
-Supported inputs:
-
-* AIS
-* displacement
-* dimensions
-* radar metadata
-* acoustic metadata
-* EO/IR metadata
-* unknown sensor observations
-
 Validated outputs:
 
-* candidate vessel matches
-* confidence scoring
-* uncertainty scoring
-* evidence chain
-* lineage participation
-* supporting source references
-
-Artifacts:
-
-```text
-sensor_fusion/sensor_fusion_engine.py
-runtime/sensor_fusion_runtime.json
-reports/sensor_fusion_validation.md
-```
+* classification
+* reasoning
+* confidence
+* evidence
+* source lineage
 
 ---
 
-# TTG RUNTIME CONVERGENCE
+# SVACS + NICAI CONVERGENCE
 
-TTG participates as an operational runtime surface.
-
-Validated convergence areas:
-
-* TTG simulation participation
-* runtime visibility
-* replay linkage
-* operational dashboard integration
-* observability convergence
-
-TTG visibility validated across:
+Validated intelligence chain:
 
 ```text
-runtime chain
-dashboard layer
-replay layer
-observability layer
+Guptchar
+↓
+Maritime Knowledge
+↓
+Sensor Fusion
+↓
+Vessel Intelligence
+↓
+SVACS Runtime
+↓
+NICAI Runtime
+↓
+Dashboard
 ```
 
 Artifacts:
 
 ```text
-ttg/
-runtime/ttg_runtime_bridge.json
-reports/ttg_execution_visibility_report.md
+runtime/intelligence_chain_trace.json
 ```
 
----
-
-# RL OPERATIONALIZATION
-
-SVACS supports bounded replay-safe operational learning execution.
-
-RL optimization allowed for:
-
-* prioritization
-* confidence weighting
-* signal ranking
-* noise filtering
-* operational scoring
-
-RL is prohibited from modifying:
-
-* governance semantics
-* replay truth
-* lineage continuity
-* constitutional boundaries
-* authority surfaces
-
-Replay-safe RL guarantees:
-
-```text
-DETERMINISTIC_TRAINING_REPLAY
-REPLAY_SAFE_LEARNING
-BOUNDARY_ENFORCEMENT_ACTIVE
-```
-
-Artifacts:
-
-```text
-rl_sandbox/reward_model.py
-rl_sandbox/episode_manager.py
-runtime/rl_runtime_proof.json
-reports/rl_operationalization_report.md
-```
+Validation confirms end-to-end lineage continuity.
 
 ---
 
@@ -382,7 +375,7 @@ Engineering observability surface
 toward:
 
 ```text
-Operational maritime cognition surface
+Operational maritime command center
 ```
 
 Integrated runtime visibility:
@@ -390,22 +383,19 @@ Integrated runtime visibility:
 * AIS visibility
 * replay visibility
 * lineage visibility
-* TTG visibility
-* runtime execution continuity
-* operational telemetry convergence
 * vessel intelligence visibility
 * sensor fusion visibility
+* operational telemetry visibility
 
-Reusable dashboard primitives:
+Dashboard primitives:
 
 * Maritime Intelligence Card
 * Sensor Fusion Card
-* Knowledge Lineage Card
-* TTG Card
 * Replay Card
-* Alert Card
 * Vessel Card
+* Alert Card
 * Executive Metric Card
+* Knowledge Lineage Card
 * Map Card
 
 Frontend stack:
@@ -414,19 +404,54 @@ Frontend stack:
 * Vite
 * TypeScript
 * TailwindCSS
-* React Query
-* component-driven architecture
-* reusable dashboard primitives
+* Component Architecture
 
-Artifacts:
+---
+
+# OPERATIONAL MARITIME COMMAND CENTER
+
+Dashboard Zones:
+
+## Executive Zone
+
+* system health
+* replay health
+* active traces
+* runtime status
+
+## Maritime Intelligence Zone
+
+* vessel identification
+* fleet intelligence
+* classification confidence
+* threat visibility
+
+## Sensor Fusion Zone
+
+* radar observations
+* acoustic observations
+* EO/IR observations
+* evidence chains
+
+## Replay & Lineage Zone
+
+* provenance visibility
+* replay continuity
+* knowledge lineage
+* fleet evolution visibility
+
+Operator workflow:
 
 ```text
-dashboard/
-dashboard_screenshorts/
-frontend_integration_report.md
-dashboard_capability_report.md
-operational_dashboard_layout.md
-component_library.md
+Observation
+↓
+Classification
+↓
+Confidence
+↓
+Evidence
+↓
+Lineage
 ```
 
 ---
@@ -441,9 +466,9 @@ component_library.md
 
 ## Vessel Intelligence Runtime
 
-* Intelligence.jpeg
-* Perception_view.jpeg
 * Signals_view.jpeg
+* Perception_view.jpeg
+* Intelligence.jpeg
 
 ## Sensor Fusion Runtime
 
@@ -463,19 +488,19 @@ Validated persistence guarantees:
 
 * append-only replay persistence
 * deterministic reconstruction
-* lineage continuity
 * replay-safe recovery
 * parent hash continuity
+* lineage continuity
 
 Bucket flow:
 
 ```text
 STATE
-   ↓
+↓
 BUCKET_UPLOAD
-   ↓
+↓
 REPLAY_RECOVERY
-   ↓
+↓
 LINEAGE_RECONSTRUCTION
 ```
 
@@ -491,18 +516,15 @@ LINEAGE_CHAIN_VALID
 
 # GOVERNANCE + PROVENANCE CONTINUITY
 
-Governance metadata enforced during runtime execution.
-
 Validated metadata:
 
 * dataset_owner
 * dataset_origin
 * dataset_trust_score
 * validation_status
-* schema_authority_reference
-* replay_reference
 * provenance_hash
 * lineage_reference
+* replay_reference
 
 Governance guarantees:
 
@@ -515,38 +537,16 @@ MUTATION_RESISTANT
 
 ---
 
-# OPERATIONAL MARITIME SCENARIOS
-
-Validated operational scenario pack:
-
-* piracy interception
-* illegal fishing detection
-* submarine ambiguity
-* smuggling anomaly
-* port congestion overload
-* RF interference
-* sensor deception event
-
-Scenario guarantees:
-
-* telemetry continuity
-* replay-safe reconstruction
-* operational ambiguity handling
-* deterministic intelligence continuity
-
----
-
 # HUMAN OPERATOR VALIDATION LAYER
 
 Operator workflows support:
 
 * replay inspection
 * lineage auditability
-* confidence explanation visibility
+* confidence explanation
 * operational review workflow
-* bounded inspection realism
 
-Operators remain:
+Operator layer remains:
 
 ```text
 INSPECTION_ONLY
@@ -558,19 +558,13 @@ No authority escalation is permitted.
 
 # TEAM CONVERGENCE
 
-| Contributor | Runtime Responsibility |
-| ----------- | ---------------------- |
-| Ankita | Runtime convergence leadership, vessel intelligence integration, governance continuity, RL operationalization |
-| Nupur | Jane’s integration, AIS participation, provenance continuity |
-| Raj | STATE runtime participation, deterministic runtime closure |
-| Nikhil | Dashboard cognition architecture, runtime visibility |
-| Bucket Team | Replay persistence, lineage continuity validation |
-
-Artifacts:
-
-```text
-TEAM_CONVERGENCE_REPORT.md
-```
+| Contributor | Responsibility                                                  |
+| ----------- | --------------------------------------------------------------- |
+| Ankita      | Runtime convergence, vessel intelligence, governance continuity |
+| Nupur       | Jane's integration, AIS participation, provenance continuity    |
+| Raj         | State persistence, deterministic closure                        |
+| Nikhil      | Dashboard cognition architecture                                |
+| Bucket Team | Replay persistence and lineage validation                       |
 
 ---
 
@@ -578,28 +572,30 @@ TEAM_CONVERGENCE_REPORT.md
 
 Validated runtime testing coverage:
 
-* Jane’s runtime participation
-* AIS ingestion proof
-* deterministic chain continuity
-* replay-safe RL execution
-* TTG runtime participation
-* replay continuity
-* lineage persistence
-* dashboard runtime integration
-* sensor fusion classification
-* vessel intelligence explainability
+* Jane's ingestion validation
+* corpus lineage validation
+* AIS validation
+* sensor fusion validation
+* vessel intelligence validation
+* dashboard validation
+* replay validation
+* provenance validation
+* knowledge continuity validation
 
 Artifacts:
 
 ```text
 TESTING_PACKET.md
+runtime/
+validation_reports/
+dashboard_screenshots/
 ```
 
 ---
 
 # FINAL SYSTEM CHARACTERISTICS
 
-SVACS Unified Core is now:
+SVACS Unified Core is:
 
 * runtime-grounded
 * deterministic
@@ -608,12 +604,11 @@ SVACS Unified Core is now:
 * provenance-visible
 * append-only
 * mutation-resistant
-* AIS-participating
+* AIS-grounded
 * lineage-preserving
-* TTG-integrated
-* operationally traceable
 * sensor-fusion-capable
 * explainable
+* operationally traceable
 * constitutionally bounded
 
 ---
@@ -623,16 +618,14 @@ SVACS Unified Core is now:
 ```text
 SYSTEM STATUS: OPERATIONAL
 RUNTIME STATUS: VERIFIED
-AIS STATUS: VERIFIED
 JANE'S STATUS: VERIFIED
-VESSEL INTELLIGENCE STATUS: VERIFIED
+AIS STATUS: VERIFIED
 SENSOR FUSION STATUS: VERIFIED
-TTG STATUS: VERIFIED
+VESSEL INTELLIGENCE STATUS: VERIFIED
 REPLAY STATUS: VERIFIED
 LINEAGE STATUS: VERIFIED
-RL BOUNDARY STATUS: ENFORCED
 GOVERNANCE STATUS: VERIFIED
 BUCKET STATUS: VERIFIED
-ORCHESTRATION STATUS: DETERMINISTIC
 DASHBOARD STATUS: ACTIVE
+ORCHESTRATION STATUS: DETERMINISTIC
 ```
