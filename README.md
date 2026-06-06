@@ -10,16 +10,16 @@
 
 SVACS Unified Core is a deterministic, replay-safe maritime intelligence execution substrate designed for:
 
-* maritime telemetry participation
+* Maritime telemetry participation
 * AIS runtime ingestion
 * Jane's maritime knowledge grounding
-* sensor fusion reasoning
-* vessel intelligence classification
-* provenance continuity
-* governance-aware orchestration
-* replay-safe execution
-* append-only lineage persistence
-* operational maritime dashboards
+* Sensor fusion reasoning
+* Vessel intelligence classification
+* Provenance continuity
+* Governance-aware orchestration
+* Replay-safe execution
+* Append-only lineage persistence
+* Operational maritime dashboards
 
 The platform validates deterministic runtime continuity across:
 
@@ -55,23 +55,21 @@ DASHBOARD
 
 SVACS validates:
 
-* deterministic runtime orchestration
-* replay-safe maritime execution
+* Deterministic runtime orchestration
+* Replay-safe maritime execution
 * AIS participation
 * Jane's knowledge participation
-* vessel intelligence reasoning
-* sensor fusion classification
-* provenance continuity
-* governance-aware lineage
-* dashboard cognition visibility
-* operator auditability
-* replay-safe reconstruction
+* Vessel intelligence reasoning
+* Sensor fusion classification
+* Provenance continuity
+* Governance-aware lineage
+* Dashboard cognition visibility
+* Operator auditability
+* Replay-safe reconstruction
 
 ---
 
-# Core Runtime Components
-
-## Runtime Chain
+# Runtime Architecture
 
 ```text
 SIGNAL
@@ -101,13 +99,22 @@ DASHBOARD
 
 ---
 
-# Runtime Execution
+# Core Runtime Components
 
-Run the complete operational chain:
-
-```bash
-python full_operational_chain.py
-```
+| Component     | Responsibility                    |
+| ------------- | --------------------------------- |
+| SIGNAL        | Maritime telemetry ingestion      |
+| NOISE         | Runtime perturbation handling     |
+| AIS           | Vessel telemetry participation    |
+| GEO           | Geo-provenance enrichment         |
+| JANE'S        | Maritime knowledge enrichment     |
+| PERCEPTION    | Vessel interpretation             |
+| INTELLIGENCE  | Threat and risk reasoning         |
+| STATE         | Deterministic runtime persistence |
+| BUCKET        | Append-only lineage persistence   |
+| REPLAY        | Deterministic reconstruction      |
+| OBSERVABILITY | Runtime visibility                |
+| DASHBOARD     | Operational cognition surface     |
 
 ---
 
@@ -171,11 +178,11 @@ runtime/runtime_vessel_metadata_flow.json
 
 Runtime AIS integration supports:
 
-* vessel identity traversal
+* Vessel identity traversal
 * AIS metadata ingestion
-* provenance linkage
-* replay continuity
-* vessel enrichment
+* Provenance linkage
+* Replay continuity
+* Vessel enrichment
 
 Artifacts:
 
@@ -191,11 +198,11 @@ runtime/runtime_vessel_metadata_flow.json
 
 Knowledge corpus supports:
 
-* vessel classes
-* fleet histories
-* vessel lineage
-* fleet evolution visibility
-* nation fleet references
+* Vessel classes
+* Fleet histories
+* Vessel lineage
+* Fleet evolution visibility
+* Nation fleet references
 
 Artifacts:
 
@@ -214,20 +221,20 @@ docs/fleet_evolution_report.md
 Sensor fusion supports:
 
 * AIS observations
-* radar observations
-* acoustic observations
+* Radar observations
+* Acoustic observations
 * EO/IR observations
-* vessel dimensions
-* displacement metadata
-* unknown observations
+* Vessel dimensions
+* Displacement metadata
+* Unknown observations
 
 Runtime outputs:
 
-* candidate matches
-* confidence scores
-* uncertainty scores
-* evidence chains
-* lineage references
+* Candidate matches
+* Confidence scores
+* Uncertainty scores
+* Evidence chains
+* Lineage references
 
 Artifacts:
 
@@ -270,11 +277,11 @@ Total Examples:
 
 Runtime vessel intelligence provides:
 
-* vessel classification
-* explainable reasoning
-* confidence scoring
-* evidence chains
-* source lineage visibility
+* Vessel classification
+* Explainable reasoning
+* Confidence scoring
+* Evidence chains
+* Source lineage visibility
 
 Artifacts:
 
@@ -332,13 +339,13 @@ runtime/intelligence_chain_trace.json
 
 Dashboard architecture supports:
 
-* operational visibility
-* replay visibility
+* Operational visibility
+* Replay visibility
 * AIS visibility
-* vessel intelligence visibility
-* sensor fusion visibility
-* lineage visibility
-* provenance visibility
+* Vessel intelligence visibility
+* Sensor fusion visibility
+* Lineage visibility
+* Provenance visibility
 
 Dashboard primitives:
 
@@ -359,25 +366,45 @@ Frontend Stack:
 
 ---
 
-# Dashboard Screenshots
+# Dashboard Preview
 
-```text
-dashboard_screenshots/
+## Operational Overview
 
-dashboard_overview.jpeg
+### Dashboard Overview
 
-dashboard_overview_2.jpeg
+![Dashboard Overview](dashboard_screenshots/dashboard_overview.jpeg)
 
-pipeline_view.jpeg
+### Dashboard Overview 2
 
-Intelligence.jpeg
+![Dashboard Overview 2](dashboard_screenshots/dashboard_overview_2.jpeg)
 
-Perception_view.jpeg
+### Runtime Pipeline
 
-Signals_view.jpeg
+![Pipeline Runtime](dashboard_screenshots/pipeline_view.jpeg)
 
-alerts_panel.jpeg
-```
+---
+
+## Vessel Intelligence Runtime
+
+### Intelligence View
+
+![Intelligence Runtime](dashboard_screenshots/Intelligence.jpeg)
+
+### Perception View
+
+![Perception Runtime](dashboard_screenshots/Perception_view.jpeg)
+
+### Signals View
+
+![Signals Runtime](dashboard_screenshots/Signals_view.jpeg)
+
+---
+
+## Sensor Fusion & Alerts
+
+### Alerts Panel
+
+![Alerts Panel](dashboard_screenshots/alerts_panel.jpeg)
 
 ---
 
@@ -395,31 +422,39 @@ svacs_unified_core/
 ├── runtime/
 ├── sensor_fusion/
 ├── storage/
-│
+
 ├── full_operational_chain.py
 ├── vessel_intelligence_engine.py
 ├── REVIEW_PACKET.md
 ├── TESTING_PACKET.md
-└── README.md
+├── README.md
 ```
 
 ---
 
 # Installation
 
-Create virtual environment:
+## Create Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
-Activate:
+## Activate Environment
+
+Windows:
 
 ```bash
 .venv\Scripts\activate
 ```
 
-Install dependencies:
+Linux / Mac:
+
+```bash
+source .venv/bin/activate
+```
+
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -429,31 +464,31 @@ pip install -r requirements.txt
 
 # Execution Commands
 
-Run operational chain:
+Run Operational Chain:
 
 ```bash
 python full_operational_chain.py
 ```
 
-Run Jane's ingestion:
+Run Jane's Ingestion:
 
 ```bash
 python external_grounding/janes_ingestion_pipeline.py
 ```
 
-Run sensor fusion:
+Run Sensor Fusion:
 
 ```bash
 python sensor_fusion/sensor_fusion_engine.py
 ```
 
-Run uncertainty analysis:
+Run Uncertainty Analysis:
 
 ```bash
 python sensor_fusion/uncertainty_engine.py
 ```
 
-Run vessel intelligence:
+Run Vessel Intelligence:
 
 ```bash
 python vessel_intelligence_engine.py
@@ -481,8 +516,11 @@ Validated guarantees:
 
 ```text
 DETERMINISTIC_CHAIN_VERIFIED
+
 REPLAY_SAFE
+
 LINEAGE_CONTINUITY_VERIFIED
+
 APPEND_ONLY_VALIDATED
 ```
 
@@ -504,18 +542,18 @@ APPEND_ONLY_VALIDATED
 
 SVACS Unified Core is:
 
-* runtime-grounded
-* deterministic
-* replay-safe
-* governance-aware
-* provenance-visible
-* append-only
-* mutation-resistant
+* Runtime-grounded
+* Deterministic
+* Replay-safe
+* Governance-aware
+* Provenance-visible
+* Append-only
+* Mutation-resistant
 * AIS-participating
-* lineage-preserving
-* sensor-fusion-capable
-* explainable
-* operationally traceable
+* Lineage-preserving
+* Sensor-fusion-capable
+* Explainable
+* Operationally traceable
 
 ---
 
