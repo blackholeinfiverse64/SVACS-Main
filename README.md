@@ -411,23 +411,159 @@ Frontend Stack:
 # Project Structure
 
 ```text
+
 svacs_unified_core/
-
+│
+├── contracts/
+│   └── execution_contract_validator.py
+│
+├── core/
+│   └── core_executor.py
+│
 ├── dashboard/
+│
 ├── dashboard_screenshots/
+│   ├── dashboard_overview.jpeg
+│   ├── dashboard_overview_2.jpeg
+│   ├── pipeline_view.jpeg
+│   ├── Intelligence.jpeg
+│   ├── Perception_view.jpeg
+│   ├── Signals_view.jpeg
+│   └── alerts_panel.jpeg
+│
+├── data/
+│
 ├── docs/
+│
 ├── external_grounding/
+│   ├── janes_ingestion_pipeline.py
+│   ├── ais_runtime_adapter.py
+│   └── runtime_registry_join.py
+│
+├── geo/
+│   └── geo_trace_reconstruction.json
+│
+├── governance/
+│   └── dataset_governance_validator.py
+│
+├── guptchar_ingestion/
+│   └── janes_ingestor.py
+│
+├── intelligence/
+│   └── intelligence_engine.py
+│
+├── lineage/
+│   └── runtime_lineage_report.json
+│
 ├── maritime_knowledge/
+│   ├── fleet_history_registry.json
+│   └── vessel_lineage_registry.json
+│
+├── operator/
+│   └── human_validation_log.json
+│
+├── orchestration/
+│   └── live_pipeline.py
+│
+├── perception/
+│   └── perception_engine.py
+│
+├── rajya/
+│   └── rajya_validator.py
+│
+├── replay/
+│   └── replay_engine.py
+│
 ├── reports/
+│   └── scenario_outputs.json
+│
+├── rl/
+│
+├── rl_sandbox/
+│   ├── reward_model.py
+│   ├── episode_manager.py
+│   └── training_logger.py
+│
 ├── runtime/
+│   ├── single_trace_runtime.json
+│   ├── runtime_trace_proof.json
+│   ├── runtime_vessel_reasoning.json
+│   ├── runtime_vessel_metadata_flow.json
+│   ├── sensor_fusion_result.json
+│   ├── sensor_fusion_runtime.json
+│   ├── runtime_ais_trace.json
+│   └── intelligence_chain_trace.json
+│
+├── runtime_proof_logs/
+│
+├── sarathi/
+│   └── token_manager.py
+│
+├── scenario_execution_reports/
+│   └── sensor_noise_report.json
+│
+├── scenario_replay_reports/
+│   └── sensor_noise_replay.json
+│
+├── scenarios/
+│   └── scenario_runner.py
+│
 ├── sensor_fusion/
+│   ├── sensor_fusion_engine.py
+│   └── uncertainty_engine.py
+│
+├── shared/
+│   └── schemas/
+│       └── provenance_registry.json
+│
+├── signal_events/
+│   └── signal_generator.py
+│
+├── state/
+│   └── state_engine.py
+│
 ├── storage/
-
+│   ├── logs/
+│   │   └── full_runtime_chain_log.jsonl
+│   └── rl_runtime_proof.json
+│
+├── stress/
+│   └── entropy_survival_report.md
+│
+├── telemetry/
+│   └── telemetry_manager.py
+│
+├── tests/
+│   └── federated_replay_validation.py
+│
+├── ttg/
+│
+├── utils/
+│   └── append_only_utils.py
+│
+├── validation_reports/
+│
 ├── full_operational_chain.py
 ├── vessel_intelligence_engine.py
+├── main.py
+├── requirements.txt
+│
+├── README.md
 ├── REVIEW_PACKET.md
 ├── TESTING_PACKET.md
-├── README.md
+├── TEAM_CONVERGENCE_REPORT.md
+├── frontend_integration_report.md
+├── operational_dashboard_layout.md
+├── dashboard_capability_report.md
+├── component_library.md
+│
+├── janes_runtime_registry.json
+├── janes_registry_runtime.json
+├── janes_aligned_registry.json
+├── runtime_vessel_metadata.json
+├── source_lineage_report.json
+├── single_trace_full_proof.json
+└── healthcheck_report.json
 ```
 
 ---
