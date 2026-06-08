@@ -1,25 +1,13 @@
 import json
 
-observation = {
-    "length": 154,
-    "beam": 21,
-    "displacement": 7200
-}
-
-matches = [
-    {
-        "candidate": "Destroyer",
-        "confidence": 0.88
-    },
-    {
-        "candidate": "Frigate",
-        "confidence": 0.72
-    }
-]
+with open(
+    "runtime/sensor_fusion_validation.json"
+) as f:
+    data = json.load(f)
 
 result = {
-    "observation": observation,
-    "candidate_matches": matches
+    "total_examples": len(data),
+    "matches": data
 }
 
 with open(
