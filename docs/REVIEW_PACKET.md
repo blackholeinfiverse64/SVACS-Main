@@ -37,6 +37,143 @@ https://bhiv-bucket.onrender.com
 
 ---
 
+# EXECUTION ENTRYPOINT
+
+---
+
+# RUNTIME EXECUTION COMMANDS
+
+## Full Operational Chain
+
+```bash
+python full_operational_chain.py
+```
+
+Purpose:
+
+* Executes deterministic SVACS runtime chain
+* Validates replay continuity
+* Uploads lineage artifact to Bucket
+* Generates runtime trace
+
+Expected Output:
+
+```text
+SIGNAL -> COMPLETED
+GEO -> COMPLETED
+PERCEPTION -> COMPLETED
+INTELLIGENCE -> COMPLETED
+STATE -> COMPLETED
+BUCKET -> COMPLETED
+REPLAY -> COMPLETED
+OBSERVABILITY -> COMPLETED
+DASHBOARD -> COMPLETED
+
+DETERMINISTIC CHAIN VERIFIED
+REPLAY SAFE
+LINEAGE CONTINUITY VERIFIED
+```
+
+---
+
+## Jane's Knowledge Ingestion
+
+```bash
+python external_grounding/janes_ingestion_pipeline.py
+```
+
+Purpose:
+
+* Maritime knowledge ingestion
+* Provenance generation
+* Corpus statistics generation
+
+Expected Output:
+
+```text
+JANES INGESTION COMPLETE
+```
+
+---
+
+## Sensor Fusion Runtime
+
+```bash
+python sensor_fusion/sensor_fusion_engine.py
+```
+
+Purpose:
+
+* Multi-source vessel matching
+* Confidence generation
+* Candidate vessel identification
+
+Expected Output:
+
+```text
+SENSOR FUSION COMPLETE
+```
+
+Generated Artifact:
+
+```text
+runtime/sensor_fusion_result.json
+```
+
+---
+
+## Uncertainty Analysis
+
+```bash
+python sensor_fusion/uncertainty_engine.py
+```
+
+Purpose:
+
+* Confidence validation
+* Uncertainty estimation
+
+Expected Output:
+
+```text
+UNCERTAINTY ANALYSIS COMPLETE
+```
+
+Generated Artifact:
+
+```text
+runtime/uncertainty_analysis.json
+```
+
+---
+
+## Vessel Intelligence Runtime
+
+```bash
+python vessel_intelligence_engine.py
+```
+
+Purpose:
+
+* Explainable vessel classification
+* Evidence generation
+* Lineage validation
+
+Expected Output:
+
+```text
+VESSEL INTELLIGENCE GENERATED
+```
+
+Generated Artifacts:
+
+```text
+runtime/runtime_trace_proof.json
+runtime/runtime_vessel_reasoning.json
+```
+
+---
+
 # SYSTEM OBJECTIVE
 
 SVACS Unified Core transitioned from:
