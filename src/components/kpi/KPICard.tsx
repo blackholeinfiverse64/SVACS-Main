@@ -35,13 +35,13 @@ export default function KPICard({
         : "text-fg-2";
 
   return (
-    <div className="panel relative overflow-hidden p-4">
-      <div className="flex items-start justify-between gap-3">
-        <div className="kpi-label">{label}</div>
+    <div className="panel relative flex h-full min-h-[8.25rem] flex-col overflow-hidden p-4">
+      <div className="flex min-h-[2.5rem] items-start justify-between gap-2">
+        <div className="kpi-label line-clamp-2 leading-snug">{label}</div>
         {icon && (
           <div
             className={clsx(
-              "flex h-8 w-8 items-center justify-center rounded-md border",
+              "flex h-8 w-8 shrink-0 items-center justify-center rounded-md border",
               accentMap[accent],
             )}
           >
@@ -49,13 +49,15 @@ export default function KPICard({
           </div>
         )}
       </div>
-      <div className="kpi-value mt-2">{value}</div>
-      {delta && (
-        <div className={clsx("mt-1 flex items-center gap-1 text-xs", deltaCls)}>
+      <div className="mt-auto flex flex-col pt-2">
+        <div className="kpi-value">{value}</div>
+        {delta && (
+          <div className={clsx("mt-1 flex items-center gap-1 text-xs", deltaCls)}>
           <DeltaIcon size={12} />
-          <span className="font-mono tabular-nums">{delta.text}</span>
-        </div>
-      )}
+            <span className="font-mono tabular-nums">{delta.text}</span>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

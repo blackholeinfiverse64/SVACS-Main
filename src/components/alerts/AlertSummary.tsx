@@ -33,42 +33,30 @@ export default function AlertSummary({
         alerts.map((a, idx) => (
           <li
             key={a.id || idx}
-            className="flex items-center gap-3 px-4 py-2.5 transition-colors hover:bg-bg-2/40"
+            className="grid grid-cols-[1rem_4.5rem_4.5rem_minmax(0,1fr)_auto] items-center gap-x-3 px-4 py-2.5 transition-colors hover:bg-bg-2/40"
           >
-            {/* ICON */}
             <AlertTriangle
               size={14}
-              className={clsx(
-                "shrink-0",
-                sevColor(a.severity)
-              )}
+              className={clsx("shrink-0", sevColor(a.severity))}
             />
 
-            {/* TIME */}
             <span className="font-mono text-xs tabular-nums text-fg-1">
               {a.ts_utc
                 ? fmtUtc(a.ts_utc)
                 : a.timestamp
-                ? fmtUtc(a.timestamp)
-                : "N/A"}
+                  ? fmtUtc(a.timestamp)
+                  : "N/A"}
             </span>
 
-            {/* VESSEL */}
-            <span className="font-mono text-xs text-fg-0">
+            <span className="truncate font-mono text-xs text-fg-0">
               {a.vessel_id || "UNKNOWN"}
             </span>
 
-            {/* ALERT TITLE */}
-            <span className="flex-1 truncate text-xs text-fg-1">
-              {a.kind ||
-                a.title ||
-                "Alert Triggered"}
+            <span className="truncate text-xs text-fg-1">
+              {a.kind || a.title || "Alert Triggered"}
             </span>
 
-            {/* SEVERITY */}
-            <SeverityChip
-              severity={a.severity || "LOW"}
-            />
+            <SeverityChip severity={a.severity || "LOW"} />
           </li>
         ))
       )}

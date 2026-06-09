@@ -64,11 +64,13 @@ const stageStyle: Record<
 interface Props {
   metrics: StageMetric[];
   bucketSyncPct?: number;
+  compact?: boolean;
 }
 
 export default function PipelineFlow({
   metrics,
   bucketSyncPct = 1,
+  compact = false,
 }: Props) {
   const order: StageMetric["stage"][] = [
     "signal",
@@ -81,29 +83,33 @@ export default function PipelineFlow({
   const map = new Map(metrics.map((m) => [m.stage, m]));
 
   return (
-    <div className="rounded-2xl border border-white/10 bg-[#0b1220] p-5 shadow-xl">
-      {/* HEADER */}
-      <div className="mb-6 flex items-center justify-between">
-        <div>
-          <h2 className="text-lg font-semibold text-white">
-            Pipeline Flow (Live)
-          </h2>
+    <div className="flex h-full min-h-0 flex-col">
+      <div
+        className={clsx(
+          "flex items-center justify-between gap-3",
+          compact ? "mb-3" : "mb-4",
+        )}
+      >
+        <p className="text-xs text-fg-2">
+          Signal → Perception → Intelligence → State → Bucket
+        </p>
 
-          <p className="mt-1 text-sm text-slate-400">
-            Signal → Perception → Intelligence → State → Bucket
-          </p>
-        </div>
-
-        <div className="flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1">
-          <Activity className="h-4 w-4 text-emerald-400" />
-          <span className="text-xs font-medium text-emerald-400">
-            LIVE PIPELINE
-          </span>
+        <div className="flex shrink-0 items-center gap-2">
+          <div className="flex items-center gap-2 rounded-full border border-accent-green/30 bg-accent-green/10 px-2.5 py-0.5">
+            <Activity className="h-3.5 w-3.5 text-accent-green" />
+            <span className="text-2xs font-semibold uppercase tracking-[0.14em] text-accent-green">
+              Live
+            </span>
+          </div>
+          {compact && (
+            <span className="hidden rounded-full bg-accent-green/10 px-2 py-0.5 text-2xs font-medium text-accent-green sm:inline">
+              Healthy
+            </span>
+          )}
         </div>
       </div>
 
-      {/* PIPELINE */}
-      <div className="flex flex-col gap-5 lg:flex-row lg:items-center">
+      <div className="flex min-h-0 flex-1 flex-col gap-3 lg:flex-row lg:items-stretch">
         {order.map((stageId, idx) => {
           const m = map.get(stageId);
 
@@ -118,93 +124,109 @@ export default function PipelineFlow({
           return (
             <div
               key={stageId}
-              className="flex flex-1 items-center"
+              className="flex min-h-0 flex-1 items-stretch"
             >
-              {/* STAGE CARD */}
-              <div className="relative flex w-full flex-col items-center rounded-2xl border border-white/10 bg-[#111827] p-5 transition-all duration-300 hover:scale-[1.02] hover:border-white/20">
-                {/* STEP NUMBER */}
+              <div
+                className={clsx(
+                  "relative flex h-full min-w-0 flex-1 flex-col items-center rounded-lg border border-line bg-bg-2/80 transition-colors hover:border-line/80 hover:bg-bg-2",
+                  compact ? "px-2 pb-3 pt-5" : "p-4 pt-5",
+                )}
+              >
                 <div
                   className={clsx(
-                    "absolute -top-3 left-1/2 flex h-7 w-7 -translate-x-1/2 items-center justify-center rounded-full border border-black/30 bg-[#0f172a] text-xs font-bold",
-                    def.text
+                    "absolute -top-3 left-1/2 flex h-6 w-6 -translate-x-1/2 items-center justify-center rounded-full border border-line bg-bg-1 text-[11px] font-bold",
+                    def.text,
                   )}
                 >
                   {idx + 1}
                 </div>
 
-                {/* ICON */}
                 <div
                   className={clsx(
-                    "mb-4 flex h-20 w-20 items-center justify-center rounded-full border-2 bg-[#0b1220]",
+                    "flex shrink-0 items-center justify-center rounded-full border-2 bg-bg-1",
+                    compact ? "h-12 w-12" : "mb-1 h-14 w-14",
                     def.ring,
-                    def.glow
+                    def.glow,
                   )}
                 >
                   <Icon
-                    size={30}
+                    size={compact ? 20 : 24}
                     strokeWidth={1.8}
                     className={def.text}
                   />
                 </div>
 
-                {/* LABEL */}
-                <div className="text-center">
-                  <div className="text-sm font-semibold text-white">
+                <div
+                  className={clsx(
+                    "mt-2 flex w-full flex-col items-center justify-center text-center",
+                    compact ? "min-h-[2.5rem]" : "min-h-[3rem]",
+                  )}
+                >
+                  <div className="text-xs font-semibold leading-tight text-fg-0">
                     {def.label}
                   </div>
-
-                  <div className="mt-1 text-[10px] uppercase tracking-[0.18em] text-slate-400">
+                  <div className="mt-0.5 text-[10px] uppercase tracking-[0.16em] text-fg-2">
                     {def.sub}
                   </div>
+                </div>
 
-                  {/* VALUE */}
-                  <div className="mt-3 font-mono text-xl font-bold text-slate-100">
-                    {value}
-                  </div>
+                <div
+                  className={clsx(
+                    "mt-auto w-full text-center font-mono font-bold tabular-nums text-fg-0",
+                    compact ? "pt-2 text-sm" : "pt-3 text-base",
+                  )}
+                >
+                  {value}
                 </div>
               </div>
 
-              {/* ARROW */}
               {idx < order.length - 1 && (
-                <PipeArrow color={def.text} />
+                <PipeArrow color={def.text} compact={compact} />
               )}
             </div>
           );
         })}
       </div>
 
-      {/* FOOTER STATUS */}
-      <div className="mt-6 flex items-center gap-3 border-t border-white/10 pt-4">
-        <StatusDot status="live" />
-
-        <span className="text-sm text-slate-400">
-          Pipeline Status:
-        </span>
-
-        <span className="rounded-full bg-emerald-500/10 px-3 py-1 text-sm font-medium text-emerald-400">
-          Healthy
-        </span>
-
-        <span className="ml-auto text-xs text-slate-500">
-          Deterministic Runtime Active
-        </span>
-      </div>
+      {!compact && (
+        <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-line pt-3">
+          <StatusDot status="live" />
+          <span className="text-xs text-fg-2">Pipeline Status:</span>
+          <span className="rounded-full bg-accent-green/10 px-2.5 py-0.5 text-xs font-medium text-accent-green">
+            Healthy
+          </span>
+          <span className="ml-auto text-2xs text-fg-2">
+            Deterministic Runtime Active
+          </span>
+        </div>
+      )}
     </div>
   );
 }
 
-function PipeArrow({ color }: { color: string }) {
+function PipeArrow({
+  color,
+  compact = false,
+}: {
+  color: string;
+  compact?: boolean;
+}) {
   return (
-    <div className="hidden lg:flex flex-1 items-center px-2">
+    <div
+      className={clsx(
+        "hidden shrink-0 items-center lg:flex",
+        compact ? "w-5 px-0.5" : "w-7 px-1",
+      )}
+    >
       <div
         className={clsx(
           "h-[2px] flex-1 bg-gradient-to-r from-transparent via-current to-current opacity-70",
-          color
+          color,
         )}
       />
 
       <svg
-        className={clsx("h-4 w-4 -ml-[2px]", color)}
+        className={clsx(compact ? "h-3 w-3 shrink-0" : "h-3.5 w-3.5 shrink-0", color)}
         viewBox="0 0 12 12"
         fill="currentColor"
       >

@@ -102,8 +102,7 @@ export default function Overview() {
 
   const chartData =
     eotQ.data?.map((x: any) => ({
-      ts: x.ts ?? x.label,
-      label: x.label ?? "",
+      time: x.time ?? x.label ?? x.ts ?? "",
       signal: Number(x.signal ?? 0),
       perception: Number(x.perception ?? 0),
       intelligence: Number(x.intelligence ?? 0),
@@ -117,10 +116,10 @@ export default function Overview() {
   if (stageQ.isLoading) {
     return (
       <div className="flex h-[60vh] items-center justify-center">
-        <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-[#0f172a] px-5 py-4 shadow-xl">
-          <Activity className="h-5 w-5 animate-pulse text-cyan-400" />
+        <div className="flex items-center gap-3 rounded-lg border border-line bg-bg-1 px-5 py-4 shadow-panel">
+          <Activity className="h-5 w-5 animate-pulse text-accent-cyan" />
 
-          <span className="text-sm text-slate-300">
+          <span className="text-sm text-fg-1">
             Initializing SVACS Runtime...
           </span>
         </div>
@@ -139,7 +138,7 @@ export default function Overview() {
           KPI SECTION
       ======================================================= */}
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-6">
+      <div className="grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 xl:grid-cols-6">
 
         <KPICard
           label="Total Signal Chunks"
@@ -212,16 +211,17 @@ export default function Overview() {
           PIPELINE + CHARTS
       ======================================================= */}
 
-      <div className="grid grid-cols-12 gap-4">
+      <div className="grid grid-cols-12 items-stretch gap-4 xl:h-[340px]">
 
         {/* PIPELINE */}
 
         <Panel
           title="Pipeline Flow (Live)"
           className="col-span-12 xl:col-span-5"
-          bodyClassName="p-4"
+          bodyClassName="flex min-h-0 flex-1 flex-col"
         >
           <PipelineFlow
+            compact
             metrics={stageQ.data ?? []}
             bucketSyncPct={bucketQ.data?.sync_percent ?? 1}
           />
@@ -232,6 +232,7 @@ export default function Overview() {
         <Panel
           title="Events Over Time (All Stages)"
           className="col-span-12 xl:col-span-4"
+          bodyClassName="flex min-h-0 flex-1 flex-col"
         >
           {chartData.length > 0 ? (
             <EventsOverTime data={chartData} />
@@ -245,6 +246,7 @@ export default function Overview() {
         <Panel
           title="Validation Status (NICAI)"
           className="col-span-12 xl:col-span-3"
+          bodyClassName="flex min-h-0 flex-1 items-center justify-center"
         >
           {valQ.data ? (
             <ValidationDonut
@@ -263,18 +265,18 @@ export default function Overview() {
           TABLES + ALERTS
       ======================================================= */}
 
-      <div className="grid grid-cols-12 gap-4">
+      <div className="grid grid-cols-12 items-stretch gap-4">
 
         {/* TOP VESSELS */}
 
         <Panel
           title="Top Vessels (By Events)"
-          className="col-span-12 xl:col-span-4"
+          className="col-span-12 min-h-[320px] xl:col-span-4"
           noPad
           right={
             <Link
               to="/vessels"
-              className="text-xs text-slate-400 transition hover:text-white"
+              className="text-xs text-fg-2 transition hover:text-fg-0"
             >
               View all vessels →
             </Link>
@@ -287,12 +289,12 @@ export default function Overview() {
 
         <Panel
           title="Recent State Outputs"
-          className="col-span-12 xl:col-span-3"
+          className="col-span-12 min-h-[320px] xl:col-span-3"
           noPad
           right={
             <Link
               to="/state"
-              className="text-xs text-slate-400 transition hover:text-white"
+              className="text-xs text-fg-2 transition hover:text-fg-0"
             >
               View all state events →
             </Link>
@@ -305,7 +307,8 @@ export default function Overview() {
 
         <Panel
           title="Bucket Sync Status"
-          className="col-span-12 xl:col-span-2"
+          className="col-span-12 min-h-[320px] xl:col-span-2"
+          bodyClassName="flex items-center"
         >
           {bucketQ.data ? (
             <BucketSyncDonut status={bucketQ.data} />
@@ -318,12 +321,12 @@ export default function Overview() {
 
         <Panel
           title="Alert Summary"
-          className="col-span-12 xl:col-span-3"
+          className="col-span-12 min-h-[320px] xl:col-span-3"
           noPad
           right={
             <Link
               to="/alerts"
-              className="text-xs text-slate-400 transition hover:text-white"
+              className="text-xs text-fg-2 transition hover:text-fg-0"
             >
               View all alerts →
             </Link>
@@ -337,7 +340,7 @@ export default function Overview() {
           NEW SVACS CARDS
       ======================================================= */}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-4">
 
         <MaritimeIntelligenceCard />
 
@@ -358,10 +361,8 @@ export default function Overview() {
 
 function EmptyState({ text }: { text: string }) {
   return (
-    <div className="flex h-[220px] items-center justify-center rounded-xl border border-dashed border-white/10 bg-[#0b1220]">
-      <span className="text-sm text-slate-500">
-        {text}
-      </span>
+    <div className="flex h-full min-h-[220px] flex-1 items-center justify-center rounded-lg border border-dashed border-line bg-bg-2/40">
+      <span className="text-sm text-fg-2">{text}</span>
     </div>
   );
 }

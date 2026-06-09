@@ -19,8 +19,8 @@ export default function ValidationDonut({ total, allow, flag, deny = 0 }: Props)
   const flagPct = total > 0 ? flag / total : 0;
 
   return (
-    <div className="flex items-center gap-4">
-      <div className="relative h-[150px] w-[150px] shrink-0">
+    <div className="flex w-full items-center justify-center gap-4">
+      <div className="relative h-[140px] w-[140px] shrink-0">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie
@@ -28,8 +28,8 @@ export default function ValidationDonut({ total, allow, flag, deny = 0 }: Props)
               dataKey="value"
               cx="50%"
               cy="50%"
-              innerRadius={48}
-              outerRadius={70}
+              innerRadius={46}
+              outerRadius={66}
               paddingAngle={2}
               stroke="none"
             >

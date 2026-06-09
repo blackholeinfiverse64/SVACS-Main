@@ -10,7 +10,9 @@ import {
 } from "recharts";
 
 interface Point {
-  time: string;
+  time?: string;
+  label?: string;
+  ts?: string;
   signal: number;
   perception: number;
   intelligence: number;
@@ -29,8 +31,11 @@ export default function EventsOverTime({
 }: {
   data: Point[];
 }) {
+  const timeKey =
+    data[0]?.time != null ? "time" : data[0]?.label != null ? "label" : "ts";
+
   return (
-    <div className="h-[320px] w-full">
+    <div className="h-full min-h-[240px] w-full flex-1">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           data={data}
@@ -48,7 +53,7 @@ export default function EventsOverTime({
           />
 
           <XAxis
-            dataKey="time"
+            dataKey={timeKey}
             stroke="#5e6b76"
             tick={{
               fontSize: 10,

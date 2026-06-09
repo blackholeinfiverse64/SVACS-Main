@@ -39,12 +39,12 @@ export default function Topbar() {
 
   return (
     <header className="flex h-16 shrink-0 items-center gap-4 border-b border-line bg-bg-1/40 px-6 backdrop-blur-xl">
-      <div className="flex flex-col leading-tight">
+      <div className="flex min-w-0 shrink-0 flex-col leading-tight">
         <span className="text-base font-semibold tracking-wide text-fg-0">{title}</span>
-        <span className="text-[11px] text-fg-2">{subtitle}</span>
+        <span className="truncate text-[11px] text-fg-2">{subtitle}</span>
       </div>
 
-      <div className="flex flex-1 items-center justify-end gap-2">
+      <div className="flex min-w-0 flex-1 flex-wrap items-center justify-end gap-2">
         <div className="relative">
           <select
             value={vesselId}

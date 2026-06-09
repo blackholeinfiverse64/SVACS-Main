@@ -19,14 +19,16 @@ export default function Panel({
   noPad,
 }: PanelProps) {
   return (
-    <section className={clsx("panel flex flex-col", className)}>
+    <section className={clsx("panel flex h-full min-h-0 flex-col", className)}>
       {title && (
         <header className="panel-header">
           <h3 className="panel-title">{title}</h3>
           {right && <div className="flex items-center gap-2">{right}</div>}
         </header>
       )}
-      <div className={clsx("flex-1", !noPad && "p-4", bodyClassName)}>{children}</div>
+      <div className={clsx("flex min-h-0 flex-1 flex-col", !noPad && "p-4", bodyClassName)}>
+        {children}
+      </div>
     </section>
   );
 }

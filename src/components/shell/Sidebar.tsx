@@ -42,7 +42,7 @@ export default function Sidebar() {
 
   return (
     <aside className="flex h-screen w-60 shrink-0 flex-col border-r border-line bg-bg-1/60 backdrop-blur-xl">
-      <div className="flex items-center gap-2 px-5 pt-5 pb-4">
+      <div className="flex items-center gap-2 px-4 pt-5 pb-4">
         <div className="flex h-8 w-8 items-center justify-center rounded-md border border-accent-cyan/40 bg-accent-cyan/10">
           <span className="font-mono text-[11px] font-bold tracking-wider text-accent-cyan">
             SV
@@ -56,7 +56,7 @@ export default function Sidebar() {
         </div>
       </div>
 
-      <nav className="flex-1 overflow-y-auto px-3 pb-4">
+      <nav className="flex-1 overflow-y-auto px-4 pb-4">
         <ul className="space-y-0.5">
           {items.map(({ to, label, icon: Icon, end }) => (
             <li key={to}>
