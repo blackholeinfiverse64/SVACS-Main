@@ -1,0 +1,77 @@
+import { AlertTriangle } from "lucide-react";
+import type { Alert } from "@/domain/types";
+import { fmtUtc } from "@/lib/time";
+import SeverityChip from "@/components/primitives/SeverityChip";
+import clsx from "clsx";
+
+const sevColor = (s?: string) => {
+  if (!s) return "text-info";
+
+  if (s === "CRITICAL" || s === "HIGH") {
+    return "text-err";
+  }
+
+  if (s === "MEDIUM") {
+    return "text-warn";
+  }
+
+  return "text-info";
+};
+
+export default function AlertSummary({
+  alerts,
+}: {
+  alerts: Alert[];
+}) {
+  return (
+    <ul className="divide-y divide-line/60">
+      {alerts.length === 0 ? (
+        <li className="px-4 py-6 text-center text-sm text-fg-2">
+          No active alerts
+        </li>
+      ) : (
+        alerts.map((a, idx) => (
+          <li
+            key={a.id || idx}
+            className="flex items-center gap-3 px-4 py-2.5 transition-colors hover:bg-bg-2/40"
+          >
+            {/* ICON */}
+            <AlertTriangle
+              size={14}
+              className={clsx(
+                "shrink-0",
+                sevColor(a.severity)
+              )}
+            />
+
+            {/* TIME */}
+            <span className="font-mono text-xs tabular-nums text-fg-1">
+              {a.ts_utc
+                ? fmtUtc(a.ts_utc)
+                : a.timestamp
+                ? fmtUtc(a.timestamp)
+                : "N/A"}
+            </span>
+
+            {/* VESSEL */}
+            <span className="font-mono text-xs text-fg-0">
+              {a.vessel_id || "UNKNOWN"}
+            </span>
+
+            {/* ALERT TITLE */}
+            <span className="flex-1 truncate text-xs text-fg-1">
+              {a.kind ||
+                a.title ||
+                "Alert Triggered"}
+            </span>
+
+            {/* SEVERITY */}
+            <SeverityChip
+              severity={a.severity || "LOW"}
+            />
+          </li>
+        ))
+      )}
+    </ul>
+  );
+}
