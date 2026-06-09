@@ -1,4 +1,5 @@
 from flask import Flask, render_template, jsonify
+from flask_cors import CORS
 
 import json
 import os
@@ -7,6 +8,15 @@ from collections import Counter
 
 
 app = Flask(__name__)
+
+_allowed_origins = os.environ.get(
+    "ALLOWED_ORIGINS",
+    "http://localhost:5173,http://127.0.0.1:5173",
+)
+CORS(
+    app,
+    origins=[origin.strip() for origin in _allowed_origins.split(",") if origin.strip()],
+)
 
 
 # =====================================================
