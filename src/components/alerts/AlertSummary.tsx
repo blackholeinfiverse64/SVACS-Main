@@ -41,11 +41,7 @@ export default function AlertSummary({
             />
 
             <span className="font-mono text-xs tabular-nums text-fg-1">
-              {a.ts_utc
-                ? fmtUtc(a.ts_utc)
-                : a.timestamp
-                  ? fmtUtc(a.timestamp)
-                  : "N/A"}
+              {a.ts_utc ? fmtUtc(a.ts_utc) : "N/A"}
             </span>
 
             <span className="truncate font-mono text-xs text-fg-0">
@@ -53,7 +49,7 @@ export default function AlertSummary({
             </span>
 
             <span className="truncate text-xs text-fg-1">
-              {a.kind || a.title || "Alert Triggered"}
+              {a.message || a.kind || "Alert Triggered"}
             </span>
 
             <SeverityChip severity={a.severity || "LOW"} />

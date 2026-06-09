@@ -50,11 +50,7 @@ export default function RecentStateTable({
               >
                 {/* TIME */}
                 <td className="px-4 py-2 tabular-nums text-fg-1">
-                  {r.ts_utc
-                    ? fmtUtc(r.ts_utc)
-                    : r.timestamp
-                    ? fmtUtc(r.timestamp)
-                    : "N/A"}
+                  {r.ts_utc ? fmtUtc(r.ts_utc) : "N/A"}
                 </td>
 
                 {/* VESSEL */}
@@ -66,12 +62,10 @@ export default function RecentStateTable({
                 <td
                   className={clsx(
                     "px-4 py-2 font-semibold",
-                    stateColor(
-                      r.to_state || r.state
-                    )
+                    stateColor(r.to_state),
                   )}
                 >
-                  {r.to_state || r.state || "NORMAL"}
+                  {r.to_state || "NORMAL"}
                 </td>
 
                 {/* VALIDATION */}

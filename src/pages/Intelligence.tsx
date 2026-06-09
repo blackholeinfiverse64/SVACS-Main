@@ -103,11 +103,7 @@ export default function Intelligence() {
                   >
                     {/* TIME */}
                     <td className="px-4 py-2 tabular-nums text-fg-1">
-                      {r.ts_utc
-                        ? fmtUtc(r.ts_utc)
-                        : r.timestamp
-                        ? fmtUtc(r.timestamp)
-                        : "N/A"}
+                      {r.ts_utc ? fmtUtc(r.ts_utc) : "N/A"}
                     </td>
 
                     {/* TRACE */}
