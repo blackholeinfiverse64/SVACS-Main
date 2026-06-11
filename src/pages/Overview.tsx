@@ -211,14 +211,14 @@ export default function Overview() {
           PIPELINE + CHARTS
       ======================================================= */}
 
-      <div className="grid grid-cols-12 items-stretch gap-4 xl:h-[340px]">
+      <div className="dashboard-row xl:min-h-[360px]">
 
         {/* PIPELINE */}
 
         <Panel
           title="Pipeline Flow (Live)"
-          className="col-span-12 xl:col-span-5"
-          bodyClassName="flex min-h-0 flex-1 flex-col"
+          className="dashboard-panel xl:col-span-5"
+          bodyClassName="flex min-h-0 flex-1 flex-col overflow-hidden"
         >
           <PipelineFlow
             compact
@@ -231,8 +231,8 @@ export default function Overview() {
 
         <Panel
           title="Events Over Time (All Stages)"
-          className="col-span-12 xl:col-span-4"
-          bodyClassName="flex min-h-0 flex-1 flex-col"
+          className="dashboard-panel xl:col-span-4"
+          bodyClassName="flex min-h-0 flex-1 flex-col overflow-hidden"
         >
           {chartData.length > 0 ? (
             <EventsOverTime data={chartData} />
@@ -245,8 +245,8 @@ export default function Overview() {
 
         <Panel
           title="Validation Status (NICAI)"
-          className="col-span-12 xl:col-span-3"
-          bodyClassName="flex min-h-0 flex-1 items-center justify-center"
+          className="dashboard-panel xl:col-span-3"
+          bodyClassName="flex min-h-0 flex-1 flex-col overflow-hidden"
         >
           {valQ.data ? (
             <ValidationDonut
@@ -265,13 +265,13 @@ export default function Overview() {
           TABLES + ALERTS
       ======================================================= */}
 
-      <div className="grid grid-cols-12 items-stretch gap-4">
+      <div className="dashboard-row xl:min-h-[340px]">
 
         {/* TOP VESSELS */}
 
         <Panel
           title="Top Vessels (By Events)"
-          className="col-span-12 min-h-[320px] xl:col-span-4"
+          className="dashboard-panel xl:col-span-4"
           noPad
           right={
             <Link
@@ -289,7 +289,7 @@ export default function Overview() {
 
         <Panel
           title="Recent State Outputs"
-          className="col-span-12 min-h-[320px] xl:col-span-3"
+          className="dashboard-panel xl:col-span-3"
           noPad
           right={
             <Link
@@ -307,8 +307,8 @@ export default function Overview() {
 
         <Panel
           title="Bucket Sync Status"
-          className="col-span-12 min-h-[320px] xl:col-span-2"
-          bodyClassName="flex items-center"
+          className="dashboard-panel xl:col-span-2"
+          bodyClassName="flex min-h-0 flex-1 flex-col overflow-hidden"
         >
           {bucketQ.data ? (
             <BucketSyncDonut status={bucketQ.data} />
@@ -321,7 +321,7 @@ export default function Overview() {
 
         <Panel
           title="Alert Summary"
-          className="col-span-12 min-h-[320px] xl:col-span-3"
+          className="dashboard-panel xl:col-span-3"
           noPad
           right={
             <Link
@@ -361,7 +361,7 @@ export default function Overview() {
 
 function EmptyState({ text }: { text: string }) {
   return (
-    <div className="flex h-full min-h-[220px] flex-1 items-center justify-center rounded-lg border border-dashed border-line bg-bg-2/40">
+    <div className="chart-surface flex flex-1 items-center justify-center rounded-lg border border-dashed border-line bg-bg-2/40">
       <span className="text-sm text-fg-2">{text}</span>
     </div>
   );

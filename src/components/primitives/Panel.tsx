@@ -19,7 +19,7 @@ export default function Panel({
   noPad,
 }: PanelProps) {
   return (
-    <section className={clsx("panel flex h-full min-h-0 flex-col", className)}>
+    <section className={clsx("panel flex h-full min-h-0 flex-col overflow-hidden", className)}>
       {title && (
         <header className="panel-header">
           <h3 className="panel-title">{title}</h3>

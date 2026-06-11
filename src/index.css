@@ -81,6 +81,15 @@ body {
   .btn {
     @apply inline-flex items-center gap-2 rounded-md border border-line bg-bg-2 px-3 py-1.5 text-sm text-fg-0 transition-colors hover:bg-bg-3;
   }
+  .dashboard-row {
+    @apply grid grid-cols-12 items-stretch gap-4;
+  }
+  .dashboard-panel {
+    @apply col-span-12 h-full min-w-0;
+  }
+  .chart-surface {
+    @apply min-h-[260px] w-full;
+  }
   .input {
     @apply rounded-md border border-line bg-bg-2 px-3 py-1.5 text-sm text-fg-0 placeholder:text-fg-2 focus:border-accent-cyan/50 focus:outline-none;
   }

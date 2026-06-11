@@ -59,7 +59,7 @@ export default function BucketSyncDonut({
   // =====================================================
 
   return (
-    <div className="flex w-full items-center justify-center gap-4">
+    <div className="chart-surface flex h-full min-h-[260px] w-full flex-col items-center justify-center gap-4 xl:flex-row">
 
       {/* ========================= */}
       {/* DONUT CHART */}

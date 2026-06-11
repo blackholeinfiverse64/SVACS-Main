@@ -35,15 +35,15 @@ export default function EventsOverTime({
     data[0]?.time != null ? "time" : data[0]?.label != null ? "label" : "ts";
 
   return (
-    <div className="h-full min-h-[240px] w-full flex-1">
+    <div className="chart-surface h-full min-h-[260px] w-full flex-1">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           data={data}
           margin={{
-            top: 12,
-            right: 16,
-            left: 0,
-            bottom: 0,
+            top: 8,
+            right: 12,
+            left: 4,
+            bottom: 4,
           }}
         >
           <CartesianGrid
@@ -89,13 +89,14 @@ export default function EventsOverTime({
 
           <Legend
             wrapperStyle={{
-              fontSize: 11,
+              fontSize: 10,
               color: "#9aa7b2",
-              paddingBottom: 10,
+              paddingTop: 8,
             }}
             iconType="circle"
-            align="left"
-            verticalAlign="top"
+            iconSize={8}
+            align="center"
+            verticalAlign="bottom"
           />
 
           <Line
