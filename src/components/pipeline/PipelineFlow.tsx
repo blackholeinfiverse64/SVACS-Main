@@ -109,7 +109,7 @@ export default function PipelineFlow({
         </div>
       </div>
 
-      <div className="flex min-h-0 flex-1 flex-col gap-3 lg:flex-row lg:items-stretch">
+      <div className="flex min-h-0 flex-1 flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-stretch xl:flex-nowrap">
         {order.map((stageId, idx) => {
           const m = map.get(stageId);
 
@@ -124,7 +124,7 @@ export default function PipelineFlow({
           return (
             <div
               key={stageId}
-              className="flex min-h-0 flex-1 items-stretch"
+              className="flex min-h-0 w-full min-w-[9rem] flex-1 basis-[calc(50%-0.375rem)] items-stretch sm:basis-[calc(33.333%-0.5rem)] xl:basis-0"
             >
               <div
                 className={clsx(
@@ -214,7 +214,7 @@ function PipeArrow({
   return (
     <div
       className={clsx(
-        "hidden shrink-0 items-center lg:flex",
+        "hidden shrink-0 items-center xl:flex",
         compact ? "w-5 px-0.5" : "w-7 px-1",
       )}
     >

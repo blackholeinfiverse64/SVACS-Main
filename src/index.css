@@ -72,6 +72,9 @@ body {
     @apply bg-bg-2 text-fg-0;
     box-shadow: inset 2px 0 0 0 #22d3ee;
   }
+  .nav-item-collapsed.nav-item-active {
+    box-shadow: inset 0 -2px 0 0 #22d3ee;
+  }
   .chip {
     @apply inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-2xs font-medium;
   }

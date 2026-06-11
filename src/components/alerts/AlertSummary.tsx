@@ -33,7 +33,7 @@ export default function AlertSummary({
         alerts.map((a, idx) => (
           <li
             key={a.id || idx}
-            className="grid grid-cols-[1rem_4.5rem_4.5rem_minmax(0,1fr)_auto] items-center gap-x-3 px-4 py-2.5 transition-colors hover:bg-bg-2/40"
+            className="flex flex-col gap-1.5 px-4 py-3 transition-colors hover:bg-bg-2/40 sm:grid sm:grid-cols-[1rem_4.5rem_4.5rem_minmax(0,1fr)_auto] sm:items-center sm:gap-x-3 sm:py-2.5"
           >
             <AlertTriangle
               size={14}
